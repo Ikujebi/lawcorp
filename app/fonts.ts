@@ -12,3 +12,8 @@ export const SourceCodePro = localFont({
   variable: "--font-source-code-pro",
   display: "swap",
 });
+export const Nunito = localFont({
+  src: "../public/fonts/Nunito-VariableFont_wght.ttf",
+  variable: "--font-Nunito-VariableFont",
+  display: "swap",
+});

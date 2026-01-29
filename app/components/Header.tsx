@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-
+import {Nunito} from "../fonts";
 import {SourceCodePro} from "../fonts";
 
 const navItems = [
@@ -18,7 +18,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className=  "fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <header className={`${Nunito.className} fixed top-0 left-0 w-full bg-white shadow-sm z-50`}  >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Brand */}
         <div className="leading-tight">
