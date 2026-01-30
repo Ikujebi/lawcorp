@@ -101,7 +101,7 @@ const practiceAreas = [
         <div className="relative z-10 flex items-center h-full px-10 2xl:px-30 ">
           <div className="max-w-4xl text-white">
             {/* Box-like text */}
-            <div className="inline-block border border-white/70 bg-white/10 text-gray-200 text-[1.3rem] px-6 py-2 rounded-full mb-6 mt-[8rem]">
+            <div className="inline-block border border-white/70 bg-white/10 text-gray-200 text-[1.3rem] px-6 py-2 rounded-full mb-6 mt-[9rem] md:mt-[8rem]">
               Legal Excellence & Integrity
             </div>
 
@@ -115,7 +115,7 @@ const practiceAreas = [
               Nigeria
             </h1>
             {/* Subheading */}
-            <p className="my-[4rem] max-w-3xl sm:text-lg md:text-[1.58rem]  text-gray-200">
+            <p className="my-[1rem] md:my-[4rem] max-w-3xl sm:text-lg md:text-[1.58rem]  text-gray-200">
               At NokaTrust, we are committed to providing reliable and strategic
               legal services with integrity and professionalism. Our experienced
               team offers representation in{" "}
@@ -127,7 +127,7 @@ const practiceAreas = [
               care.
             </p>
             {/* buttons area */}
-            <div className="flex flex-col sm:flex-row gap-8 font-semibold">
+            <div className="flex flex-col sm:flex-row md:gap-8 font-semibold">
               <div className="inline-block bg-[#F4C430] hover:bg-[#F4C430]/80 border border-white/70  text-gray-900 text-[1.1rem] px-8 py-4 rounded-full mb-6">
                 Book a Free Consultation
               </div>
@@ -140,7 +140,7 @@ const practiceAreas = [
       </section>
 
       {/* WHO WE ARE SECTION  */}
-      <section className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-[80svh] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}>
+      <section className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-full md:h-[80svh] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}>
   <h2 className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}>Who We Are</h2>
   <h2 className="2xl:text-[4rem] text-[2.5rem]  font-semibold mb-4">A Law Firm Built on Trust & Expertise</h2>
   <p className="max-w-3xl text-[1.363rem] text-center text-gray-700 mb-4">
@@ -202,6 +202,7 @@ Integrity, Strategy & Trust
         Our firm combines ethical responsibility regional legal insight and disciplined case strategy
         to deliver dependable legal representation in sensitive and complex matters.
       </p>
+      <div className="mt-3 h-[2.5px] w-1/4 bg-[#F4C430] "></div>
     </div>
 
     {/* Divider for desktop */}
