@@ -27,7 +27,7 @@ export default function LegalDisclaimerModal() {
     Legal Disclaimer
   </h2>
 
-  <div className="mx-auto mt-3 h-[2px] w-1/2 bg-[#0b2545]"></div>
+  <div className="mx-auto mt-3 h-[1px] w-1/4 bg-gray-200"></div>
 </div>
 
         <p className="text-lg mb-[1rem]">
