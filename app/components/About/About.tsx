@@ -32,11 +32,8 @@ const About = () => {
                 understanding of our clients&#39; needs.
               </p>
               <p>
-                With a growing presence across Lagos, Abuja (FCT), Ogun, and
-                Rivers, our firm is recognized for its strategic approach to
-                corporate advisory, regulatory compliance, and client-centered
-                legal services.
-              </p>
+  With a growing presence across <span className="font-bold">Lagos</span>, <span className="font-bold">Abuja (FCT)</span>, <span className="font-bold">Ogun</span>, and <span className="font-bold">Rivers</span>, our firm is recognized for its strategic approach to corporate advisory, regulatory compliance, and client-centered legal services.
+</p>
               <p>
                 Our practice emphasizes precision, personalized guidance, and
                 long-term client trust over short-term outcomes, ensuring that
