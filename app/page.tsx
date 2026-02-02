@@ -1,9 +1,12 @@
 import Image from "next/image";
-import bgPic from "../public/img/freelancer-using-phone-laptop.jpg";
+import bgPic from "../public/img/pexels-mikhail-nilov-8731037.jpg";
 import { SourceCodePro } from "./fonts";
 import {Roboto } from "./fonts";
 import { Scale, ShieldCheck, Users } from "lucide-react"
-
+import International from "./components/International Legal Assistance";
+import Team from "./components/Team";
+import Confidential from "./components/Confidential";
+import Practice from "./components/Practice Areas";
 export default function Home() {
 
   const values = [
@@ -26,58 +29,6 @@ export default function Home() {
     icon: Users,
   },
 ]
-
-const practiceAreas = [
-  {
-    number: "01",
-    title: "Real Estate Due Diligence",
-    description:
-      "Title verification ownership validation and risk analysis for secure property transactions.",
-  },
-  {
-    number: "02",
-    title: "Nigerians Abroad Legal Services",
-    description:
-      "Comprehensive legal representation and property management for clients living abroad.",
-  },
-  {
-    number: "03",
-    title: "Criminal Law and Bail",
-    description:
-      "Defense strategy anticipatory bail and trial advocacy across courts.",
-  },
-  {
-    number: "04",
-    title: "Cheque Bounce Matters",
-    description:
-      "Swift remedies and representation under applicable negotiable instruments laws.",
-  },
-  {
-    number: "05",
-    title: "RERA and Builder Disputes",
-    description:
-      "Regulatory compliance delayed possession and consumer protection matters.",
-  },
-  {
-    number: "06",
-    title: "Family and Matrimonial Law",
-    description:
-      "Divorce custody maintenance and settlement proceedings.",
-  },
-  {
-    number: "07",
-    title: "Cyber Crime and Fraud",
-    description:
-      "Legal action for digital fraud impersonation and cyber offences.",
-  },
-  {
-    number: "08",
-    title: "Property Disputes and Recovery",
-    description:
-      "Civil litigation injunctions and recovery suits.",
-  },
-]
-
 
   return (
     <>
@@ -110,26 +61,20 @@ const practiceAreas = [
               className={`${SourceCodePro.className}  text-xl font-extrabold tracking-wide text-gray-100 sm:text-3xl md:text-3xl lg:text-[3.26rem]`}
             >
               Trusted Law Firm in{" "}
-              <span className="text-[#F4C430]">Lagos, Ogun & Abuja </span>
+              <span className="text-[#FFA500]">Lagos, Ogun & Abuja </span>
               <br />
               Nigeria
             </h1>
             {/* Subheading */}
-            <p className="my-[1rem] md:my-[4rem] max-w-3xl sm:text-lg md:text-[1.58rem]  text-gray-200">
-              At NokaTrust, we are committed to providing reliable and strategic
-              legal services with integrity and professionalism. Our experienced
-              team offers representation in{" "}
-              <span className="text-white font-semibold">
-                Real Estate, Criminal Defense, Family Law, and NRI Legal
-                Matters,{" "}
-              </span>{" "}
-              guiding clients through every legal challenge with discretion and
-              care.
-            </p>
+            <p className="my-[1rem] md:my-[4rem] max-w-3xl sm:text-lg md:text-[1.58rem] text-gray-200">
+  At Lummina, we empower new, emerging, and growing businesses with strategic legal solutions that protect value and manage risk.  
+  <span className="text-white font-bold">Your Trusted Partner for Sustainable Success</span>,  
+  guiding clients with expertise in corporate law, regulatory compliance, and contracts to navigate complex legal landscapes with confidence.
+</p>
             {/* buttons area */}
             <div className="flex flex-col sm:flex-row md:gap-8 font-semibold">
-              <div className="inline-block bg-[#F4C430] hover:bg-[#F4C430]/80 border border-white/70  text-gray-900 text-[1.1rem] px-8 py-4 rounded-full mb-6">
-                Book a Free Consultation
+              <div className="inline-block bg-[#FFA500] hover:bg-[#FFA500]/80 border border-white/70  text-gray-900 text-[1.1rem] px-8 py-4 rounded-full mb-6">
+                Book Consultation
               </div>
               <div className="inline-block border border-white/70 bg-white/10 hover:bg-white hover:text-gray-900 text-gray-100 text-[1.1rem] px-8 py-4 rounded-full mb-6">
                 View Our Practice Areas
@@ -144,13 +89,10 @@ const practiceAreas = [
   <h2 className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}>Who We Are</h2>
   <h2 className="2xl:text-[4rem] text-[2.5rem]  font-semibold mb-4">A Law Firm Built on Trust & Expertise</h2>
   <p className="max-w-3xl text-[1.363rem] text-center text-gray-700 mb-4">
-    We are a full service Nigerian law firm providing
-     strategic ethical and results driven legal
-      representation across key jurisdictions in Nigeria.
-       Our practice is known for excellence in real estate
-        due diligence criminal defense family law and
-         comprehensive
-     legal services for Nigerians at home and abroad.
+We are a full-service Nigerian law firm providing strategic,
+ ethical, and results-driven legal solutions. We specialize
+  in real estate, corporate, and commercial law, with a focus on supporting
+ new and growing businesses across Nigeria and abroad.
   </p>
   <div className="mx-auto mt-3 h-[2.5px] w-1/8 bg-[#F4C430] "></div>
 
@@ -195,8 +137,7 @@ const practiceAreas = [
     <div className="md:w-1/2 md:pr-8">
     <h2 className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}>Why Choose Us</h2>
       <h2 className={`${SourceCodePro.className} text-5xl font-semibold mb-4 text-gray-800 mb-[3rem]`}>
-        A Practice Built on
-Integrity, Strategy & Trust
+        Guiding Businesses with Integrity, Excellence & Innovation
       </h2>
       <p className="text-gray-700 leading-relaxed">
         Our firm combines ethical responsibility regional legal insight and disciplined case strategy
@@ -240,10 +181,13 @@ Integrity, Strategy & Trust
   <div className="mb-[3rem]">
     <div className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}>
       <h2 className="text-[1.15rem] text-[#F4C430]">03</h2>
-      <h3>NRI-Focused Legal Expertise</h3>
+      <h3>Client-Centered Legal Solutions</h3>
     </div>
     <p className="text-gray-600 leading-relaxed text-[1.15rem]">
-     Dedicated handling of legal matters for Nigerians living abroad, including property, family, and litigation cases, with seamless remote coordination.
+     We provide personalized, responsive, and practical
+      legal support, tailored to meet the unique needs 
+      of each client, ensuring clarity,
+      efficiency, and results at every step.
     </p>
   </div>
 
@@ -263,53 +207,22 @@ Integrity, Strategy & Trust
 </section>
 
 {/* Practice Areas SECTION  */}
-<section className={`${Roboto.className} px-6 py-[6rem] flex flex-col items-center justify-center  bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-gray-900`}>
- <h2 className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}>Practice Areas</h2>
-  <h2 className="2xl:text-[4rem] text-[2.5rem]  font-semibold mb-4">Areas of Legal Practice</h2>
-  <p className="max-w-3xl text-[1.363rem] text-center text-gray-700 mb-4">
-  Our firm represents individuals,
-   families, and institutions across a
-    broad spectrum of civil and criminal matters
-     with clarity,
-   strategy, and discretion.
-  </p>
-  <div className="mx-auto mt-3 h-[2.5px] w-1/8 bg-[#F4C430] "></div>
 
-<div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
-  {practiceAreas.map(({ number, title, description }) => (
-    <div
-      key={number}
-      className="group flex gap-4 relative border border-gray-300 bg-white rounded-2xl p-8
-        hover:bg-[linear-gradient(135deg,rgba(244,196,48,0.2),rgba(255,255,255,0.95))] hover:shadow-lg hover:-translate-y-2
-        transition-all duration-300"
-    >
-      <div className="flex flex-col items-center">
-      {/* Number Circle */}
-      <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#F9DE8A]/70 text-[1.14rem] font-bold text-[#F4C430]">
-        {number}
-      </div>
-       <div className="mt-2 h-full w-px bg-gray-300 "></div>
-      </div>
-    <div>
-      {/* Title */}
-      <h3 className="text-xl font-medium mb-3 transition-colors duration-300">
-        {title}
-      </h3>
+<section className="">
+  <Practice />
+</section>
 
-      {/* Description */}
-      <p className="text-gray-400  leading-relaxed mb-3 text-[1.1rem]">
-        {description}
-      </p>
-
-      {/* Link */}
-      <span className="inline-flex items-center text-[1.2rem] text-gray-400 font-medium   transition-colors duration-300">
-        View Details →
-      </span>
-    </div>
-    </div>
-  ))}
-</div>
-
+{/* International Legal Assistance SECTION  */}
+<section className="">
+  <International />
+</section>
+{/*Our Legal Team SECTION  */}
+<section className="">
+  <Team />
+</section>
+{/*Confidential Legal Support SECTION  */}
+<section className="">
+  <Confidential />
 </section>
     </>
   );

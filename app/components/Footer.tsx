@@ -6,7 +6,7 @@ import { SourceCodePro } from "../fonts";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0b2545] text-gray-400 p-4 text-sm">
+    <footer className="bg-[#5F021F] text-[#F7e7ce] p-4 text-sm">
       <section className="grid grid-cols-1 md:grid-cols-4 gap-8  px-6
     xl:px-[15%] xl:max-w-[85%]
     2xl:px-[15%] 2xl:max-w-[85%]
@@ -59,7 +59,7 @@ export default function Footer() {
           </p>
         </article>
       </section>
-      <div className="w-full h-[1px] bg-gray-600 mb-2"></div>
+      <div className="w-full h-[1px] bg-[#F4C430] mb-2"></div>
       <section className="text-xs  flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
         <div className=" ">
           © {new Date().getFullYear()} NokaTrust Law. All rights reserved.

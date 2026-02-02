@@ -4,7 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import {Nunito} from "../fonts";
-import {SourceCodePro} from "../fonts";
+
+import Image from "next/image";
+import Lummina2 from "@/public/img/Lummina2.png";
 
 const navItems = [
   { name: "About", href: "/" },
@@ -18,20 +20,20 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className={`${Nunito.className} fixed top-0 left-0 w-full bg-white shadow-sm z-50`}  >
+    <header className={`${Nunito.className} fixed top-0 left-0 w-full bg-[#F7e7ce] shadow-sm z-50`}  >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Brand */}
         <div className="leading-tight">
-          <h1 className={`${SourceCodePro.className}  text-xl font-extrabold tracking-wide text-[#0b2545]`}>
-            NokaTrust
-          </h1>
-          <p className="text-xs font-semibold tracking-widest text-gray-600">
+          <div>
+          <Image src={Lummina2} alt="Lummina Logo" width={100} height={50} className="h-13 object-contain"/>
+          </div>
+          {/* <p className="text-xs font-semibold tracking-widest text-gray-600">
             ATTORNEYS AT LAW
-          </p>
+          </p> */}
         </div>
 
         {/* Desktop Navigation */}
-       <nav className="hidden items-center gap-8 md:flex text-xs text-gray-800 font-semibold">
+       <nav className="hidden items-center gap-8 md:flex text-xs text-[#5F021F] font-semibold">
   {navItems.map((item) => (
     <Link
       key={item.href}
@@ -44,7 +46,7 @@ export default function Header() {
 </nav>
 
         {/* Desktop CTA */}
-        <button className="hidden rounded-full bg-[#0b2545] px-9 py-3 text-[.799rem] font-semibold text-white transition hover:bg-[#081c33] md:block">
+        <button className="hidden rounded-full bg-[#5F021F] px-9 py-3 text-[.799rem] font-semibold text-white transition hover:bg-[#081c33] md:block">
           Request Consultation
         </button>
 
@@ -85,7 +87,7 @@ export default function Header() {
             </Link>
 
             {/* CTA */}
-            <button className="whitespace-nowrap rounded-full bg-[#0b2545] px-5 py-2 text-sm font-semibold text-white">
+            <button className="whitespace-nowrap rounded-full bg-[#5F021F] px-5 py-2 text-sm font-semibold text-white">
               Consult
             </button>
           </div>

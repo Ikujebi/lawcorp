@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        company: {
+          cream: "#F7E7CE",
+          orange: "#FFA500",
+          wine: "#5F021F",
+        },
+      },
       fontFamily: {
         law: ["var(--font-law)"],
       },
