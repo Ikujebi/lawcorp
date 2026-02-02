@@ -9,8 +9,8 @@ import Image from "next/image";
 import Lummina2 from "@/public/img/Lummina2.png";
 
 const navItems = [
-  { name: "About", href: "/" },
-  { name: "Practice Areas", href: "/practice" },
+  { name: "About", href: "/about" },
+  { name: "International Services", href: "/international" },
   { name: "NRI Services", href: "/nri" },
   { name: "Our Team", href: "/team" },
   { name: "Contact", href: "/contact" },
@@ -24,9 +24,9 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Brand */}
         <div className="leading-tight">
-          <div>
+          <Link href="/">
           <Image src={Lummina2} alt="Lummina Logo" width={100} height={50} className="h-13 object-contain"/>
-          </div>
+          </Link>
           {/* <p className="text-xs font-semibold tracking-widest text-gray-600">
             ATTORNEYS AT LAW
           </p> */}
