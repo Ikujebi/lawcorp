@@ -15,13 +15,13 @@ const Team = () => {
   {
     title: "Adv. Okoro Joy",
     description:
-      "Family Law & Matrimonial Disputes",
+      "Corporate & Commercial Advisory",
     icon: image2,
   },
   {
     title: "Adv. Ajani Yetunde",
     description:
-      "Criminal Defense & Bail Matters",
+      "Real Estate & Transaction Support",
     icon: image3,
   },
 ]

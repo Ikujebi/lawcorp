@@ -7,6 +7,7 @@ import International from "./components/International Legal Assistance";
 import Team from "./components/Team";
 import Confidential from "./components/Confidential";
 import Practice from "./components/Practice Areas";
+import Presence from "./components/Presence";
 export default function Home() {
 
   const values = [
@@ -223,6 +224,10 @@ We are a full-service Nigerian law firm providing strategic,
 {/*Confidential Legal Support SECTION  */}
 <section className="">
   <Confidential />
+</section>
+{/*Our Presence SECTION  */}
+<section className="">
+  <Presence />
 </section>
     </>
   );
