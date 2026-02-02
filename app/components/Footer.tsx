@@ -7,7 +7,7 @@ import { SourceCodePro } from "../fonts";
 export default function Footer() {
   return (
     <footer className="bg-[#5F021F] text-[#F7e7ce] p-4 text-sm">
-      <section className="grid grid-cols-1 md:grid-cols-4 gap-8  px-6
+      <section className="grid grid-cols-1 md:grid-cols-4 gap-8  px-6 py-[2.5rem]
     xl:px-[15%] xl:max-w-[85%]
     2xl:px-[15%] 2xl:max-w-[85%]
     mx-auto">
@@ -44,7 +44,7 @@ export default function Footer() {
         <article>
           <h2 className="text-[#F4C430] text-sm">Quick Links</h2>
           <p className="">Practice Areas</p>
-          <p className="">NRI Services</p>
+          
           <p className="">Our Team</p>
           <p className="">Careers</p>
           <p className="">Contact</p>
