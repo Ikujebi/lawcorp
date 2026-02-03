@@ -32,8 +32,14 @@ const About = () => {
                 understanding of our clients&#39; needs.
               </p>
               <p>
-  With a growing presence across <span className="font-bold">Lagos</span>, <span className="font-bold">Abuja (FCT)</span>, <span className="font-bold">Ogun</span>, and <span className="font-bold">Rivers</span>, our firm is recognized for its strategic approach to corporate advisory, regulatory compliance, and client-centered legal services.
-</p>
+                With a growing presence across{" "}
+                <span className="font-bold">Lagos</span>,{" "}
+                <span className="font-bold">Abuja (FCT)</span>,{" "}
+                <span className="font-bold">Ogun</span>, and{" "}
+                <span className="font-bold">Rivers</span>, our firm is
+                recognized for its strategic approach to corporate advisory,
+                regulatory compliance, and client-centered legal services.
+              </p>
               <p>
                 Our practice emphasizes precision, personalized guidance, and
                 long-term client trust over short-term outcomes, ensuring that
@@ -41,73 +47,59 @@ const About = () => {
                 expectations.
               </p>
             </div>
-            <div className="mt-3 h-[2.5px] w-1/4 bg-[#FFA500] "></div>
           </div>
-
-          {/* Divider for desktop */}
-          <div className="hidden md:block w-[2px] bg-gray-300"></div>
-
           {/* Right Part */}
-          <div className="md:w-1/2 md:pl-8 mt-10 md:mt-0 flex flex-col">
-            {/* Item 01 */}
-            <div className="mb-[3rem]">
-              <div
-                className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
-              >
-                <h2 className="text-[1.15rem] text-[#F4C430]">01</h2>
-                <h3>Ethical & Transparent Practice</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-[1.15rem]">
-                Strict adherence to the rules and ethical standards of the
-                Nigerian Bar Association, ensuring responsible and transparent
-                legal representation without solicitation or misleading
-                assurances.
-              </p>
-            </div>
+          <div className="md:w-1/2 md:pl-8 mt-10 md:mt-0 flex flex-col items-center">
+  {/* Gold Line */}
+  <div className="h-[2.5px] w-[94%] bg-[#FFA500] mx-auto" />
 
-            {/* Item 02 */}
-            <div className="mb-[3rem]">
-              <div
-                className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
-              >
-                <h2 className="text-[1.15rem] text-[#F4C430]">02</h2>
-                <h3>Strong Regional Presence</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-[1.15rem]">
-                Extensive litigation and advisory experience across Lagos,
-                Abuja, Port Harcourt, and other key regions in Nigeria.
-              </p>
-            </div>
+  {/* Card */}
+  <div id="single-card" className="w-full max-w-lg">
+    <div
+      className="
+        border border-gray-300 bg-white
+        rounded-xl p-6 shadow-sm
+        hover:shadow-lg transition duration-300
+      "
+    >
+      {/* Title */}
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+        Our Practice Philosophy
+      </h3>
 
-            {/* Item 03 */}
-            <div className="mb-[3rem]">
-              <div
-                className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
-              >
-                <h2 className="text-[1.15rem] text-[#F4C430]">03</h2>
-                <h3>Client-Centered Legal Solutions</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-[1.15rem]">
-                We provide personalized, responsive, and practical legal
-                support, tailored to meet the unique needs of each client,
-                ensuring clarity, efficiency, and results at every step.
-              </p>
-            </div>
+      {/* Intro Text */}
+      <p className="text-gray-600 mb-5 leading-relaxed">
+        Every matter entrusted to us is handled with professional
+        rigor, ethical responsibility, and strategic foresight.
+      </p>
 
-            {/* Item 04 */}
-            <div>
-              <div
-                className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
-              >
-                <h2 className="text-[1.15rem] text-[#F4C430]">04</h2>
-                <h3>Strategic Case Handling</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-[1.15rem]">
-                Every matter is guided by structured legal analysis risk
-                evaluation and outcome-focused strategy.
-              </p>
-            </div>
-          </div>
+      {/* Bullet List */}
+      <ul className="space-y-3">
+        <li className="flex items-start gap-3">
+          <span className="mt-2 w-2 h-2 rounded-full bg-[#FFA500]"></span>
+          <span>Ethical, transparent, and compliant legal practice</span>
+        </li>
+
+        <li className="flex items-start gap-3">
+          <span className="mt-2 w-2 h-2 rounded-full bg-[#FFA500]"></span>
+          <span>Structured case assessment and legal strategy</span>
+        </li>
+
+        <li className="flex items-start gap-3">
+          <span className="mt-2 w-2 h-2 rounded-full bg-[#FFA500]"></span>
+          <span>Clear communication and procedural accountability</span>
+        </li>
+
+        <li className="flex items-start gap-3">
+          <span className="mt-2 w-2 h-2 rounded-full bg-[#FFA500]"></span>
+          <span>Long-term legal protection and client confidence</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+          
         </div>
       </section>
     </div>
