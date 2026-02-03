@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div className="w-full">
       {/* ABOUT SECTION — NORMAL BACKGROUND */}
-      <section className="w-full bg-white/10">
+      <section className="w-full bg-gray-100/5">
         <main
           className={`${Roboto.className} max-w-6xl mx-auto px-6 py-16 text-gray-900`}
         >
@@ -107,7 +107,7 @@ const About = () => {
       </section>
 
       {/* CORE VALUES SECTION — KEEP SEPARATE (NON IMAGE BG) */}
-      <section className="w-full bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))]">
+      <section className="w-full bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))]">
         <div className="max-w-6xl mx-auto px-6 py-24">
           <CoreV />
         </div>
