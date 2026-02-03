@@ -55,7 +55,11 @@ const Practice = () => {
 
 
   return (
-    <section className={`${Roboto.className} px-6 py-[6rem] flex flex-col items-center justify-center  bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-gray-900`}>
+    <section
+  className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-full md:h-[80svh] 
+  bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
+>
+
      <h2 className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}>Practice Areas</h2>
       <h2 className="2xl:text-[4rem] text-[2.5rem]  font-semibold mb-4">Areas of Legal Practice</h2>
       <p className="max-w-3xl text-[1.363rem] text-center text-gray-700 mb-4">
