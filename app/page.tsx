@@ -86,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* WHO WE ARE SECTION  */}
-     <section
+      <section
   className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-full md:h-[80svh] 
   bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
 >
