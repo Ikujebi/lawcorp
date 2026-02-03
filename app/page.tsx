@@ -86,7 +86,10 @@ export default function Home() {
       </section>
 
       {/* WHO WE ARE SECTION  */}
-      <section className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-full md:h-[80svh] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}>
+     <section
+  className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-full md:h-[80svh] 
+  bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
+>
   <h2 className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}>Who We Are</h2>
   <h2 className="2xl:text-[4rem] text-[2.5rem]  font-semibold mb-4">A Law Firm Built on Trust & Expertise</h2>
   <p className="max-w-3xl text-[1.363rem] text-center text-gray-700 mb-4">
