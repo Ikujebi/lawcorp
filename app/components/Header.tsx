@@ -53,7 +53,7 @@ export default function Header() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden"
+          className="md:hidden text-[#5F021F]"
           aria-label="Toggle menu"
         >
           {open ? <X size={28} /> : <Menu size={28} />}
@@ -63,7 +63,7 @@ export default function Header() {
       {/* Mobile Horizontal Menu */}
       {open && (
         <div className="absolute left-0 top-full z-50 w-full border-t bg-white shadow-md md:hidden">
-          <div className="flex flex-col ml-[1rem] justify-between gap-6 px-6 py-4 overflow-x-auto">
+          <div className="flex flex-col ml-[1rem] justify-between gap-6 px-6 py-4 overflow-x-auto text-[#FFA500]">
             {/* Brand */}
             <span className="whitespace-nowrap text-sm font-bold text-[#0b2545]">
               NokaTrust
