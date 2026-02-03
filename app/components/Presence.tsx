@@ -12,9 +12,11 @@ const Presence = () => {
 
   return (
     <div>
-      <section
-        className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-full md:h-[80svh] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
-      >
+     <section
+  className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-full md:h-[80svh] 
+  bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
+>
+
         <h2 className="text-lg font-thin tracking-wide mb-4 text-gray-800">
           Our Presence
         </h2>

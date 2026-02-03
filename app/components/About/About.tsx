@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div className="w-full">
       {/* ABOUT SECTION — NORMAL BACKGROUND */}
-      <section className="w-full bg-gray-200/10">
+      <section className="w-full bg-white/10">
         <main
           className={`${Roboto.className} max-w-6xl mx-auto px-6 py-16 text-gray-900`}
         >
