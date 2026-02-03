@@ -59,7 +59,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section >
         <About />
       </section>
     </div>

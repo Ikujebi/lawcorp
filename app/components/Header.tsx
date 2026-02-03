@@ -70,7 +70,7 @@ export default function Header() {
             </span>
 
             {/* Links */}
-            <Link href="/" className="whitespace-nowrap font-semibold">
+            <Link href="/about" className="whitespace-nowrap font-semibold">
               About
             </Link>
             <Link href="/practice" className="whitespace-nowrap font-semibold">
