@@ -134,7 +134,7 @@ We are a full-service Nigerian law firm providing strategic,
 </section>
 
 {/* Why Choose Us SECTION  */}
-<section className={`${Roboto.className} px-6 py-16 max-w-6xl flex justify-center items-center  bg-gray-200/10 text-gray-900`}>
+<section className={`${Roboto.className} px-6 py-16 max-w-6xl flex justify-center items-center  bg-gray-100/5 text-gray-900`}>
  <div className="flex flex-col md:flex-row md:space-x-8 ">
 
     {/* Left Part */}
