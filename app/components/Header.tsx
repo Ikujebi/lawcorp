@@ -46,7 +46,7 @@ export default function Header() {
 </nav>
 
         {/* Desktop CTA */}
-        <button className="hidden rounded-full bg-[#5F021F] px-9 py-3 text-[.799rem] font-semibold text-white transition hover:bg-[#081c33] md:block">
+        <button className="hidden rounded-full bg-[#5F021F] px-9 py-3 text-[.799rem] font-semibold text-white transition hover:bg-[#7A1A36] md:block ">
           Request Consultation
         </button>
 

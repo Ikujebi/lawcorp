@@ -67,17 +67,17 @@ export default function Home() {
               Nigeria
             </h1>
             {/* Subheading */}
-            <p className="my-[1rem] md:my-[4rem] max-w-3xl sm:text-lg md:text-[1.58rem] text-gray-200">
+            <p className="my-[1rem] md:my-[2rem]  max-w-3xl sm:text-lg md:text-[1.58rem] text-gray-200">
   At Lummina, we empower new, emerging, and growing businesses with strategic legal solutions that protect value and manage risk.  
   <span className="text-white font-bold">Your Trusted Partner for Sustainable Success</span>,  
   guiding clients with expertise in corporate law, regulatory compliance, and contracts to navigate complex legal landscapes with confidence.
 </p>
             {/* buttons area */}
             <div className="flex flex-col sm:flex-row md:gap-8 font-semibold">
-              <div className="inline-block bg-[#FFA500] hover:bg-[#FFA500]/80 border border-white/70  text-gray-900 text-[1.1rem] px-8 py-4 rounded-full mb-6">
+              <div className="inline-block bg-[#FFA500] hover:bg-[#FFA500]/80 border border-white/70  text-gray-900 text-[1.1rem] px-8 py-4 rounded-full mb-6 xl:py-2">
                 Book Consultation
               </div>
-              <div className="inline-block border border-white/70 bg-white/10 hover:bg-white hover:text-gray-900 text-gray-100 text-[1.1rem] px-8 py-4 rounded-full mb-6">
+              <div className="inline-block border border-white/70 bg-white/10 hover:bg-white hover:text-gray-900 text-gray-100 text-[1.1rem] px-8 py-4 rounded-full mb-6 xl:py-2">
                 View Our Practice Areas
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function Home() {
 
       {/* WHO WE ARE SECTION  */}
       <section
-  className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-full md:h-[80svh] 
+  className={`${Roboto.className} px-6 xl:py-6 flex flex-col items-center justify-center h-full md:h-[80svh] xl:h-full
   bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
 >
   <h2 className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}>Who We Are</h2>
@@ -100,7 +100,7 @@ We are a full-service Nigerian law firm providing strategic,
   </p>
   <div className="mx-auto mt-3 h-[2.5px] w-1/8 bg-[#F4C430] "></div>
 
-<div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl w-full mt-[4rem]">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl w-full mt-[4rem] xl:mt-[.2rem]">
   {values.map(({ title, description, icon: Icon }) => (
     <div
       key={title}
@@ -134,7 +134,7 @@ We are a full-service Nigerian law firm providing strategic,
 </section>
 
 {/* Why Choose Us SECTION  */}
-<section className={`${Roboto.className} px-6 py-16 max-w-6xl flex justify-center items-center  bg-gray-100/5 text-gray-900`}>
+<section className={`${Roboto.className} xl:h-full px-6 py-16 max-w-6xl flex justify-center items-center  bg-gray-100/5 text-gray-900`}>
  <div className="flex flex-col md:flex-row md:space-x-8 ">
 
     {/* Left Part */}
