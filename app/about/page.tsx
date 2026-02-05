@@ -18,7 +18,7 @@ const page = () => {
           priority
           sizes="100vw"
           quality={85}
-          className="object-cover object-center"
+          className="object-cover object-[center_25%] "
         />
 
         {/* Overlay */}
@@ -42,7 +42,7 @@ const page = () => {
             </h1>
             <p className={`${Nunito.className}   tracking-wide text-gray-300 sm:text-medium md:text-[1.2rem] lg:text-[1.2rem]`}>Serving Lagos · Abuja (FCT) · Rivers · Ogun</p>
             {/* Subheading */}
-            <p className="my-[1rem] md:my-[4rem] max-w-3xl sm:text-lg md:text-[1.58rem] text-gray-200">
+            <p className="my-[1rem] md:my-[4rem] xl:my-[2rem] max-w-3xl sm:text-lg md:text-[1.58rem] text-gray-200">
               Lummina law firm is a{" "}
               <span className="text-white font-bold">
                 mordern, innovative and client-centered full-service law firm

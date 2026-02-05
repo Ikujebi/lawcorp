@@ -38,7 +38,7 @@ export default function Header() {
     <Link
       key={item.href}
       href={item.href}
-      className="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#0b2545] after:transition-all after:duration-500 hover:after:w-full"
+      className="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#5F021F] after:transition-all after:duration-500 hover:after:w-full"
     >
       {item.name}
     </Link>
