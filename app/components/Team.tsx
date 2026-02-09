@@ -25,14 +25,14 @@ const Team = () => {
   return (
     <div>
       <section
-        className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-full md:h-[80svh] 
+        className={`${Roboto.className} px-6 flex flex-col items-center justify-center min-h-screen md:min-h-[80svh] py-16
   bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
       >
         <h2 className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}>
           Our Legal Team
         </h2>
-        <h2 className="2xl:text-[4rem] text-[2.5rem]  font-semibold mb-4">
-          Experienced Advocates You Can Trust
+        <h2 className="2xl:text-[3.2rem] text-[2.5rem]  font-semibold mb-4">
+          Experienced Legal Counsel You Can Rely On
         </h2>
         <p className="max-w-3xl text-[1.363rem] text-center text-gray-700 mb-4">
           Our team consists of experienced advocates with deep courtroom

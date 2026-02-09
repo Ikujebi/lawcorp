@@ -56,7 +56,7 @@ const Practice = () => {
 
   return (
     <section
-  className={`${Roboto.className} px-6 flex flex-col items-center justify-center h-full md:h-[80svh] 
+  className={`${Roboto.className} px-6 flex flex-col items-center justify-center min-h-screen md:min-h-[80svh] py-16
   bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
 >
 
