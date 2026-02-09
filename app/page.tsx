@@ -84,87 +84,92 @@ export default function Home() {
   </div>
 
   {/* Stats Article at bottom of hero */}
-  <article className="absolute bottom-0 left-0 w-full h-[10svh] bg-[#5F021F] text-[#F7E7CE] flex items-center justify-center z-20">
-  <div className="flex flex-row items-center justify-center w-full max-w-6xl relative">
-    
+<article className="absolute bottom-0 left-0 w-full h-[20svh] md:h-[10svh] bg-[#5F021F] text-[#F7E7CE] flex items-center justify-center z-20">
+  <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl px-4 md:px-0">
+
     {/* 1 - Trusted by our customer */}
-    <div className="flex flex-col  text-white mr-10 z-10">
-      {/* Title */}
-      <h3 className="text-sm ml-4 md:text-[.8rem] md:text-base font-xs mb-2">
+    <div className="flex flex-col text-white w-full mb-4 md:mb-0 md:mr-10 z-10">
+      <h3 className="text-[0.6rem] md:text-[.8rem] font-xs mb-1 md:mb-2  md:text-left">
         Trusted by our customer
       </h3>
 
-      {/* Flex row: pictures + stat */}
-      <div className="flex items-center">
+      <div className="flex  md:justify-start">
         {/* Pictures */}
-        <div className="flex items-center -space-x-3">
+        <div className="flex items-center -space-x-2 md:-space-x-3">
           <Image
             src={bgPic1}
             alt="Customer 1"
-            width={50}
-            height={50}
-            className="rounded-full border-2 border-white"
+            width={28}
+            height={28}
+            className="rounded-full border-[1px] border-white md:w-12 md:h-12"
           />
           <Image
             src={bgPic1}
             alt="Customer 2"
-            width={50}
-            height={50}
-            className="rounded-full border-2 border-white"
+            width={28}
+            height={28}
+            className="rounded-full border-[1px] border-white md:w-12 md:h-12"
           />
           <Image
             src={bgPic1}
             alt="Customer 3"
-            width={50}
-            height={50}
-            className="rounded-full border-2 border-white"
+            width={28}
+            height={28}
+            className="rounded-full border-[1px] border-white md:w-12 md:h-12"
           />
           <Image
             src={bgPic1}
             alt="Customer 4"
-            width={50}
-            height={50}
-            className="rounded-full border-2 border-white"
+            width={28}
+            height={28}
+            className="rounded-full border-[1px] border-white md:w-12 md:h-12"
           />
         </div>
 
         {/* Stat */}
-        <div className="flex flex-col items-center justify-center ml-4">
-          <span className="text-lg md:text-xl text-white">1000+</span>
-          <span className="text-[0.625rem] md:text-xs text-white font-normal mt-1">
-            Clients Satisfied
-          </span>
+        <div className="flex flex-col items-center justify-center ml-2 md:ml-4">
+          <span className="text-lg md:text-lg font-semibold md:font-bold text-white">1000+</span>
+          <span className="text-[0.55rem] md:text-[0.625rem] font-normal text-white mt-1">Clients Satisfied</span>
         </div>
       </div>
     </div>
 
-    {/* 2 */}
-    <div className="flex flex-col items-center justify-center flex-1 relative md:mx-6">
-      {/* Divider to the right */}
-      <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-8 border-r border-[#F7E7CE]" />
-      <div className="text-center">
-        <span className="text-xl md:text-2xl font-bold">15k+</span>
-        <span className="text-xs md:text-sm">Legal Matters Resolved</span>
-      </div>
-    </div>
+    {/* 2–4 in a row */}
+    <div className="flex flex-row md:flex-row flex-wrap  w-full md:w-auto">
 
-    {/* 3 */}
-    <div className="flex flex-col items-center justify-center flex-1 relative md:mx-6">
-      {/* Divider to the right */}
-      <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-8 border-r border-[#F7E7CE]" />
-      <div className="text-center">
-        <span className="text-xl md:text-2xl font-bold">13+</span>
-        <span className="text-xs md:text-sm">Years Experience</span>
+      {/* 2 */}
+      <div className="flex flex-col   flex-1 relative md:mx-6 mt-4 md:mt-0">
+        <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-8 border-r border-[#F7E7CE]" />
+        <div className="text-center">
+          <span className="text-lg md:text-xl font-semibold md:font-bold block">15k+</span>
+          <span className="text-[0.55rem] md:text-xs block mt-1">Legal Matters Resolved</span>
+        </div>
       </div>
-    </div>
 
-    {/* 4 */}
-    <div className="flex flex-col items-center justify-center flex-1 md:ml-6">
-      <span className="text-xl md:text-2xl font-bold">10k+</span>
-      <span className="text-xs md:text-sm">Satisfied Clients</span>
+      {/* 3 */}
+      <div className="flex flex-col   flex-1 relative md:mx-6 mt-4 md:mt-0">
+        <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-8 border-r border-[#F7E7CE]" />
+        <div className="text-center">
+          <span className="text-lg md:text-xl font-semibold md:font-bold block">13+</span>
+          <span className="text-[0.55rem] md:text-xs block mt-1">Years Experience</span>
+        </div>
+      </div>
+
+      {/* 4 */}
+      <div className="flex flex-col   flex-1 md:ml-6 mt-4 md:mt-0">
+        <div className="text-center">
+          <span className="text-lg md:text-xl font-semibold md:font-bold block">10k+</span>
+          <span className="text-[0.55rem] md:text-xs block mt-1">Satisfied Clients</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </article>
+
+
+
+
 </section>
 
 
