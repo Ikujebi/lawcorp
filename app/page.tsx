@@ -84,7 +84,7 @@ export default function Home() {
   </div>
 
   {/* Stats Article at bottom of hero */}
-<article className="absolute bottom-0 left-0 w-full h-[20svh] md:h-[10svh] bg-[#5F021F] text-[#F7E7CE] flex items-center justify-center z-20">
+<article className="absolute bottom-0 left-0 w-full h-[20svh] md:h-[10svh] bg-[#5F021F] text-[#F7E7CE] flex items-center justify-center z-20 ">
   <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl px-4 md:px-0">
 
     {/* 1 - Trusted by our customer */}
@@ -129,7 +129,7 @@ export default function Home() {
         {/* Stat */}
         <div className="flex flex-col items-center justify-center ml-2 md:ml-4">
           <span className="text-lg md:text-lg font-semibold md:font-bold text-white">1000+</span>
-          <span className="text-[0.55rem] md:text-[0.625rem] font-normal text-white mt-1">Clients Satisfied</span>
+          <span className="text-[0.5rem] md:text-[0.625rem] font-normal text-white mt-1">Clients Satisfied</span>
         </div>
       </div>
     </div>
