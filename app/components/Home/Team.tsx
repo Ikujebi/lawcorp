@@ -1,4 +1,4 @@
-import { Roboto } from "../fonts";
+import { Roboto } from "../../fonts";
 import image1 from "@/public/img/black-adult-beautiful-american-business.jpg";
 import image2 from "@/public/img/freelancer-using-phone-laptop.jpg";
 import image3 from "@/public/img/medium-shot-female-economist-working-laptop.jpg";

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Roboto } from "../fonts";
+import { Roboto } from "../../fonts";
 
 import lagosImg from "@/public/img/Ellipse 8.png";
 import abujaImg from "@/public/img/Ellipse 9.png";

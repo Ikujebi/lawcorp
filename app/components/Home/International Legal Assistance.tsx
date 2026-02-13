@@ -1,6 +1,6 @@
 import Image from "next/image";
 import rect from "@/public/img/Rectangle 32.jpg";
-import { Nunito } from "../fonts";
+import { Nunito } from "../../fonts";
 
 export default function Footer() {
   return (

@@ -1,4 +1,4 @@
-import {Roboto } from "../fonts";
+import {Roboto } from "../../fonts";
 
 const Practice = () => {
 
