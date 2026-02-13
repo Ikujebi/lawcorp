@@ -233,95 +233,102 @@ export default function Home() {
 
       {/* Why Choose Us SECTION  */}
       <section
-        className={`${Roboto.className} xl:h-full px-6 py-16 max-w-6xl flex justify-center items-center  bg-gray-100/5 text-gray-900`}
+  className={`${Roboto.className} xl:h-full px-6 py-16 max-w-6xl flex justify-center items-center
+  bg-white md:bg-[#FFF7E7]/60 xl:bg-gray-100/5 backdrop-blur-[2px] text-gray-900`}
+>
+  <div className="flex flex-col md:flex-row md:space-x-8">
+    {/* Left Part */}
+    <div className="md:w-1/2 md:pr-8">
+      <h2 className="text-lg font-thin tracking-wide mb-4 text-gray-800">
+        Why Choose Us
+      </h2>
+
+      <h2
+        className={`${SourceCodePro.className} text-5xl font-semibold text-gray-900 md:text-gray-800 mb-[3rem]`}
       >
-        <div className="flex flex-col md:flex-row md:space-x-8 ">
-          {/* Left Part */}
-          <div className="md:w-1/2 md:pr-8">
-            <h2
-              className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}
-            >
-              Why Choose Us
-            </h2>
-            <h2
-              className={`${SourceCodePro.className} text-5xl font-semibold mb-4 text-gray-800 mb-[3rem]`}
-            >
-              Guiding Businesses with Integrity, Excellence & Innovation
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              Our firm combines ethical responsibility regional legal insight
-              and disciplined case strategy to deliver dependable legal
-              representation in sensitive and complex matters.
-            </p>
-            <div className="mt-3 h-[2.5px] w-1/4 bg-[#F4C430] "></div>
-          </div>
+        Guiding Businesses with Integrity, Excellence & Innovation
+      </h2>
 
-          {/* Divider for desktop */}
-          <div className="hidden md:block w-[2px] bg-gray-300"></div>
+      <p className="text-gray-700 leading-relaxed">
+        Our firm combines ethical responsibility regional legal insight
+        and disciplined case strategy to deliver dependable legal
+        representation in sensitive and complex matters.
+      </p>
 
-          {/* Right Part */}
-          <div className="md:w-1/2 md:pl-8 mt-10 md:mt-0 flex flex-col">
-            {/* Item 01 */}
-            <div className="mb-[3rem]">
-              <div
-                className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
-              >
-                <h2 className="text-[1.15rem] text-[#F4C430]">01</h2>
-                <h3>Ethical & Transparent Practice</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-[1.15rem]">
-                Strict adherence to the rules and ethical standards of the
-                Nigerian Bar Association, ensuring responsible and transparent
-                legal representation without solicitation or misleading
-                assurances.
-              </p>
-            </div>
+      <div className="mt-3 h-[2.5px] w-1/4 bg-[#F4C430]"></div>
+    </div>
 
-            {/* Item 02 */}
-            <div className="mb-[3rem]">
-              <div
-                className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
-              >
-                <h2 className="text-[1.15rem] text-[#F4C430]">02</h2>
-                <h3>Strong Regional Presence</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-[1.15rem]">
-                Extensive litigation and advisory experience across Lagos,
-                Abuja, Port Harcourt, and other key regions in Nigeria.
-              </p>
-            </div>
+    {/* Divider for desktop */}
+    <div className="hidden md:block w-[2px] bg-gray-300"></div>
 
-            {/* Item 03 */}
-            <div className="mb-[3rem]">
-              <div
-                className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
-              >
-                <h2 className="text-[1.15rem] text-[#F4C430]">03</h2>
-                <h3>Client-Centered Legal Solutions</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-[1.15rem]">
-                We provide personalized, responsive, and practical legal
-                support, tailored to meet the unique needs of each client,
-                ensuring clarity, efficiency, and results at every step.
-              </p>
-            </div>
-
-            {/* Item 04 */}
-            <div>
-              <div
-                className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
-              >
-                <h2 className="text-[1.15rem] text-[#F4C430]">04</h2>
-                <h3>Strategic Case Handling</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-[1.15rem]">
-                Every matter is guided by structured legal analysis risk
-                evaluation and outcome-focused strategy.
-              </p>
-            </div>
-          </div>
+    {/* Right Part */}
+    <div className="md:w-1/2 md:pl-8 mt-10 md:mt-0 flex flex-col">
+      {/* Item 01 */}
+      <div className="mb-[3rem]">
+        <div
+          className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
+        >
+          <h2 className="text-[1.15rem] text-[#F4C430]">01</h2>
+          <h3>Ethical & Transparent Practice</h3>
         </div>
-      </section>
+
+        <p className="text-gray-600 leading-relaxed text-[1.15rem]">
+          Strict adherence to the rules and ethical standards of the
+          Nigerian Bar Association, ensuring responsible and transparent
+          legal representation without solicitation or misleading
+          assurances.
+        </p>
+      </div>
+
+      {/* Item 02 */}
+      <div className="mb-[3rem]">
+        <div
+          className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
+        >
+          <h2 className="text-[1.15rem] text-[#F4C430]">02</h2>
+          <h3>Strong Regional Presence</h3>
+        </div>
+
+        <p className="text-gray-600 leading-relaxed text-[1.15rem]">
+          Extensive litigation and advisory experience across Lagos,
+          Abuja, Port Harcourt, and other key regions in Nigeria.
+        </p>
+      </div>
+
+      {/* Item 03 */}
+      <div className="mb-[3rem]">
+        <div
+          className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
+        >
+          <h2 className="text-[1.15rem] text-[#F4C430]">03</h2>
+          <h3>Client-Centered Legal Solutions</h3>
+        </div>
+
+        <p className="text-gray-600 leading-relaxed text-[1.15rem]">
+          We provide personalized, responsive, and practical legal
+          support, tailored to meet the unique needs of each client,
+          ensuring clarity, efficiency, and results at every step.
+        </p>
+      </div>
+
+      {/* Item 04 */}
+      <div>
+        <div
+          className={`${SourceCodePro.className} text-[1.34rem] font-medium mb-2 text-gray-900`}
+        >
+          <h2 className="text-[1.15rem] text-[#F4C430]">04</h2>
+          <h3>Strategic Case Handling</h3>
+        </div>
+
+        <p className="text-gray-600 leading-relaxed text-[1.15rem]">
+          Every matter is guided by structured legal analysis risk
+          evaluation and outcome-focused strategy.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Practice Areas SECTION  */}
 
