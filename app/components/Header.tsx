@@ -36,7 +36,7 @@ export default function Header() {
       className={`
         ${Nunito.className}
         fixed top-0 left-0 w-full z-50 transition-all duration-300
-        ${scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"}
+        ${scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-[#F7e7ce]/90"}
       `}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -57,7 +57,7 @@ export default function Header() {
         <nav
           className={`
             hidden items-center gap-8 md:flex text-sm font-semibold transition-colors duration-300
-            ${scrolled ? "text-[#5F021F]" : "text-white"}
+            ${scrolled ? "text-[#5F021F]" : "text-[#5F021F]"}
           `}
         >
           {navItems.map((item) => (

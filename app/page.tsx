@@ -1,6 +1,6 @@
 import Image from "next/image";
-import bgPic from "../public/img/pexels-mikhail-nilov-8731037.jpg";
-import bgPic1 from "../public/img/medium-shot-female-economist-working-laptop.jpg";
+import bgPic1 from "../public/img/Ellipse 8.png";
+import bgPic from "../public/img/Rectangle 41.png";
 import { SourceCodePro } from "./fonts";
 import { Roboto } from "./fonts";
 import { Scale, ShieldCheck, Users } from "lucide-react";
@@ -52,7 +52,7 @@ export default function Home() {
   />
 
   {/* Overlay */}
-  <div className="absolute inset-0 bg-gray-900/40" />
+  <div className="absolute inset-0 bg-black/50" />
 
   {/* Hero Content */}
   <div className="relative z-10 flex items-center h-full px-10 2xl:px-30">
@@ -84,16 +84,16 @@ export default function Home() {
   </div>
 
   {/* Stats Article at bottom of hero */}
-<article className="absolute bottom-0 left-0 w-full h-[20svh] md:h-[10svh] bg-[#5F021F] text-[#F7E7CE] flex items-center justify-center z-20 ">
-  <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl px-4 md:px-0">
+<article className="absolute bottom-0 left-0 w-full h-[20svh] md:h-[10svh] bg-[#5F021F] text-[#F7E7CE] flex items-center justify-center z-20">
+  <div className="flex flex-col md:flex-row items-center justify-center w-full   max-w-6xl px-4 md:px-0">
 
     {/* 1 - Trusted by our customer */}
-    <div className="flex flex-col text-white w-full mb-4 md:mb-0 md:mr-10 z-10">
-      <h3 className="text-[0.6rem] md:text-[.8rem] font-xs mb-1 md:mb-2  md:text-left">
+    <div className="flex flex-col text-white w-full mb-4 md:mb-0 md:mr-6 lg:mr-8 z-10 md:pl-[3rem]">
+      <h3 className="text-[0.6rem] md:text-[.8rem] font-xs mb-1 md:mb-2 md:text-left">
         Trusted by our customer
       </h3>
 
-      <div className="flex  md:justify-start">
+      <div className="flex md:justify-start">
         {/* Pictures */}
         <div className="flex items-center -space-x-2 md:-space-x-3">
           <Image
@@ -129,43 +129,52 @@ export default function Home() {
         {/* Stat */}
         <div className="flex flex-col items-center justify-center ml-2 md:ml-4">
           <span className="text-lg md:text-lg font-semibold md:font-bold text-white">1000+</span>
-          <span className="text-[0.5rem] md:text-[0.625rem] font-normal text-white mt-1">Clients Satisfied</span>
+          <span className="text-[0.5rem] md:text-[0.625rem] font-normal text-white mt-1 whitespace-nowrap">
+            Clients Satisfied
+          </span>
         </div>
       </div>
     </div>
 
     {/* 2–4 in a row */}
-    <div className="flex flex-row md:flex-row flex-wrap  w-full md:w-auto">
+    <div className="flex flex-row md:flex-row flex-wrap w-full ">
 
       {/* 2 */}
-      <div className="flex flex-col   flex-1 relative md:mx-6 mt-4 md:mt-0">
+      <div className="flex flex-col flex-1 relative md:mx-3 lg:mx-4 mt-4 md:mt-0">
         <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-8 border-r border-[#F7E7CE]" />
         <div className="text-center">
           <span className="text-lg md:text-xl font-semibold md:font-bold block">15k+</span>
-          <span className="text-[0.55rem] md:text-xs block mt-1">Legal Matters Resolved</span>
+          <span className="text-[0.55rem] md:text-xs block mt-1 whitespace-nowrap">
+            Matters Resolved
+          </span>
         </div>
       </div>
 
       {/* 3 */}
-      <div className="flex flex-col   flex-1 relative md:mx-6 mt-4 md:mt-0">
+      <div className="flex flex-col flex-1 relative md:mx-3 lg:mx-4 mt-4 md:mt-0">
         <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-8 border-r border-[#F7E7CE]" />
         <div className="text-center">
           <span className="text-lg md:text-xl font-semibold md:font-bold block">13+</span>
-          <span className="text-[0.55rem] md:text-xs block mt-1">Years Experience</span>
+          <span className="text-[0.55rem] md:text-xs block mt-1 whitespace-nowrap">
+            Years Exp
+          </span>
         </div>
       </div>
 
       {/* 4 */}
-      <div className="flex flex-col   flex-1 md:ml-6 mt-4 md:mt-0">
+      <div className="flex flex-col flex-1 md:ml-3 lg:ml-4 mt-4 md:mt-0">
         <div className="text-center">
           <span className="text-lg md:text-xl font-semibold md:font-bold block">10k+</span>
-          <span className="text-[0.55rem] md:text-xs block mt-1">Satisfied Clients</span>
+          <span className="text-[0.55rem] md:text-xs block mt-1 whitespace-nowrap">
+            Happy Clients
+          </span>
         </div>
       </div>
 
     </div>
   </div>
 </article>
+
 
 
 
