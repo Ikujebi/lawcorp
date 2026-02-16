@@ -26,7 +26,7 @@ const coreValues = [
 const CoreV = () => {
   return (
     <section
-      className={`${Roboto.className} px-6 py-16 flex flex-col items-center`}
+      className={`${Roboto.className} px-6 flex flex-col items-center`}
     >
       <h2 className="text-lg font-thin tracking-wide mb-4 text-gray-800">
         Our Core Values

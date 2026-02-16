@@ -10,7 +10,7 @@ import Lummina2 from "@/public/img/Lummina2.png";
 const navItems = [
   { name: "About", href: "/about" },
   { name: "International Services", href: "/international" },
-  { name: "NRI Services", href: "/nri" },
+  { name: "Services", href: "/services" },
   { name: "Our Team", href: "/team" },
   { name: "Contact", href: "/contact" },
 ];

@@ -42,7 +42,7 @@ const page = () => {
             </h1>
             <p className={`${Nunito.className}   tracking-wide text-gray-300 sm:text-medium md:text-[1.2rem] lg:text-[1.2rem]`}>Serving all across Nigeria</p>
             {/* Subheading */}
-              <p className="max-w-3xl text-[1.363rem] text-center text-gray-700 mb-4">
+              <p className="max-w-3xl font-xs text-[1.3rem] text-center text-[#F7E7CE] mb-4">
           <strong>Lummina Law Firm</strong> is a modern, innovative and
           client-centered full-service law firm based in{" "}
           <strong>Lagos, Nigeria</strong>. We are committed to redefining legal
