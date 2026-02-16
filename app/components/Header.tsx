@@ -100,8 +100,8 @@ export default function Header() {
             <Link href="/practice" className="whitespace-nowrap font-semibold">
               Practice Areas
             </Link>
-            <Link href="/nri" className="whitespace-nowrap font-semibold">
-              NRI Services
+            <Link href="/services" className="whitespace-nowrap font-semibold">
+               Services
             </Link>
             <Link href="/team" className="whitespace-nowrap font-semibold">
               Our Team

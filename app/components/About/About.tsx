@@ -1,6 +1,7 @@
 import { SourceCodePro } from "../../fonts";
 import { Roboto } from "../../fonts";
 import CoreV from "./CoreV";
+import MissionVision from "./MissionVision";
 
 const About = () => {
   const philosophyList = [
@@ -110,6 +111,11 @@ const About = () => {
       <section className="w-full bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))]">
         <div className="max-w-6xl mx-auto px-6 py-24">
           <CoreV />
+        </div>
+      </section>
+      <section className="w-full bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))]">
+        <div className="max-w-6xl mx-auto px-6 py-24">
+          <MissionVision />
         </div>
       </section>
     </div>

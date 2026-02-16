@@ -40,20 +40,17 @@ const page = () => {
               A Tradition of Integrity{" "}
               <span className="text-[#FFA500]">& Legal Excellence</span>
             </h1>
-            <p className={`${Nunito.className}   tracking-wide text-gray-300 sm:text-medium md:text-[1.2rem] lg:text-[1.2rem]`}>Serving Lagos · Abuja (FCT) · Rivers · Ogun</p>
+            <p className={`${Nunito.className}   tracking-wide text-gray-300 sm:text-medium md:text-[1.2rem] lg:text-[1.2rem]`}>Serving all across Nigeria</p>
             {/* Subheading */}
-            <p className="my-[1rem] md:my-[4rem] xl:my-[2rem] max-w-3xl sm:text-lg md:text-[1.58rem] text-gray-200">
-              Lummina law firm is a{" "}
-              <span className="text-white font-bold">
-                mordern, innovative and client-centered full-service law firm
-              </span>{" "}
-              based in lagos,Nigeria. we are committed to dedefining legal
-              practice through innovation, excellence, and a deep understanding
-              of our clients&#39; needs. Our approach combines cutting-edge legal
-              expertise with a personalized service ethos, ensuring that we
-              deliver solutions that empower our clients and exceed their
-              expection
-            </p>
+              <p className="max-w-3xl text-[1.363rem] text-center text-gray-700 mb-4">
+          <strong>Lummina Law Firm</strong> is a modern, innovative and
+          client-centered full-service law firm based in{" "}
+          <strong>Lagos, Nigeria</strong>. We are committed to redefining legal
+          practice through innovation, excellence, and a deep understanding of
+          our clients&apos; needs. Our approach combines cutting-edge legal
+          expertise with a personalized service ethos, ensuring that we deliver
+          solutions that empower our clients and exceed their expectations.
+        </p>
             {/* LIne area */}
             <div className="h-[2px] w-[10rem] bg-[#F4C430]"></div>
           </div>
