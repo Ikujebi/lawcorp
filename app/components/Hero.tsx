@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import bgPic from "@/public/img/Rectangle 41.png"; // fallback/background image
-import heroVideo from "@/public/video/hero.mp4"; // from public folder
+import heroVideo from """
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
