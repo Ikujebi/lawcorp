@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bgPic1 from "../public/img/Ellipse 8.png";
 import bgPic from "../public/img/Rectangle 41.png";
+import Hero from "./components/Hero";
 import { SourceCodePro } from "./fonts";
 import { Roboto } from "./fonts";
 import { Scale, ShieldCheck, Users } from "lucide-react";
@@ -40,149 +41,7 @@ const values = [
   return (
     <>
       {/* HERO SECTION */}
-      <section
-        className={`${inter.className} relative h-screen overflow-hidden`}
-      >
-        {/* Background Image */}
-        <Image
-          src={bgPic}
-          alt="Background"
-          fill
-          priority
-          sizes="100vw"
-          quality={85}
-          className="object-cover object-center"
-        />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50" />
-
-        {/* Hero Content */}
-        <div className="relative z-10 flex items-center h-full px-10 2xl:px-30">
-          <div className="max-w-4xl text-white">
-            {/* Main Heading */}
-            <h1
-              className={`${inter.className} text-xl font-semibold tracking-wide text-[#f7e7ce] sm:text-3xl md:text-[3rem] lg:text-[3.26rem]`}
-            >
-              Legal Experts for Business, <br />& Individuals in Nigeria.
-            </h1>
-
-            {/* Subheading */}
-            <p className="my-[1rem] md:my-[2rem] max-w-3xl sm:text-lg md:text-[1.58rem] text-[#FFF7E7] font-normal leading-relaxed">
-              We provide strategic legal solutions that protect your business
-              and reduce risk. Responsive. Trusted. Expert counsel across
-              corporate, compliance & litigation needs.
-            </p>
-
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row md:gap-8 font-normal text-[#f7e7ce]">
-              <div className="inline-block bg-[#FFA500] hover:bg-[#FFA500]/80 border border-white/70 text-[1rem] px-8 py-4 rounded-full mb-6 xl:py-2">
-                Schedule Consultation
-              </div>
-              <div className="inline-block border border-white/70 bg-[#F7e7ce] text-[#5F021F] hover:bg-[#F7e7ce]/90 text-[1rem] px-8 py-4 rounded-full mb-6 xl:py-2">
-                View Practice Areas
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Stats Article at bottom of hero */}
-        <article className="absolute bottom-0 left-0 w-full h-[20svh] md:h-[10svh] bg-[#5F021F] text-[#F7E7CE] flex items-center justify-center z-20">
-          <div className="flex flex-col md:flex-row items-center justify-center w-full   max-w-6xl px-4 md:px-0">
-            {/* 1 - Trusted by our customer */}
-            <div className="flex flex-col text-white w-full mb-4 md:mb-0 md:mr-6 lg:mr-8 z-10 md:pl-[3rem]">
-              <h3 className="text-[0.6rem] md:text-[.8rem] font-xs mb-1 md:mb-2 md:text-left">
-                Trusted by our customer
-              </h3>
-
-              <div className="flex md:justify-start">
-                {/* Pictures */}
-                <div className="flex items-center -space-x-2 md:-space-x-3">
-                  <Image
-                    src={bgPic1}
-                    alt="Customer 1"
-                    width={28}
-                    height={28}
-                    className="rounded-full border-[1px] border-white md:w-12 md:h-12"
-                  />
-                  <Image
-                    src={bgPic1}
-                    alt="Customer 2"
-                    width={28}
-                    height={28}
-                    className="rounded-full border-[1px] border-white md:w-12 md:h-12"
-                  />
-                  <Image
-                    src={bgPic1}
-                    alt="Customer 3"
-                    width={28}
-                    height={28}
-                    className="rounded-full border-[1px] border-white md:w-12 md:h-12"
-                  />
-                  <Image
-                    src={bgPic1}
-                    alt="Customer 4"
-                    width={28}
-                    height={28}
-                    className="rounded-full border-[1px] border-white md:w-12 md:h-12"
-                  />
-                </div>
-
-                {/* Stat */}
-                <div className="flex flex-col items-center justify-center ml-2 md:ml-4">
-                  <span className="text-lg md:text-lg font-semibold md:font-bold text-white">
-                    1000+
-                  </span>
-                  <span className="text-[0.5rem] md:text-[0.625rem] font-normal text-white mt-1 whitespace-nowrap">
-                    Clients Satisfied
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* 2–4 in a row */}
-            <div className="flex flex-row md:flex-row flex-wrap w-full ">
-              {/* 2 */}
-              <div className="flex flex-col flex-1 relative md:mx-3 lg:mx-4 mt-4 md:mt-0">
-                <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-8 border-r border-[#F7E7CE]" />
-                <div className="text-center">
-                  <span className="text-lg md:text-xl font-semibold md:font-bold block">
-                    15k+
-                  </span>
-                  <span className="text-[0.55rem] md:text-xs block mt-1 whitespace-nowrap">
-                    Matters Resolved
-                  </span>
-                </div>
-              </div>
-
-              {/* 3 */}
-              <div className="flex flex-col flex-1 relative md:mx-3 lg:mx-4 mt-4 md:mt-0">
-                <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-8 border-r border-[#F7E7CE]" />
-                <div className="text-center">
-                  <span className="text-lg md:text-xl font-semibold md:font-bold block">
-                    13+
-                  </span>
-                  <span className="text-[0.55rem] md:text-xs block mt-1 whitespace-nowrap">
-                    Years Exp
-                  </span>
-                </div>
-              </div>
-
-              {/* 4 */}
-              <div className="flex flex-col flex-1 md:ml-3 lg:ml-4 mt-4 md:mt-0">
-                <div className="text-center">
-                  <span className="text-lg md:text-xl font-semibold md:font-bold block">
-                    10k+
-                  </span>
-                  <span className="text-[0.55rem] md:text-xs block mt-1 whitespace-nowrap">
-                    Happy Clients
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
+      < Hero />
 
       {/* WHO WE ARE SECTION  */}
       <section
