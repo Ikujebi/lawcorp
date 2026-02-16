@@ -7,10 +7,12 @@ import { SourceCodePro } from "../fonts";
 export default function Footer() {
   return (
     <footer className="bg-[#5F021F] text-[#F7e7ce] p-4 text-sm">
-      <section className="grid grid-cols-1 md:grid-cols-4 gap-8  px-6 py-[2.5rem]
+      <section
+        className="grid grid-cols-1 md:grid-cols-4 gap-8  px-6 py-[2.5rem]
     xl:px-[15%] xl:max-w-[85%]
     2xl:px-[15%] 2xl:max-w-[85%]
-    mx-auto">
+    mx-auto"
+      >
         <article>
           <h2
             className={`${SourceCodePro.className}  text-xl font-extrabold  text-white`}
@@ -24,27 +26,32 @@ export default function Footer() {
             jurisdictions.
           </p>
         </article>
-        <article>
+        <article className="space-y-2">
           <h2 className="text-[#F4C430] text-sm">Contact Us</h2>
-          <p className="flex">
+
+          <p className="flex items-center gap-x-2">
             <Image src={call} alt="Call icon" width={16} height={16} />
-            <span className="text-xs">+91 XXXXX XXXXX</span>{" "}
+            <span className="text-xs">+234 706 046 9068</span>
           </p>
-          <p className="flex">
-            <Image src={messages} alt="Call icon" width={16} height={16} />
-            <span className="text-[.73rem]">contact@lextrustlaw.com</span>{" "}
+
+          <p className="flex items-center gap-x-2">
+            <Image src={messages} alt="Message icon" width={16} height={16} />
+            <span className="text-[0.73rem]">
+              lumminallp@gmail.com: info@lummina.com
+            </span>
           </p>
-          <p className="flex">
-            <Image src={location} alt="Call icon" width={16} height={16} />
-            <span className="text-[.74rem]">
-              Chandigarh Punjab • Haryana • Himachal Pradesh
-            </span>{" "}
+
+          <p className="flex items-center gap-x-2">
+            <Image src={location} alt="Location icon" width={16} height={16} />
+            <span className="text-[0.74rem]">
+              Address: 12 OLUSEYI AWEDA STREET, MAGODO PHASE 1, LAGOS
+            </span>
           </p>
         </article>
         <article>
           <h2 className="text-[#F4C430] text-sm">Quick Links</h2>
           <p className="">Practice Areas</p>
-          
+
           <p className="">Our Team</p>
           <p className="">Careers</p>
           <p className="">Contact</p>
@@ -52,7 +59,7 @@ export default function Footer() {
         <article>
           <h2 className="text-[#F4C430] text-sm">Legal Disclaimer</h2>
           <p className="">
-            As per the Bar Council of India rules, LexTrust Law does not solicit
+            As per the Bar Council of Nigeria rules, LexTrust Law does not solicit
             work or advertise. This website is for informational purposes only
             and does not constitute legal advice or create a lawyer-client
             relationship.

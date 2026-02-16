@@ -37,7 +37,7 @@ const InternationalPage = () => {
               interests spanning multiple jurisdictions.
             </p>
             {/* LIne area */}
-            <div className="h-[2px] w-[10rem] bg-[#F4C430]"></div>
+            <div className="h-[2px] w-[10rem] bg-[#F4C430] mt-6"></div>
           </div>
         </div>
        

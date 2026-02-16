@@ -1,7 +1,7 @@
 import { Roboto } from "../../fonts";
-import image1 from "@/public/img/black-adult-beautiful-american-business.jpg";
-import image2 from "@/public/img/freelancer-using-phone-laptop.jpg";
-import image3 from "@/public/img/medium-shot-female-economist-working-laptop.jpg";
+import image1 from "@/public/img/faithPhoto.jpg";
+import image2 from "@/public/img/staff1Photo.jpg";
+import image3 from "@/public/img/staff2Photo.jpg";
 import Image from "next/image";
 const Team = () => {
   const values = [

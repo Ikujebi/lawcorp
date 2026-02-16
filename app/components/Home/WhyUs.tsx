@@ -10,28 +10,34 @@ interface Item {
 
 export default function WhyChooseUs() {
   // Built-in array of items
-  const items: Item[] = [
-    {
-      title: "Ethical & Transparent Practice",
-      description:
-        "Strict adherence to the rules and ethical standards of the Nigerian Bar Association, ensuring responsible and transparent legal representation without solicitation or misleading assurances.",
-    },
-    {
-      title: "Strong Regional Presence",
-      description:
-        "Extensive litigation and advisory experience across Lagos, Abuja, Port Harcourt, and other key regions in Nigeria.",
-    },
-    {
-      title: "Client-Centered Legal Solutions",
-      description:
-        "We provide personalized, responsive, and practical legal support, tailored to meet the unique needs of each client, ensuring clarity, efficiency, and results at every step.",
-    },
-    {
-      title: "Strategic Case Handling",
-      description:
-        "Every matter is guided by structured legal analysis, risk evaluation, and outcome-focused strategy.",
-    },
-  ];
+ const items: Item[] = [
+  {
+    title: "Deep Local Expertise",
+    description:
+      "We have an in-depth understanding of the Nigerian legal and business landscape, enabling precise and effective solutions.",
+  },
+  {
+    title: "Timely & Pragmatic Solutions",
+    description:
+      "Our team is committed to delivering cost-effective and practical legal guidance, ensuring timely outcomes for every client.",
+  },
+  {
+    title: "Strong Legal & Business Network",
+    description:
+      "We maintain robust relationships within legal, regulatory, and business circles, providing strategic advantages across matters.",
+  },
+  {
+    title: "Proven Track Record",
+    description:
+      "Our history of success spans diverse legal areas, demonstrating our capability to handle complex matters efficiently and effectively.",
+  },
+  {
+    title: "Commitment to Positive Legacy",
+    description:
+      "We strive to contribute meaningfully to the Nigerian legal community, leaving a lasting positive impact beyond individual cases.",
+  },
+];
+
 
   const heading = "Why Choose Us";
   const subheading = "Guiding Businesses with Integrity, Excellence & Innovation";
