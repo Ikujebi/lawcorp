@@ -85,37 +85,35 @@ export default function Header() {
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
+{/* Mobile Menu */}
+{open && (
+  <div className="absolute left-0 top-full z-50 w-full border-t bg-white shadow-md md:hidden">
+    <div className="flex flex-col ml-[1rem] justify-between gap-6 px-6 py-4 overflow-x-auto text-[#FFA500]">
+      <span className="whitespace-nowrap text-sm font-bold text-[#0b2545]">
+        NokaTrust
+      </span>
 
-      {/* Mobile Menu */}
-      {open && (
-        <div className="absolute left-0 top-full z-50 w-full border-t bg-white shadow-md md:hidden">
-          <div className="flex flex-col ml-[1rem] justify-between gap-6 px-6 py-4 overflow-x-auto text-[#FFA500]">
-            <span className="whitespace-nowrap text-sm font-bold text-[#0b2545]">
-              NokaTrust
-            </span>
+      {navItems.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          className="whitespace-nowrap font-semibold text-[#0b2545]"
+          onClick={() => setOpen(false)} // ✅ close menu on click
+        >
+          {item.name}
+        </Link>
+      ))}
 
-            <Link href="/about" className="whitespace-nowrap font-semibold">
-              About
-            </Link>
-            <Link href="/practice" className="whitespace-nowrap font-semibold">
-              Practice Areas
-            </Link>
-            <Link href="/services" className="whitespace-nowrap font-semibold">
-               Services
-            </Link>
-            <Link href="/team" className="whitespace-nowrap font-semibold">
-              Our Team
-            </Link>
-            <Link href="/contact" className="whitespace-nowrap font-semibold">
-              Contact
-            </Link>
+      <button
+        className="whitespace-nowrap rounded-full bg-[#5F021F] px-5 py-2 text-sm font-semibold text-white"
+        onClick={() => setOpen(false)} // optional if this navigates somewhere
+      >
+        Consult
+      </button>
+    </div>
+  </div>
+)}
 
-            <button className="whitespace-nowrap rounded-full bg-[#5F021F] px-5 py-2 text-sm font-semibold text-white">
-              Consult
-            </button>
-          </div>
-        </div>
-      )}
     </header>
   );
 }
