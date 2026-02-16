@@ -23,9 +23,10 @@ export default function Footer() {
         </h2>
 
         <p className="text-xl">
-          We provide an initial consultation to understand your legal concern
-          and guide you on the appropriate course of action. This is a safe and
-          confidential space — not legal solicitation or advice.
+          Our client engagement process is designed to understand your legal
+          needs and determine the appropriate course of action. All discussions
+          are treated with strict confidentiality and do not constitute legal
+          solicitation or advice.
         </p>
         <div className=" mt-8 h-[2.5px] w-1/6 bg-[#F4C430] mx-auto"></div>
       </section>

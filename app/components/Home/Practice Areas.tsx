@@ -1,113 +1,156 @@
-import {Roboto } from "../../fonts";
+import { Roboto } from "../../fonts";
 
 const Practice = () => {
-
-    const practiceAreas = [
-  {
-    number: "01",
-    title: "Real Estate Due Diligence",
-    description:
-      "Title verification ownership validation and risk analysis for secure property transactions.",
-  },
-  {
-    number: "02",
-    title: "Nigerians Abroad Legal Services",
-    description:
-      "Comprehensive legal representation and property management for clients living abroad.",
-  },
-  {
-    number: "03",
-    title: "Criminal Law and Bail",
-    description:
-      "Defense strategy anticipatory bail and trial advocacy across courts.",
-  },
-  {
-    number: "04",
-    title: "Cheque Bounce Matters",
-    description:
-      "Swift remedies and representation under applicable negotiable instruments laws.",
-  },
-  {
-    number: "05",
-    title: "RERA and Builder Disputes",
-    description:
-      "Regulatory compliance delayed possession and consumer protection matters.",
-  },
-  {
-    number: "06",
-    title: "Family and Matrimonial Law",
-    description:
-      "Divorce custody maintenance and settlement proceedings.",
-  },
-  {
-    number: "07",
-    title: "Cyber Crime and Fraud",
-    description:
-      "Legal action for digital fraud impersonation and cyber offences.",
-  },
-  {
-    number: "08",
-    title: "Property Disputes and Recovery",
-    description:
-      "Civil litigation injunctions and recovery suits.",
-  },
-]
-
+  const practiceAreas = [
+    {
+      number: "01",
+      title: "Business Law",
+      description:
+        "Corporate advisory, commercial transactions, regulatory compliance, and business structuring for sustainable growth.",
+    },
+    {
+      number: "02",
+      title: "Debt Recovery",
+      description:
+        "Strategic debt recovery, asset tracing, and enforcement actions for individuals and corporate entities.",
+    },
+    {
+      number: "03",
+      title: "Company Secretarial & Compliance",
+      description:
+        "Corporate governance, statutory filings, board advisory, and regulatory compliance support.",
+    },
+    {
+      number: "04",
+      title: "Technology Law",
+      description:
+        "Legal advisory on data protection, fintech regulation, software agreements, and digital business compliance.",
+    },
+    {
+      number: "05",
+      title: "Startup Law",
+      description:
+        "End-to-end legal support for startups including incorporation, investor documentation, and regulatory structuring.",
+    },
+    {
+      number: "06",
+      title: "Entertainment & Media Law",
+      description:
+        "Contract negotiation, rights protection, licensing, and advisory for creative and media professionals.",
+    },
+    {
+      number: "07",
+      title: "Litigation",
+      description:
+        "Strategic dispute resolution and strong courtroom representation across civil and commercial matters.",
+    },
+    {
+      number: "08",
+      title: "Alternative Dispute Resolution (ADR)",
+      description:
+        "Efficient mediation, arbitration, and negotiated settlement solutions outside traditional litigation.",
+    },
+    {
+      number: "09",
+      title: "Real Estate & Property Law",
+      description:
+        "Property transactions, title verification, due diligence, and real estate dispute resolution.",
+    },
+    {
+      number: "10",
+      title: "Intellectual Property",
+      description:
+        "Protection, registration, enforcement, and commercialization of intellectual property rights.",
+    },
+    {
+      number: "11",
+      title: "Banking & Finance",
+      description:
+        "Financial regulatory advisory, loan documentation, and transactional finance support.",
+    },
+    {
+      number: "12",
+      title: "Employment & Labour Law",
+      description:
+        "Employment contracts, workplace policies, dispute resolution, and regulatory compliance.",
+    },
+    {
+      number: "13",
+      title: "Energy & Natural Resources",
+      description:
+        "Regulatory advisory, project structuring, and compliance support in energy and resource sectors.",
+    },
+    {
+      number: "14",
+      title: "Family Law & Private Client Services",
+      description:
+        "Confidential advisory on family matters, estate planning, and private wealth legal support.",
+    },
+  ];
 
   return (
     <section
-  className={`${Roboto.className} px-6 flex flex-col items-center justify-center min-h-screen md:min-h-[80svh] py-16
-  bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
->
-
-     <h2 className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}>Practice Areas</h2>
-      <h2 className="2xl:text-[4rem] text-[2.5rem]  font-semibold mb-4">Areas of Legal Practice</h2>
-      <p className="max-w-3xl text-[1.363rem] text-center text-gray-700 mb-4">
-      Our firm represents individuals,
-       families, and institutions across a
-        broad spectrum of civil and criminal matters
-         with clarity,
-       strategy, and discretion.
-      </p>
-      <div className="mx-auto mt-3 h-[2.5px] w-1/8 bg-[#F4C430] "></div>
-    
-    <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
-      {practiceAreas.map(({ number, title, description }) => (
-        <div
-          key={number}
-          className="group flex gap-4 relative border border-gray-300 bg-white rounded-2xl p-8
-            hover:bg-[linear-gradient(135deg,rgba(244,196,48,0.2),rgba(255,255,255,0.95))] hover:shadow-lg hover:-translate-y-2
-            transition-all duration-300"
+      className={`${Roboto.className} px-6 flex flex-col items-center justify-center
+      min-h-screen md:min-h-[80svh] py-14
+      bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
+    >
+      
+      <h2
+          className={` text-lg font-semibold tracking-wide mb-4 text-[#5F021F] border-1 rounded-3xl border-gray-900 px-10 py-1`}
         >
-          <div className="flex flex-col items-center">
-          {/* Number Circle */}
-          <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#F9DE8A]/70 text-[1.14rem] font-bold text-[#F4C430]">
-            {number}
-          </div>
-           <div className="mt-2 h-full w-px bg-gray-300 "></div>
-          </div>
-        <div>
-          {/* Title */}
-          <h3 className="text-xl font-medium mb-3 transition-colors duration-300">
-            {title}
-          </h3>
-    
-          {/* Description */}
-          <p className="text-gray-400  leading-relaxed mb-3 text-[1.1rem]">
-            {description}
-          </p>
-    
-          {/* Link */}
-          <span className="inline-flex items-center text-[1.2rem] text-gray-400 font-medium   transition-colors duration-300">
-            View Details →
-          </span>
-        </div>
-        </div>
-      ))}
-    </div>
-    
-    </section>
-  )
-}
+          Practice Areas
+        </h2>
 
-export default Practice 
+      <h2 className="2xl:text-[3.4rem] text-[2.2rem] font-semibold mb-3">
+        Areas of Legal Practice
+      </h2>
+
+      <p className="max-w-2xl text-[1.1rem] text-center text-gray-700 mb-3">
+        At <b>Lummina Law Firm</b>, we offer a comprehensive range of legal services to meet the diverse needs of our clients:
+
+      </p>
+
+      <div className="mx-auto mt-3 h-[2px] w-16 bg-[#F4C430]" />
+
+      {/* Cards */}
+      <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl w-full">
+        {practiceAreas.map(({ number, title, description }) => (
+          <div
+            key={number}
+            className="group flex gap-3 relative border border-gray-300 bg-white rounded-xl p-5
+            hover:bg-[linear-gradient(135deg,rgba(244,196,48,0.2),rgba(255,255,255,0.95))]
+            hover:shadow-lg hover:-translate-y-1.5
+            transition-all duration-300"
+          >
+            {/* Left Column */}
+            <div className="flex flex-col items-center">
+              {/* Number Circle */}
+              <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#F9DE8A]/70 text-[0.95rem] font-bold text-[#F4C430]">
+                {number}
+              </div>
+
+              <div className="mt-1 h-full w-px bg-gray-300"></div>
+            </div>
+
+            {/* Right Content */}
+            <div>
+              <h3 className="text-[1.05rem] font-semibold mb-2 transition-colors duration-300">
+                {title}
+              </h3>
+
+              <p className="text-gray-500 leading-snug mb-2 text-[0.95rem]">
+                {description}
+              </p>
+
+              <span className="inline-flex items-center text-[0.95rem] text-gray-500 font-medium transition-colors duration-300">
+                View Details →
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Practice;

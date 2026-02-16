@@ -28,16 +28,19 @@ const Team = () => {
         className={`${Roboto.className} px-6 flex flex-col items-center justify-center min-h-screen md:min-h-[80svh] py-16
   bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
       >
-        <h2 className={` text-lg font-thin tracking-wide mb-4 text-gray-800`}>
-          Our Legal Team
-        </h2>
-        <h2 className="2xl:text-[3.2rem] text-[2.5rem]  font-semibold mb-4">
-          Experienced Legal Counsel You Can Rely On
+        
+         <h2
+          className={` text-lg font-semibold tracking-wide mb-4 text-[#5F021F] border-1 rounded-3xl border-gray-900 px-10 py-1`}
+        >
+          Our Team
         </h2>
         <p className="max-w-3xl text-[1.363rem] text-center text-gray-700 mb-4">
-          Our team consists of experienced advocates with deep courtroom
-          exposure and subject-matter expertise across civil, criminal, family,
-          and NRI legal matters.
+          Our team consists of experienced and passionate legal
+professionals with diverse expertise across multiple practice
+areas. At Lummina Law Firm, we pride ourselves on
+fostering a culture of continuous learning, mentorship, and
+professional development, ensuring that our lawyers
+remain at the forefront of legal innovation.
         </p>
         <div className="mx-auto mt-3 h-[2.5px] w-1/8 bg-[#F4C430] "></div>
 
