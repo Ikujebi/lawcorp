@@ -14,27 +14,27 @@ export default function WhyChooseUs() {
   {
     title: "Deep Local Expertise",
     description:
-      "We have an in-depth understanding of the Nigerian legal and business landscape, enabling precise and effective solutions.",
+      "Deep understanding of the Nigerian legal and business landscape.",
   },
   {
     title: "Timely & Pragmatic Solutions",
     description:
-      "Our team is committed to delivering cost-effective and practical legal guidance, ensuring timely outcomes for every client.",
+      "Commitment to timely, cost-effective, and pragmatic solutions.",
   },
   {
     title: "Strong Legal & Business Network",
     description:
-      "We maintain robust relationships within legal, regulatory, and business circles, providing strategic advantages across matters.",
+      "Strong network of relationships within legal, regulatory, and business circles.",
   },
   {
     title: "Proven Track Record",
     description:
-      "Our history of success spans diverse legal areas, demonstrating our capability to handle complex matters efficiently and effectively.",
+      "Proven track record of success across a wide array of legal matters.",
   },
   {
     title: "Commitment to Positive Legacy",
     description:
-      "We strive to contribute meaningfully to the Nigerian legal community, leaving a lasting positive impact beyond individual cases.",
+      "Dedication to building a positive legacy within the legal community and beyond.",
   },
 ];
 
