@@ -31,6 +31,7 @@ const page = () => {
             <div className="inline-flex items-center gap-3  bg-white/10 text-gray-200 text-[1.3rem] px-6 py-2 rounded-full mb-6 mt-[9rem] md:mt-[8rem]">
               <span className="h-[2px] w-[5rem] bg-[#F4C430]"></span>
               <span>About the Firm</span>
+              
             </div>
 
             {/* Main Heading */}

@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className="w-full">
       {/* ABOUT SECTION — NORMAL BACKGROUND */}
-      <section className="w-full bg-gray-100/5">
+      <section className="w-full  bg-[#FAFAFA]">
         <main
           className={`${Roboto.className} max-w-6xl mx-auto px-6 py-16 text-gray-900`}
         >
@@ -22,9 +22,12 @@ const About = () => {
             
             {/* LEFT SIDE */}
             <div className="md:w-1/2">
-              <h2 className="text-lg font-thin tracking-wide mb-4 text-gray-800">
-                About the Firm
-              </h2>
+              
+               <h2
+          className={` text-lg font-semibold tracking-wide mb-4 text-[#5F021F] border-1 rounded-3xl border-black  px-10 py-1`}
+        >
+          About the Firm
+        </h2>
 
               <h2
                 className={`${SourceCodePro.className} text-4xl md:text-5xl font-semibold text-gray-800 mb-10`}

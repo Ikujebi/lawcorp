@@ -19,22 +19,28 @@ const inter = Inter({
 export default function Home() {
 const values = [
   {
-    title: "Modern & Innovative Legal Practice",
+    title: "Integrity",
     description:
-      "We leverage contemporary legal strategy, technology-driven research, and forward-thinking advisory methods to deliver efficient and effective legal solutions across evolving regulatory and business environments.",
+      "We maintain the highest ethical standards in all our dealings.",
     icon: Scale,
   },
   {
-    title: "Client-Centered Representation",
+    title: "Client-Centered Service",
     description:
-      "Every engagement is built around a deep understanding of our clients’ objectives, risks, and expectations, allowing us to provide practical, responsive, and personalized legal support at every stage.",
+      "Our clients' needs and interests guide every decision we make.",
     icon: Users,
   },
   {
-    title: "Full-Service Strategic Expertise",
+    title: "Excellence",
     description:
-      "As a full-service law firm, we combine strong technical legal knowledge with commercial awareness to provide integrated solutions that protect, empower, and advance our clients’ interests.",
+      "We are dedicated to delivering superior results with precision,professionalism, and attention to detail.",
     icon: ShieldCheck,
+  },
+  {
+    title: "Innovation",
+    description:
+      "We leverage modern technologies and creative approaches to solve complex legal challenges.",
+    icon: Scale,
   },
 ];
 
@@ -68,36 +74,38 @@ const values = [
 
         <div className="mx-auto mt-3 h-[2.5px] w-1/8 bg-[#F4C430] "></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl w-full mt-[3rem] xl:mt-2">
+       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl w-full mt-[2rem]">
   {values.map(({ title, description, icon: Icon }) => (
     <div
       key={title}
       className="group flex flex-col items-center text-center
-      px-4 py-5 border border-gray-300 bg-white z-30
-      rounded-lg
-      hover:bg-white/70 hover:shadow-lg hover:-translate-y-1.5
-      transition-transform transition-shadow duration-300"
+      px-3 py-3 border border-gray-300 bg-white
+      rounded-md
+      hover:bg-white/80 hover:shadow-md hover:-translate-y-1
+      transition-all duration-300"
     >
       {/* Icon */}
-      <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full border border-[#F4C430]/10">
-        <Icon className="h-[18px] w-[18px] text-gray-900 group-hover:text-[#F4C430] transition-colors duration-300" />
+      <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#F4C430]/20">
+        <Icon className="h-[14px] w-[14px] text-gray-900 group-hover:text-[#F4C430] transition-colors duration-300" />
       </div>
 
       {/* Header */}
-      <h3 className="text-base font-semibold text-gray-900 group-hover:text-[#F4C430] transition-colors duration-300">
+      <h3 className="text-[0.85rem] font-semibold text-gray-900 group-hover:text-[#F4C430] transition-colors duration-300">
         {title}
       </h3>
 
       {/* Divider */}
-      <div className="mt-2 mb-2 h-[1.2px] w-10 bg-[#F4C430]"></div>
+      <div className="mt-1 mb-1 h-[1px] w-6 bg-[#F4C430]"></div>
 
       {/* Description */}
-      <p className="text-[0.9rem] text-gray-600 leading-snug">
+      <p className="text-[0.75rem] text-gray-600 leading-tight">
         {description}
       </p>
     </div>
   ))}
 </div>
+
+
 
       </section>
 
@@ -113,9 +121,9 @@ const values = [
       </section>
 
       {/* International Legal Assistance SECTION  */}
-      <section className="">
+      {/* <section className="">
         <International />
-      </section>
+      </section> */}
       {/*Our Legal Team SECTION  */}
       <section className="">
         <Team />

@@ -1,13 +1,18 @@
 "use client";
-
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Roboto, Nunito } from "@/app/fonts";
-import teamHero from "@/public/img/team.jpg"; // Professional team banner
+import StaffModal from "../components/StaffModal"; // import modal
+import teamHero from "@/public/img/team.jpg";
 import faithPhoto from "@/public/img/faithPhoto.jpg";
 import staff1Photo from "@/public/img/staff1Photo.jpg";
 import staff2Photo from "@/public/img/staff2Photo.jpg";
+import { useState } from "react";
 
 const TeamPage = () => {
+  const [selectedMember, setSelectedMember] = useState<
+    { name: string; role: string; photo: StaticImageData; bio: string } | null
+  >(null);
+
   const teamMembers = [
     {
       name: "Faith Zekeri, LL.B, B.L, ACIS",
@@ -63,9 +68,10 @@ const TeamPage = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member) => (
-              <div
+              <button
                 key={member.name}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-300 shadow-sm hover:shadow-lg transition-shadow duration-300"
+                onClick={() => setSelectedMember(member)}
+                className="bg-white rounded-2xl overflow-hidden border border-gray-300 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-left focus:outline-none"
               >
                 <div className="relative w-full h-64">
                   <Image
@@ -82,11 +88,14 @@ const TeamPage = () => {
                     {member.bio.length > 150 ? member.bio.slice(0, 150) + "..." : member.bio}
                   </p>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </div>
       </section>
+
+      {/* MODAL */}
+      <StaffModal member={selectedMember} onClose={() => setSelectedMember(null)} />
     </div>
   );
 };

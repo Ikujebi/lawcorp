@@ -28,11 +28,14 @@ const CoreV = () => {
     <section
       className={`${Roboto.className} px-6 flex flex-col items-center`}
     >
-      <h2 className="text-lg font-thin tracking-wide mb-4 text-gray-800">
-        Our Core Values
-      </h2>
+      
+       <h2
+          className={` text-lg font-semibold tracking-wide mb-4 text-[#5F021F] border-1 rounded-3xl border-black  px-10 py-1`}
+        >
+          Our Core Values
+        </h2>
 
-      <h2 className="2xl:text-[4rem] text-[2.5rem] font-semibold mb-4 text-center">
+      <h2 className="2xl:text-[4rem] text-[2.5rem] font-semibold mb-4 text-center text-[#5F021F]">
         Principles That Define Our Legal Practice
       </h2>
 
