@@ -22,3 +22,8 @@ export const Roboto = localFont({
   variable: "--font-Nunito-VariableFont",
   display: "swap",
 });
+export const Gyahegi  = localFont({
+  src: "../public/fonts/Gyahegi Regular.ttf",
+  variable: "--font-Nunito-VariableFont",
+  display: "swap",
+});
