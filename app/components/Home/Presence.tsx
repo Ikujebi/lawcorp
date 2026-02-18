@@ -15,15 +15,15 @@ const Presence = () => {
       top: "70%",
       left: "20%",
       topMobile: "65%",
-      leftMobile: "20%",
+      leftMobile: "10%",
     },
     {
       name: "South South",
       image: riversImg,
       top: "75%",
       left: "45%",
-      topMobile: "70%",
-      leftMobile: "40%",
+      topMobile: "75%",
+      leftMobile: "35%",
     },
     {
       name: "South East",
@@ -54,33 +54,30 @@ const Presence = () => {
       image: oyoImg,
       top: "15%",
       left: "70%",
-      topMobile: "10%",
+      topMobile: "15%",
       leftMobile: "65%",
     },
   ];
 
   return (
     <section className="px-6 sm:px-10 py-16 bg-[#FFF7E7] text-black relative min-h-[80svh]">
-      {/* National Presence Heading */}
+      {/* Heading */}
       <header className="flex">
         <h2 className="inline-block mx-auto text-sm sm:text-lg font-semibold tracking-wide mb-3 text-[#5F021F] border rounded-3xl border-gray-900 px-4 sm:px-10 py-1 text-center">
           National Presence
         </h2>
       </header>
 
-      {/* Main Heading */}
       <h2 className="2xl:text-[4rem] text-[2rem] sm:text-[2.5rem] font-semibold mb-3 sm:mb-4 text-center leading-tight">
         Serving Clients Across Nigeria
       </h2>
 
-      {/* Description */}
       <p className="max-w-3xl text-[1rem] sm:text-[1.363rem] text-center text-gray-700 mb-6 sm:mb-8 leading-snug sm:leading-relaxed">
         We represent clients across Nigeria, with active matters before courts,
         tribunals, and regulatory authorities nationwide, supported by strong
         local partnerships and procedural familiarity across jurisdictions.
       </p>
 
-      {/* Divider */}
       <div className="mx-auto mt-3 sm:mt-4 h-[2px] sm:h-[2.5px] w-20 sm:w-24 bg-[#F4C430]"></div>
 
       {/* Map Container */}
@@ -90,7 +87,7 @@ const Presence = () => {
           Nigeria
         </div>
 
-        {/* Unified layout */}
+        {/* Cards */}
         <div className="relative w-full h-full ml-[3%]">
           {coverage.map((zone) => (
             <div
@@ -101,12 +98,13 @@ const Presence = () => {
                 border border-gray-300 rounded-2xl
                 flex flex-col items-center justify-center
                 hover:shadow-2xl hover:scale-110 hover:border-[#F4C430] transition-all duration-300
-                w-20 sm:w-24 h-20 sm:h-24 p-2 sm:p-4
+                w-20 h-20 sm:w-24 sm:h-24 p-2 sm:p-4
               "
               style={{
-                top: `var(--top-mobile, ${zone.top})`,
-                left: `var(--left-mobile, ${zone.left})`,
+                top: zone.topMobile,
+                left: zone.leftMobile,
               }}
+              className="sm:top-[var(--top)] sm:left-[var(--left)]"
             >
               <div className="relative w-12 sm:w-20 h-12 sm:h-20 rounded-2xl overflow-hidden mb-1 sm:mb-2 shadow-md">
                 <Image src={zone.image} alt={zone.name} fill className="object-cover" />
