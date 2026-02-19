@@ -144,33 +144,35 @@ const NewsletterPage = () => {
         </form>
       </section>
 
-      {/* PAST NEWSLETTERS */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-2xl bg-white md:text-4xl font-semibold text-[#5F021F] mb-12 text-center">
-          Past Newsletters
-        </h2>
+      
+    {/* PAST NEWSLETTERS */}
+<section className="bg-[#FFF7E7] max-w-6xl mx-auto px-6 py-16 md:py-20">
+  <h2 className="text-2xl md:text-4xl font-semibold text-[#5F021F] mb-12 text-center">
+    Past Newsletters
+  </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sampleNewsletters.map((item) => (
-            <div
-              key={item.title}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 animate-pulseSlide"
-            >
-              <h3 className="text-xl font-semibold text-[#5F021F] mb-2">
-                {item.title}
-              </h3>
-              <span className="text-sm text-gray-500">{item.date}</span>
-              <p className="text-gray-700 mt-4">{item.summary}</p>
-              <button
-                onClick={() => setSelectedNewsletter(item)}
-                className="mt-4 text-[#F4C430] font-semibold hover:underline"
-              >
-                Read More
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {sampleNewsletters.map((item) => (
+      <div
+        key={item.title}
+        className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 animate-pulseSlide"
+      >
+        <h3 className="text-xl font-semibold text-[#5F021F] mb-2">
+          {item.title}
+        </h3>
+        <span className="text-sm text-gray-500">{item.date}</span>
+        <p className="text-gray-700 mt-4">{item.summary}</p>
+        <button
+          onClick={() => setSelectedNewsletter(item)}
+          className="mt-4 text-[#F4C430] font-semibold hover:underline"
+        >
+          Read More
+        </button>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* MODAL */}
       {selectedNewsletter && (
