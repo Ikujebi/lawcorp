@@ -12,6 +12,7 @@ const navItems = [
   // { name: "International Services", href: "/international" },
   { name: "Services", href: "/services" },
   { name: "Our Team", href: "/team" },
+  { name: "Newsletter", href: "/news" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -89,9 +90,7 @@ export default function Header() {
 {open && (
   <div className="absolute left-0 top-full z-50 w-full border-t bg-white shadow-md md:hidden">
     <div className="flex flex-col ml-[1rem] justify-between gap-6 px-6 py-4 overflow-x-auto text-[#FFA500]">
-      <span className="whitespace-nowrap text-sm font-bold text-[#0b2545]">
-        NokaTrust
-      </span>
+      
 
       {navItems.map((item) => (
         <Link
