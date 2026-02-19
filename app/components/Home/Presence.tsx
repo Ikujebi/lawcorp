@@ -26,7 +26,7 @@ const Presence = () => {
   ];
 
   return (
-    <section className="px-6 sm:px-10 py-16 bg-[#FFF7E7] text-black relative min-h-[80svh]">
+    <section className="px-6 sm:px-10 py-10 sm:py-16 bg-[#FFF7E7] text-black relative min-h-[80svh]">
       
       {/* Header */}
       <header className="flex">

@@ -44,14 +44,10 @@ export default function Home() {
 
       {/* WHO WE ARE SECTION  */}
       <section
-        className={`${Roboto.className} px-5 sm:px-6 py-8 sm:py-6 flex flex-col items-center justify-center h-full md:h-[90svh] xl:h-full
+        className={`${Roboto.className} px-5 sm:px-6 py-10 sm:py-16 flex flex-col items-center justify-center h-full md:h-[90svh] xl:h-full
 bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-gray-900`}
       >
-        <h2
-          className={`text-sm sm:text-lg font-semibold tracking-wide mb-4 text-[#5F021F] border rounded-3xl border-gray-900 px-6 sm:px-10 py-1`}
-        >
-          ABout Us
-        </h2>
+        
 
         <h2 className="text-[2rem] sm:text-[2.5rem] 2xl:text-[4rem] font-semibold leading-tight mb-4 mx-auto text-center text-gray-900">
           Modern Legal Solutions Rooted in Trust and Excellence

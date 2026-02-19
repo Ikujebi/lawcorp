@@ -90,7 +90,7 @@ const Practice = () => {
   return (
     <section
       className={` px-5 sm:px-6 flex flex-col items-center justify-center
-      min-h-screen md:min-h-[80svh] py-10 sm:py-14
+      min-h-screen md:min-h-[80svh] py-10 sm:py-16
       bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
     >
       <h2

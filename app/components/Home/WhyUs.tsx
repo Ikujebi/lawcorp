@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
 
   return (
     <section
-      className={`xl:h-full px-5 sm:px-6 py-10 sm:py-14 max-w-6xl flex justify-center items-center
+      className={`xl:h-full px-5 sm:px-6 py-10 sm:py-16 max-w-6xl flex justify-center items-center
       bg-white md:bg-[#FFF7E7]/60 xl:bg-gray-100/5 backdrop-blur-[2px] text-gray-900`}
     >
       <div className="flex flex-col md:flex-row md:space-x-6 w-full">
