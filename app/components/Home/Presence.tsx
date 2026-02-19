@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client";
+
+import Image, { StaticImageData } from "next/image";
 
 import lagosImg from "@/public/img/Ellipse 8.png";
 import abujaImg from "@/public/img/Ellipse 9.png";
@@ -7,61 +9,26 @@ import riversImg from "@/public/img/Ellipse 11.png";
 import oyoImg from "@/public/img/Ellipse 12.png";
 import kanoImg from "@/public/img/Ellipse 13.png";
 
+type CoverageZone = {
+  name: string;
+  image: StaticImageData;
+  angle: number;
+};
+
 const Presence = () => {
-  const coverage = [
-    {
-      name: "South West",
-      image: lagosImg,
-      top: "70%",
-      left: "20%",
-      topMobile: "65%",
-      leftMobile: "10%",
-    },
-    {
-      name: "South South",
-      image: riversImg,
-      top: "75%",
-      left: "45%",
-      topMobile: "75%",
-      leftMobile: "35%",
-    },
-    {
-      name: "South East",
-      image: abujaImg,
-      top: "70%",
-      left: "65%",
-      topMobile: "65%",
-      leftMobile: "60%",
-    },
-    {
-      name: "North Central",
-      image: ogunImg,
-      top: "35%",
-      left: "50%",
-      topMobile: "30%",
-      leftMobile: "50%",
-    },
-    {
-      name: "North West",
-      image: kanoImg,
-      top: "20%",
-      left: "20%",
-      topMobile: "15%",
-      leftMobile: "15%",
-    },
-    {
-      name: "North East",
-      image: oyoImg,
-      top: "15%",
-      left: "70%",
-      topMobile: "15%",
-      leftMobile: "65%",
-    },
+  const coverage: CoverageZone[] = [
+    { name: "South West", image: lagosImg, angle: 0 },
+    { name: "South South", image: riversImg, angle: 60 },
+    { name: "South East", image: abujaImg, angle: 120 },
+    { name: "North Central", image: ogunImg, angle: 180 },
+    { name: "North West", image: kanoImg, angle: 240 },
+    { name: "North East", image: oyoImg, angle: 300 },
   ];
 
   return (
     <section className="px-6 sm:px-10 py-16 bg-[#FFF7E7] text-black relative min-h-[80svh]">
-      {/* Heading */}
+      
+      {/* Header */}
       <header className="flex">
         <h2 className="inline-block mx-auto text-sm sm:text-lg font-semibold tracking-wide mb-3 text-[#5F021F] border rounded-3xl border-gray-900 px-4 sm:px-10 py-1 text-center">
           National Presence
@@ -72,50 +39,98 @@ const Presence = () => {
         Serving Clients Across Nigeria
       </h2>
 
-      <p className="max-w-3xl text-[1rem] sm:text-[1.363rem] text-center text-gray-700 mb-6 sm:mb-8 leading-snug sm:leading-relaxed">
+      <p className="max-w-3xl mx-auto text-[1rem] sm:text-[1.2rem] text-center text-gray-700 mb-6 sm:mb-8 leading-relaxed">
         We represent clients across Nigeria, with active matters before courts,
-        tribunals, and regulatory authorities nationwide, supported by strong
-        local partnerships and procedural familiarity across jurisdictions.
+        tribunals, and regulatory authorities nationwide.
       </p>
 
-      <div className="mx-auto mt-3 sm:mt-4 h-[2px] sm:h-[2.5px] w-20 sm:w-24 bg-[#F4C430]"></div>
+      <div className="mx-auto mt-3 sm:mt-4 h-[2px] w-20 bg-[#F4C430]"></div>
 
-      {/* Map Container */}
-      <div className="relative mt-12 w-full sm:h-[70vh]">
-        {/* Center hub */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full w-24 h-24 bg-[#F4C430]/20 flex items-center justify-center font-semibold text-[#5F021F] text-center">
+      {/* ================= MOBILE RADIAL ================= */}
+      <div className="sm:hidden relative mt-14 flex items-center justify-center h-[420px]">
+        
+        {/* Center */}
+        <div className="absolute w-24 h-24 rounded-full bg-gradient-to-br from-[#F4C430]/40 to-[#F4C430]/10 backdrop-blur-md flex items-center justify-center font-semibold text-[#5F021F] shadow-lg z-10">
           Nigeria
         </div>
 
-        {/* Cards */}
-        <div className="relative w-full h-full ml-[3%]">
+        <div className="relative w-[320px] h-[320px] animate-[spin_40s_linear_infinite]">
           {coverage.map((zone) => (
             <div
               key={zone.name}
-              className="
-                absolute transform -translate-x-1/2 -translate-y-1/2
-                bg-gradient-to-br from-white/90 to-[#FFF7E7]/80
-                border border-gray-300 rounded-2xl
-                flex flex-col items-center justify-center
-                hover:shadow-2xl hover:scale-110 hover:border-[#F4C430] transition-all duration-300
-                w-20 h-20 sm:w-24 sm:h-24 p-2 sm:p-4
-              "
+              className="absolute top-1/2 left-1/2"
               style={{
-                top: zone.topMobile,
-                left: zone.leftMobile,
+                transform: `
+                  rotate(${zone.angle}deg)
+                  translate(140px)
+                  rotate(-${zone.angle}deg)
+                `,
               }}
-              className="sm:top-[var(--top)] sm:left-[var(--left)]"
             >
-              <div className="relative w-12 sm:w-20 h-12 sm:h-20 rounded-2xl overflow-hidden mb-1 sm:mb-2 shadow-md">
-                <Image src={zone.image} alt={zone.name} fill className="object-cover" />
+              <div className="w-16 h-16 bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl shadow-xl flex flex-col items-center justify-center p-2 hover:scale-110 transition-all duration-300">
+                
+                <div className="relative w-8 h-8 rounded-xl overflow-hidden mb-1">
+                  <Image
+                    src={zone.image}
+                    alt={zone.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <p className="text-[9px] font-semibold text-center leading-tight text-[#5F021F]">
+                  {zone.name}
+                </p>
+
               </div>
-              <p className="text-[0.625rem] sm:text-base font-semibold text-gray-800 group-hover:text-[#5F021F] text-center">
-                {zone.name}
-              </p>
             </div>
           ))}
         </div>
       </div>
+
+      {/* ================= DESKTOP RADIAL ================= */}
+      <div className="hidden sm:block relative mt-16 w-full h-[70vh]">
+        
+        {/* Center */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full w-28 h-28 bg-[#F4C430]/20 flex items-center justify-center font-semibold text-[#5F021F] text-center z-10 shadow-md">
+          Nigeria
+        </div>
+
+        <div className="relative w-full h-full">
+          {coverage.map((zone) => (
+            <div
+              key={zone.name}
+              className="absolute top-1/2 left-1/2"
+              style={{
+                transform: `
+                  rotate(${zone.angle}deg)
+                  translate(240px)
+                  rotate(-${zone.angle}deg)
+                `,
+              }}
+            >
+              <div className="w-24 h-24 bg-gradient-to-br from-white/90 to-[#FFF7E7]/80 border border-gray-300 rounded-2xl flex flex-col items-center justify-center hover:shadow-2xl hover:scale-110 hover:border-[#F4C430] hover:z-20 transition-all duration-300 p-3">
+                
+                <div className="relative w-12 h-12 rounded-xl overflow-hidden mb-1 shadow-md">
+                  <Image
+                    src={zone.image}
+                    alt={zone.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <p className="text-sm font-semibold text-gray-800 text-center leading-tight">
+                  {zone.name}
+                </p>
+
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+
     </section>
   );
 };
