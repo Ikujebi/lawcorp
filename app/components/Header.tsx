@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <header
       className={`
-        ${Gyahegi.className}
+       
         fixed top-0 left-0 w-full z-50 transition-all duration-300
         ${scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-[#F7e7ce]/90"}
       `}
