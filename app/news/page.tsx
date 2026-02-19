@@ -44,16 +44,19 @@ const NewsletterPage = () => {
       {/* Inline animation styles */}
       <style>
         {`
-          /* Hero text fade + zoom */
+          /* Hero text fade + float */
           @keyframes fadeZoom {
             0% { opacity: 0; transform: scale(0.92); }
             100% { opacity: 1; transform: scale(1); }
           }
 
-          /* Hero text float for subtle motion */
           @keyframes floatText {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
+          }
+
+          .animate-fadeZoom {
+            animation: fadeZoom 2s ease-out forwards, floatText 5s ease-in-out infinite;
           }
 
           /* Hero image slow zoom and pan */
@@ -63,18 +66,25 @@ const NewsletterPage = () => {
             100% { transform: scale(1) translate(0,0); }
           }
 
+          .animate-heroImage {
+            animation: imageZoomPan 15s ease-in-out infinite;
+          }
+
+          /* Animated gradient overlay */
+          @keyframes overlayMove {
+            0% { transform: translateX(-25%) }
+            50% { transform: translateX(25%) }
+            100% { transform: translateX(-25%) }
+          }
+
+          .animate-overlay {
+            animation: overlayMove 20s linear infinite;
+          }
+
           /* Newsletter card pulse */
           @keyframes pulseSlide {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
-          }
-
-          .animate-fadeZoom {
-            animation: fadeZoom 2s ease-out forwards, floatText 5s ease-in-out infinite;
-          }
-
-          .animate-heroImage {
-            animation: imageZoomPan 15s ease-in-out infinite;
           }
 
           .animate-pulseSlide {
@@ -91,8 +101,13 @@ const NewsletterPage = () => {
           style={{ backgroundImage: `url(${financial.src})` }}
         ></div>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* Animated Gradient Overlay */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-r from-black/30 via-black/20 to-black/30 animate-overlay" />
+        </div>
+
+        {/* Static Dark Overlay for contrast */}
+        <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
 
         {/* Hero Text */}
         <div className="relative text-white max-w-3xl animate-fadeZoom z-10">
@@ -157,7 +172,7 @@ const NewsletterPage = () => {
         </div>
       </section>
 
-      {/* Modal */}
+      {/* MODAL */}
       {selectedNewsletter && (
         <NewsletterModal
           title={selectedNewsletter.title}
