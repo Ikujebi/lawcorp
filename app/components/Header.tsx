@@ -43,7 +43,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Brand */}
         <div className="leading-tight">
-          <Link href="/">
+          <Link href="/" onClick={() => setOpen(false)}>
             <Image
               src={Lummina2}
               alt="Lummina Logo"
