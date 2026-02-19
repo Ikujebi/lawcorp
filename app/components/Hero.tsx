@@ -80,12 +80,12 @@ export default function Hero() {
           >
             <Link
   href="/contact"
-  className="inline-block bg-[#FFA500] hover:bg-[#FFA500]/80 text-white text-[1rem] px-8 py-4 rounded-full mb-6 xl:py-2"
+  className="inline-block bg-[#F7e7ce] text-[#5F021F] hover:bg-[#5F021F] hover:text-white text-[1rem] px-8 py-4 rounded-full mb-6 xl:py-2"
 >
   Schedule Consultation
 </Link>
             <Link
-  href="/services" className="inline-block border border-white/70 bg-[#F7e7ce] text-[#5F021F] hover:bg-[#F7e7ce]/90 text-[1rem] px-8 py-4 rounded-full mb-6 xl:py-2">
+  href="/services" className="inline-block border border-white/70 bg-[#F7e7ce] text-[#5F021F] hover:bg-[#5F021F] hover:text-white text-[1rem] px-8 py-4 rounded-full mb-6 xl:py-2">
               View Practice Areas
             </Link>
           </motion.div>
