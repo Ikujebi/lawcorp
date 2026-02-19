@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
     <section
       className={`w-full min-h-[70vh] md:min-h-[80vh] xl:h-[90vh] px-5 sm:px-6 py-10 sm:py-16
       flex justify-center items-center
-      bg-white md:bg-[#FFF7E7]/60 xl:bg-gray-100/5 backdrop-blur-[2px] text-gray-900`}
+      bg-[#FFF7E7] md:bg-[#FFF7E7]/60  backdrop-blur-[2px] text-gray-900`}
     >
       <div className="flex flex-col md:flex-row md:space-x-6 w-full max-w-6xl">
         {/* Left Part */}
