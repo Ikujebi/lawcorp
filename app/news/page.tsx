@@ -146,7 +146,7 @@ const NewsletterPage = () => {
 
       {/* PAST NEWSLETTERS */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#5F021F] mb-12 text-center">
+        <h2 className="text-2xl bg-white md:text-4xl font-semibold text-[#5F021F] mb-12 text-center">
           Past Newsletters
         </h2>
 
