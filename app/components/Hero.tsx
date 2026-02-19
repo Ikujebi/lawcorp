@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import  test from "@/public/img/Rectangle 41.png";
 import bgPic1 from "@/public/img/VECTOR.png";
 import bgPic from "@/public/img/financial-advisor-website-hero-background_31O.jpg";
@@ -77,12 +78,16 @@ export default function Hero() {
             transition={{ duration: 1.5, delay: 1.6 }}
             className="flex flex-col sm:flex-row md:gap-8 font-normal text-[#f7e7ce]"
           >
-            <div className="inline-block bg-[#FFA500] hover:bg-[#FFA500]/80  -white/70 text-[1rem] px-8 py-4 rounded-full mb-6 xl:py-2">
-              Schedule Consultation
-            </div>
-            <div className="inline-block border border-white/70 bg-[#F7e7ce] text-[#5F021F] hover:bg-[#F7e7ce]/90 text-[1rem] px-8 py-4 rounded-full mb-6 xl:py-2">
+            <Link
+  href="/contact"
+  className="inline-block bg-[#FFA500] hover:bg-[#FFA500]/80 text-white text-[1rem] px-8 py-4 rounded-full mb-6 xl:py-2"
+>
+  Schedule Consultation
+</Link>
+            <Link
+  href="/services" className="inline-block border border-white/70 bg-[#F7e7ce] text-[#5F021F] hover:bg-[#F7e7ce]/90 text-[1rem] px-8 py-4 rounded-full mb-6 xl:py-2">
               View Practice Areas
-            </div>
+            </Link>
           </motion.div>
 
         </motion.div>
