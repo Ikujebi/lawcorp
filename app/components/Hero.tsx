@@ -104,7 +104,7 @@ export default function Hero() {
   {/* Customer Trust */}
   <div className="flex flex-col text-white w-full mb-4 md:mb-0 md:mr-6 lg:mr-8 z-10 md:pl-[3rem]">
     <h3 className="text-[0.6rem] md:text-[.8rem] mb-1 md:mb-2 md:text-left">
-      Trusted by our customer
+      Trusted by our customers
     </h3>
 
     <div className="flex md:justify-start">
