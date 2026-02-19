@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import bgPic from "@/public/img/Rectangle 41.png";
-import bgPic1 from "@/public/img/Ellipse 8.png";
+import bgPic1 from "@/public/img/VECTOR.png";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -111,7 +111,7 @@ export default function Hero() {
                     alt="Customer"
                     width={28}
                     height={28}
-                    className="rounded-full border border-white md:w-12 md:h-12"
+                    className="rounded-full border  md:w-12 md:h-12"
                   />
                 ))}
               </div>
