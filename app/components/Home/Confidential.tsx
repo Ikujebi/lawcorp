@@ -1,6 +1,6 @@
 import Image from "next/image";
 import rect from "@/public/img/Rectangle 31.jpg";
-
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -36,12 +36,13 @@ export default function Footer() {
 
       {/* Buttons Area */}
       <section className="flex flex-col sm:flex-row mt-6 sm:mt-[2rem] gap-4 sm:gap-8 font-semibold items-center">
-        <div className="inline-block bg-[#FFA500] hover:bg-[#FFA500]/80 border border-white/70 text-gray-900 text-[0.95rem] sm:text-[1.1rem] px-6 sm:px-8 py-3 sm:py-4 rounded-full">
+        <Link
+          href="/contact"
+          className="inline-block bg-[#FFA500] hover:bg-[#FFA500]/80  text-white text-[0.95rem] sm:text-[1.1rem] px-6 sm:px-8 py-3 sm:py-4 rounded-full"
+        >
           Schedule a Legal Consultation
-        </div>
-        <div className="inline-block border border-white/70 bg-white/10 hover:bg-white hover:text-gray-900 text-gray-100 text-[0.95rem] sm:text-[1.1rem] px-6 sm:px-8 py-3 sm:py-4 rounded-full">
-          Submit Your Legal Query
-        </div>
+       </Link>
+        
       </section>
     </main>
   );
