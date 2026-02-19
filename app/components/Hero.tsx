@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import bgPic from "@/public/img/Rectangle 41.png";
+import  test from "@/public/img/Rectangle 41.png";
 import bgPic1 from "@/public/img/VECTOR.png";
+import bgPic from "@/public/img/financial-advisor-website-hero-background_31O.jpg";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -59,8 +60,8 @@ export default function Hero() {
 
           {/* Subtext */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 3, y: 0 }}
             transition={{ duration: 1.8, delay: 1.2 }}
             className="my-[1rem] md:my-[2rem] max-w-3xl sm:text-lg md:text-[1.58rem] text-[#FFF7E7] font-normal leading-relaxed"
           >
