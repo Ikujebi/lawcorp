@@ -1,42 +1,84 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { Roboto, Nunito } from "@/app/fonts";
-import contactHero from "@/public/img/contactHero.jpg"; // your abstract hero bg
-import cartoonImage from "@/public/img/cartoon2.png"; // your cartoon illustration
+import contactHero from "@/public/img/contactHero.jpg";
+import cartoonImage from "@/public/img/cartoon2.png";
 
 const ContactPage = () => {
   return (
     <div className="w-full">
 
       {/* HERO SECTION */}
-      <section className="relative h-[80vh] md:h-[88vh] lg:h-[80vh]">
-        <Image
-          src={contactHero}
-          alt="Contact Us"
-          fill
-          className="object-cover object-center"
-          priority
-        />
+      <section className="relative h-[80vh] md:h-[88vh] lg:h-[80vh] overflow-hidden">
+
+        {/* Animated Background */}
+        <motion.div
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 6, ease: "easeOut" }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={contactHero}
+            alt="Contact Us"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </motion.div>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[#5F021F]/50"></div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.5 }}
+          transition={{ duration: 2 }}
+          className="absolute inset-0 bg-[#5F021F]"
+        />
 
         {/* Hero Text */}
         <div className="relative z-10 flex items-center justify-center h-full px-6 text-center">
-          <div className="max-w-4xl text-white">
-            <h1 className={`${Roboto.className} text-3xl md:text-4xl lg:text-[3.5rem] font-bold`}>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.3 } }
+            }}
+            className="max-w-4xl text-white"
+          >
+
+            {/* Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.6 }}
+              className="text-3xl md:text-4xl lg:text-[3.5rem] font-bold"
+            >
               Get in Touch with Lummina
-            </h1>
-            <p className={`${Nunito.className} mt-4 text-[1.2rem] md:text-[1.5rem]`}>
+            </motion.h1>
+
+            {/* Subtext */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.8 }}
+              className="mt-4 text-[1.2rem] md:text-[1.5rem]"
+            >
               We’re here to provide professional legal guidance. Reach out with your inquiries, and our team will assist you promptly.
-            </p>
-            <div className="h-[2px] w-[10rem] bg-[#FFA500] mx-auto mt-6"></div>
-          </div>
+            </motion.p>
+
+            {/* Decorative Line */}
+            <motion.div
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ duration: 1.5 }}
+              className="h-[2px] w-[10rem] bg-[#FFA500] mx-auto mt-6 origin-left"
+            />
+
+          </motion.div>
         </div>
       </section>
-
-     
 
       {/* CONTACT FORM SECTION */}
       <section className="px-6 md:px-12 lg:px-20 py-16 bg-[#FFF7E7] text-gray-900">
@@ -86,24 +128,25 @@ const ContactPage = () => {
 
           {/* Contact Info */}
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mt-12">
-  {/* Contact Info */}
-  <div className="text-gray-700 space-y-4">
-    <p><strong>Address:</strong> 123 Legal Avenue, Lagos, Nigeria</p>
-    <p><strong>Phone:</strong> +234 800 123 4567</p>
-    <p><strong>Email:</strong> contact@lummina.com</p>
-  </div>
 
-  {/* Cartoon Illustration */}
-  <div className="relative w-48 h-48 flex-shrink-0">
-    <Image
-      src={cartoonImage}
-      alt="Contact Illustration"
-      className="object-contain"
-      fill
-    />
-  </div>
-</div>
+            {/* Contact Details */}
+            <div className="text-gray-700 space-y-4">
+              <p><strong>Address:</strong> 123 Legal Avenue, Lagos, Nigeria</p>
+              <p><strong>Phone:</strong> +234 800 123 4567</p>
+              <p><strong>Email:</strong> contact@lummina.com</p>
+            </div>
 
+            {/* Cartoon Illustration */}
+            <div className="relative w-48 h-48 flex-shrink-0">
+              <Image
+                src={cartoonImage}
+                alt="Contact Illustration"
+                className="object-contain"
+                fill
+              />
+            </div>
+
+          </div>
         </div>
       </section>
 
