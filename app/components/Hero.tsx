@@ -146,9 +146,7 @@ export default function Hero() {
               </div>{" "}
               <div className="flex flex-col items-center justify-center ml-2 md:ml-4">
                 {" "}
-                <span className="text-lg font-semibold md:font-bold">
-                  1000+
-                </span>{" "}
+                
                 <span className="text-[0.5rem] md:text-[0.625rem] mt-1 whitespace-nowrap">
                   {" "}
                   Clients Satisfied{" "}
