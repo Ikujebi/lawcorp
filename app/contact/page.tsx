@@ -120,7 +120,7 @@ const ContactPage = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-[#5F021F] text-[#F7E7CE] px-6 py-3 rounded-lg font-semibold hover:bg-[#FFA500] hover:text-[#5F021F] transition-all duration-300"
+              className="bg-[#5F021F]/80 text-[#F7E7CE] px-6 py-3 rounded-lg font-semibold hover:bg-[#FFA500] hover:text-[#5F021F] transition-all duration-300"
             >
               Send Message
             </button>

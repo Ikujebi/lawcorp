@@ -9,7 +9,7 @@ import { SourceCodePro } from "../fonts";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#5F021F] text-[#F7E7CE] pt-12 pb-6">
+    <footer className="bg-[#5F021F]/80 text-[#F7E7CE] pt-12 pb-6">
       
       {/* MAIN FOOTER CONTENT */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 
