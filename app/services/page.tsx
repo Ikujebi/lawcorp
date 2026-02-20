@@ -6,46 +6,20 @@ import servicesHero2 from "@/public/img/service2.jpg";
 
 const ServicesPage = () => {
   const services = [
-    {
-      title: "Real Estate Due Diligence",
-      description:
-        "Title verification, ownership validation, and risk analysis for secure property transactions.",
-    },
-    {
-      title: "Corporate & Commercial Law",
-      description:
-        "Business formation, contracts, governance, mergers, and strategic advisory tailored to commercial success.",
-    },
-    {
-      title: "Dispute Resolution & Litigation",
-      description:
-        "Civil litigation, negotiation, and advocacy in courts and regulatory forums.",
-    },
-    {
-      title: "Family & Matrimonial Law",
-      description:
-        "Divorce, custody, maintenance, and settlement proceedings handled with care and discretion.",
-    },
-    {
-      title: "Cheque Bounce & Debt Recovery",
-      description:
-        "Swift remedies and legal representation under applicable negotiable instruments laws.",
-    },
-    {
-      title: "Regulatory & Compliance Advisory",
-      description:
-        "Assistance with compliance to local laws and regulations across sectors.",
-    },
-    {
-      title: "Cyber Crime & Fraud",
-      description:
-        "Legal support for digital fraud, impersonation, and cyber offences.",
-    },
-    {
-      title: "Property Disputes & Recovery",
-      description:
-        "Civil litigation, injunctions, and recovery suits to protect your property interests.",
-    },
+    { title: "Business Law", description: "Comprehensive legal support for businesses, including contracts, governance, and compliance." },
+    { title: "Debt Recovery", description: "Legal remedies to recover debts efficiently, including negotiation, litigation, and enforcement." },
+    { title: "Company Secretarial & Compliance", description: "Assistance with corporate governance, filings, and compliance requirements for companies." },
+    { title: "Technology Law", description: "Guidance on IT contracts, data privacy, digital transactions, and emerging tech regulations." },
+    { title: "Startup Law", description: "Legal advisory for startups, including formation, fundraising, contracts, and IP protection." },
+    { title: "Entertainment & Media Law", description: "Support for contracts, licensing, copyright, and intellectual property in media and entertainment." },
+    { title: "Litigation", description: "Representation in civil, commercial, and regulatory disputes with strategic advocacy." },
+    { title: "Alternative Dispute Resolution (ADR)", description: "Mediation, arbitration, and negotiation services to resolve disputes efficiently." },
+    { title: "Real Estate & Property Law", description: "Property acquisition, leasing, title verification, and dispute resolution." },
+    { title: "Intellectual Property", description: "Protection and enforcement of patents, trademarks, copyrights, and trade secrets." },
+    { title: "Banking & Finance", description: "Legal support for financial transactions, regulatory compliance, and banking operations." },
+    { title: "Employment & Labour Law", description: "Advice on employment contracts, workplace policies, and labour dispute resolution." },
+    { title: "Energy & Natural Resources", description: "Regulatory and contractual guidance for energy, mining, and natural resource projects." },
+    { title: "Family Law & Private Client Services", description: "Assistance with family matters, estate planning, and personal legal advisory." },
   ];
 
   return (
@@ -53,7 +27,6 @@ const ServicesPage = () => {
 
       {/* HERO */}
       <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
-
         {/* Animated Background */}
         <motion.div
           initial={{ scale: 1.1 }}
@@ -79,7 +52,7 @@ const ServicesPage = () => {
         />
 
         {/* Hero Text */}
-        <div className="relative z-10 flex items-center h-full px-10 2xl:px-30">
+        <div className="relative z-10 flex items-center h-full px-6 sm:px-10 md:px-20 2xl:px-30">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -87,17 +60,16 @@ const ServicesPage = () => {
               hidden: {},
               visible: { transition: { staggerChildren: 0.3 } },
             }}
-            className="max-w-4xl text-white"
+            className="max-w-4xl text-white mx-auto text-center md:text-left"
           >
-
             {/* Box-like text */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
-              className="inline-flex items-center gap-3 bg-white/10 text-gray-200 text-[1.3rem] px-6 py-2 rounded-full mb-6 mt-[9rem] md:mt-[8rem]"
+              className="inline-flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3 bg-white/10 text-gray-200 text-[1rem] sm:text-[1.2rem] md:text-[1.3rem] px-4 sm:px-6 py-2 rounded-full mb-6 mt-[6rem] sm:mt-[8rem]"
             >
-              <span className="h-[2px] w-[5rem] bg-[#F4C430]"></span>
+              <span className="h-[2px] w-[4rem] sm:w-[5rem] bg-[#F4C430]"></span>
               <span className="text-[#FFA500]"> Legal Services</span>
             </motion.div>
 
@@ -106,7 +78,7 @@ const ServicesPage = () => {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
-              className="tracking-wide text-gray-300 sm:text-medium md:text-[1.2rem] lg:text-[1.2rem]"
+              className="tracking-wide text-gray-300 text-[0.9rem] sm:text-[1rem] md:text-[1.2rem]"
             >
               Legal Services with Trusted Expertise
             </motion.p>
@@ -116,7 +88,7 @@ const ServicesPage = () => {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.8 }}
-              className="mt-4 text-[1.25rem] md:text-[1.5rem]"
+              className="mt-4 text-[1rem] sm:text-[1.25rem] md:text-[1.5rem] leading-relaxed"
             >
               Comprehensive legal solutions designed to meet the unique needs of individuals, businesses, and institutions.
             </motion.p>
@@ -126,9 +98,8 @@ const ServicesPage = () => {
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
               transition={{ duration: 1.5 }}
-              className="h-[2px] w-[10rem] bg-[#F4C430] mt-6 origin-left"
+              className="h-[2px] w-[6rem] sm:w-[8rem] md:w-[10rem] bg-[#F4C430] mt-6 origin-left mx-auto md:mx-0"
             />
-
           </motion.div>
         </div>
       </section>
@@ -155,7 +126,7 @@ const ServicesPage = () => {
                     hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
                 >
                   <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                  <p className="text-gray-700 text-[1.05rem] leading-relaxed">{service.description}</p>
+                  <p className="text-gray-700 text-[1rem] sm:text-[1.05rem] leading-relaxed">{service.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -167,7 +138,7 @@ const ServicesPage = () => {
               Why Clients Choose Lummina
             </h3>
 
-            <ul className="list-disc pl-5 space-y-3 text-gray-700 text-[1.05rem]">
+            <ul className="list-disc pl-5 space-y-3 text-gray-700 text-[1rem] sm:text-[1.05rem]">
               <li>Deep understanding of the Nigerian legal and business landscape.</li>
               <li>Commitment to timely, cost-effective, and pragmatic solutions.</li>
               <li>Strong network of relationships within legal, regulatory, and business circles.</li>
