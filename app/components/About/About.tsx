@@ -1,7 +1,11 @@
+"use client";
+
 import { SourceCodePro } from "../../fonts";
 import { Roboto } from "../../fonts";
 import CoreV from "./CoreV";
 import MissionVision from "./MissionVision";
+import abt from "@/public/img/abt.png";
+import Image from "next/image";
 
 const About = () => {
   const philosophyList = [
@@ -13,70 +17,50 @@ const About = () => {
 
   return (
     <div className="w-full">
-      {/* ABOUT SECTION — NORMAL BACKGROUND */}
-      <section className="w-full  bg-[#FAFAFA]">
+
+      {/* CORE VALUES SECTION */}
+      <section className="w-full bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))]">
+        <div className="max-w-6xl mx-auto px-6 py-24">
+          <MissionVision />
+        </div>
+      </section>
+
+      <section className="w-full bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))]">
+        <div className="max-w-6xl mx-auto px-6 py-24">
+          <CoreV />
+        </div>
+      </section>
+
+      {/* ABOUT SECTION */}
+      <section className="w-full bg-[#FAFAFA]">
         <main
           className={`${Roboto.className} max-w-6xl mx-auto px-6 py-16 text-gray-900`}
         >
-          <div className="flex flex-col md:flex-row md:gap-12">
-            
-            {/* LEFT SIDE */}
-            <div className="md:w-1/2">
-              
-               <h2
-          className={` text-lg font-semibold tracking-wide mb-4 text-[#5F021F] border-1 rounded-3xl border-black  px-10 py-1`}
-        >
-          About the Firm
-        </h2>
+          <div className="flex flex-col md:flex-row md:gap-16 items-center">
 
-              <h2
-                className={`${SourceCodePro.className} text-4xl md:text-5xl font-semibold text-gray-800 mb-10`}
-              >
-                Trusted Legal Solicitors Across Nigeria
-              </h2>
-
-              <div className="h-[2.5px] w-1/4 bg-[#F4C430] mb-8" />
-
-              <div className="text-gray-700 leading-relaxed">
-                <p className="mb-6">
-                  Lummina Law Firm is a{" "}
-                  <span className="font-bold">
-                    modern, innovative, and client-centered full-service law firm
-                  </span>{" "}
-                  based in Lagos, Nigeria. We are committed to redefining legal
-                  practice through innovation, excellence, and a deep
-                  understanding of our clients&#39; needs.
-                </p>
-
-                <p className="mb-6">
-                  With a growing presence across{" "}
-                  <span className="font-bold">Lagos</span>,{" "}
-                  <span className="font-bold">Abuja (FCT)</span>,{" "}
-                  <span className="font-bold">Ogun</span>, and{" "}
-                  <span className="font-bold">Rivers</span>, our firm is
-                  recognized for its strategic approach to corporate advisory,
-                  regulatory compliance, and client-centered legal services.
-                </p>
-
-                <p>
-                  Our practice emphasizes precision, personalized guidance, and
-                  long-term client trust over short-term outcomes, ensuring that
-                  every solution empowers our clients and exceeds their
-                  expectations.
-                </p>
+            {/* LEFT SIDE IMAGE (TABLET & ABOVE) */}
+            <div className="hidden md:block md:w-1/2">
+              <div className="relative w-full h-[420px] lg:h-[500px] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src={abt}
+                  alt="About Lummina"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
 
             {/* RIGHT SIDE */}
-            <div className="md:w-1/2 mt-14 md:mt-0 flex flex-col items-center">
-              
+            <div className="w-full md:w-1/2 mt-14 md:mt-0 flex flex-col items-center">
+
               {/* Gold Line */}
               <div className="h-[2.5px] w-full max-w-lg bg-[#F4C430]" />
 
               {/* Card */}
               <div className="w-full max-w-lg">
                 <div className="border border-gray-300 bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition duration-300">
-                  
+
                   <h3
                     className={`${SourceCodePro.className} text-lg font-semibold text-gray-900 mb-8 mt-4`}
                   >
@@ -110,17 +94,6 @@ const About = () => {
         </main>
       </section>
 
-      {/* CORE VALUES SECTION — KEEP SEPARATE (NON IMAGE BG) */}
-      <section className="w-full bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))]">
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <CoreV />
-        </div>
-      </section>
-      <section className="w-full bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))]">
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <MissionVision />
-        </div>
-      </section>
     </div>
   );
 };

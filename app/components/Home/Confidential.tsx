@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <main
-      className={` bg-[#5F021F] text-[#F7e7ce] p-4 sm:p-6 text-sm flex flex-col items-center`}
+      className={` bg-[#5F021F]/85 text-[#F7e7ce] p-4 sm:p-6 text-sm flex flex-col items-center`}
     >
       {/* Image Section */}
       <section className="my-6 sm:my-8 w-full flex justify-center">

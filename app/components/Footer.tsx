@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import call from "@/public/call.svg";
 import messages from "@/public/messages.svg";
 import location from "@/public/location.svg";
@@ -6,72 +9,106 @@ import { SourceCodePro } from "../fonts";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#5F021F] text-[#F7e7ce] p-4 text-sm">
-      <section
-        className="grid grid-cols-1 md:grid-cols-4 gap-8  px-6 py-[2.5rem]
-    xl:px-[15%] xl:max-w-[85%]
-    2xl:px-[15%] 2xl:max-w-[85%]
-    mx-auto"
-      >
-        <article>
+    <footer className="bg-[#5F021F] text-[#F7E7CE] pt-12 pb-6">
+      
+      {/* MAIN FOOTER CONTENT */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 
+        xl:px-[12%] max-w-7xl mx-auto">
+
+        {/* Brand Section */}
+        <article className="space-y-4">
           <h2
-            className={`${SourceCodePro.className}  text-xl font-extrabold  text-white`}
+            className={`${SourceCodePro.className} text-2xl font-extrabold text-white`}
           >
-            {" "}
             Lummina
           </h2>
-          <p>
-            A full-service law firm providing strategic, compliant, and
-            confidential legal representation across India and international
-            jurisdictions.
+
+          <p className="text-sm leading-relaxed text-[#F7E7CE]/90">
+            A full-service law firm providing strategic, compliant, and 
+            confidential legal representation across Nigeria and 
+            international jurisdictions — built on our clients&apos; trust.
           </p>
         </article>
-        <article className="space-y-2">
-          <h2 className="text-[#F4C430] text-sm">Contact Us</h2>
 
-          <p className="flex items-center gap-x-2">
-            <Image src={call} alt="Call icon" width={16} height={16} />
-            <span className="text-xs">+234 706 046 9068</span>
-          </p>
+        {/* Contact Section */}
+        <article className="space-y-4">
+          <h3 className="text-[#F4C430] font-semibold text-sm tracking-wide uppercase">
+            Contact Us
+          </h3>
 
-          <p className="flex items-center gap-x-2">
-            <Image src={messages} alt="Message icon" width={16} height={16} />
-            <span className="text-[0.73rem]">
-              lumminallp@gmail.com: info@lummina.com
-            </span>
-          </p>
+          <div className="space-y-3 text-sm">
 
-          <p className="flex items-center gap-x-2">
-            <Image src={location} alt="Location icon" width={16} height={16} />
-            <span className="text-[0.74rem]">
-              Address: 12 OLUSEYI AWEDA STREET, MAGODO PHASE 1, LAGOS
-            </span>
-          </p>
+            <p className="flex items-start gap-3">
+              <Image src={call} alt="Call icon" width={18} height={18} />
+              <span>+234 706 046 9068</span>
+            </p>
+
+            <p className="flex items-start gap-3">
+              <Image src={messages} alt="Email icon" width={18} height={18} />
+              <span>
+                lumminallp@gmail.com <br />
+                info@lummina.com
+              </span>
+            </p>
+
+            <p className="flex items-start gap-3">
+              <Image src={location} alt="Location icon" width={18} height={18} />
+              <span>
+                12 Oluseyi Aweda Street, <br />
+                Magodo Phase 1, Lagos, Nigeria
+              </span>
+            </p>
+
+          </div>
         </article>
-        <article>
-          <h2 className="text-[#F4C430] text-sm">Quick Links</h2>
-          <p className="">Practice Areas</p>
 
-          <p className="">Our Team</p>
-          <p className="">Careers</p>
-          <p className="">Contact</p>
+        {/* Quick Links */}
+        <article className="space-y-4">
+          <h3 className="text-[#F4C430] font-semibold text-sm tracking-wide uppercase">
+            Quick Links
+          </h3>
+
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link href="/services" className="hover:text-[#F4C430] transition">
+                Practice Areas
+              </Link>
+            </li>
+            <li>
+              <Link href="/team" className="hover:text-[#F4C430] transition">
+                Our Team
+              </Link>
+            </li>
+            <li>
+              <Link href="/careers" className="hover:text-[#F4C430] transition">
+                Careers
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-[#F4C430] transition">
+                Contact
+              </Link>
+            </li>
+          </ul>
         </article>
-        <article>
-          <h2 className="text-[#F4C430] text-sm">Legal Disclaimer</h2>
-          <p className="">
-            As per the Bar Council of Nigeria rules,Lummina does not solicit
-            work or advertise. This website is for informational purposes only
-            and does not constitute legal advice or create a lawyer-client
-            relationship.
-          </p>
-        </article>
+
       </section>
-      <div className="w-full h-[1px] bg-[#F4C430] mb-2"></div>
-      <section className="text-xs  flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-        <div className=" ">
-          © {new Date().getFullYear()} NokaTrust Law. All rights reserved.
+
+      {/* Divider */}
+      <div className="w-full h-[1px] bg-[#F4C430]/50 my-8"></div>
+
+      {/* Bottom Bar */}
+      <section className="flex flex-col md:flex-row justify-between items-center 
+        px-6 xl:px-[12%] max-w-7xl mx-auto text-xs text-[#F7E7CE]/80 space-y-2 md:space-y-0">
+
+        <div>
+          © {new Date().getFullYear()} Lummina. All rights reserved.
         </div>
-        <div className="">Trust • Confidentiality • Compliance</div>
+
+        <div className="tracking-wide">
+          Trust • Confidentiality • Compliance
+        </div>
+
       </section>
     </footer>
   );

@@ -37,7 +37,7 @@ export default function Header() {
       className={`${Montserrat.variable} font-sans
        
         fixed top-0 left-0 w-full z-50 transition-all duration-300
-        ${scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-[#F7e7ce]/90"}
+        ${scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-[#F7e7ce]/40"}
       `}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -73,9 +73,9 @@ export default function Header() {
         </nav>
 
         {/* Desktop CTA */}
-        <button className="hidden rounded-full bg-[#5F021F] px-9 py-3 text-[.799rem] font-semibold text-white transition hover:bg-[#7A1A36] md:block">
+        {/* <button className="hidden rounded-full bg-[#5F021F] px-9 py-3 text-[.799rem] font-semibold text-white transition hover:bg-[#7A1A36] md:block">
           Contact Us
-        </button>
+        </button> */}
 
         {/* Mobile Hamburger */}
         <button

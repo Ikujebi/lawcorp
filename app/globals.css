@@ -72,3 +72,6 @@ h6 {
 .animate-fadeZoom {
   animation: fadeZoom 1s ease-out forwards;
 }
+.pagination{
+--swiper-pagination-color: #5F021F;
+}

@@ -25,7 +25,7 @@ const Practice = () => {
   const visibleAreas = showAll ? practiceAreas : practiceAreas.slice(0, 6);
 
   return (
-    <section className="px-5 sm:px-6 flex flex-col items-center justify-center min-h-screen md:min-h-[80svh] py-10 sm:py-16 bg-[#FFF7E7] text-black">
+    <section className="px-5 sm:px-6 flex flex-col items-center justify-center min-h-screen md:min-h-[80svh] py-10 sm:py-16 bg-[#FFF7E7]/90 text-black">
       <h2 className="text-sm sm:text-lg font-semibold tracking-wide mb-4 text-[#5F021F] border rounded-3xl border-gray-900 px-6 sm:px-10 py-1">
         Practice Areas
       </h2>
