@@ -35,7 +35,7 @@ const Presence = () => {
         </h2>
       </header>
 
-      <h2 className="2xl:text-[4rem] text-[2rem] sm:text-[2.5rem] font-semibold mb-3 sm:mb-4 text-center leading-tight">
+      <h2 className="2xl:text-[4rem] text-[2rem] sm:text-[2.5rem] font-semibold mb-3 sm:mb-4 text-center leading-tight text-[#5F021F]">
         Serving Clients Across Nigeria
       </h2>
 

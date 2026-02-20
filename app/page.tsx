@@ -1,6 +1,6 @@
 import Hero from "./components/Hero";
-import { Gyahegi } from "./fonts";
-import { Roboto } from "./fonts";
+import { Montserrat } from "./fonts";
+
 import { Scale, ShieldCheck, Users } from "lucide-react";
 // import International from "./components/Home/International Legal Assistance";
 import Team from "./components/Home/Team";
@@ -40,23 +40,25 @@ export default function Home() {
   return (
     <>
       {/* HERO SECTION */}
+      <section className={`${Montserrat.className} `}>
       <Hero />
+      </section>
 
       {/* WHO WE ARE SECTION  */}
       <section
-        className={`${Roboto.className} px-5 sm:px-6 py-10 sm:py-16 flex flex-col items-center justify-center h-full md:h-[90svh] xl:h-full
+        className={`${Montserrat.className} px-5 sm:px-6 py-10 sm:py-16 flex flex-col items-center justify-center h-full md:h-[90svh] xl:h-full
 bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-gray-900`}
       >
         
 
-        <h2 className="text-[2rem] sm:text-[2.5rem] 2xl:text-[4rem] font-semibold leading-tight mb-4 mx-auto text-center text-gray-900">
+        <h2 className="text-[2rem] sm:text-[2.5rem] 2xl:text-[4rem] font-semibold leading-tight mb-4 mx-auto text-center text-[#5F021F]">
           Modern Legal Solutions Rooted in Trust and Excellence
         </h2>
 
         <p className="max-w-3xl text-base sm:text-[1.2rem] md:text-[1.363rem] text-center text-gray-700 mb-4">
-          <strong>Lummina Law Firm</strong> is a modern, innovative and
+          <strong className="text-[#5F021F]">Lummina Law Firm</strong> is a modern, innovative and
           client-centered full-service law firm based in{" "}
-          <strong>Lagos, Nigeria</strong>. We are committed to redefining legal
+          <strong className="text-[#5F021F]">Lagos, Nigeria</strong>. We are committed to redefining legal
           practice through innovation, excellence, and a deep understanding of
           our clients&apos; needs. Our approach combines cutting-edge legal
           expertise with a personalized service ethos, ensuring that we deliver
@@ -77,11 +79,11 @@ bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(2
             >
               {/* Icon */}
               <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#F4C430]/20">
-                <Icon className="h-[14px] w-[14px] text-gray-900 group-hover:text-[#F4C430] transition-colors duration-300" />
+                <Icon className="h-[14px] w-[14px] text-[#5F021F] group-hover:text-[#F4C430] transition-colors duration-300" />
               </div>
 
               {/* Header */}
-              <h3 className="text-[0.8rem] sm:text-[0.85rem] font-semibold text-gray-900 group-hover:text-[#F4C430] transition-colors duration-300">
+              <h3 className="text-[0.8rem] sm:text-[0.85rem] font-semibold text-[#5F021F] group-hover:text-[#F4C430] transition-colors duration-300">
                 {title}
               </h3>
 
@@ -98,13 +100,13 @@ bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(2
       </section>
 
       {/* Why Choose Us SECTION  */}
-      <section>
+      <section className={`${Montserrat.className} `}>
         <WhyUs />
       </section>
 
       {/* Practice Areas SECTION  */}
 
-      <section className="">
+      <section className={`${Montserrat.className} `}>
         <Practice />
       </section>
 
@@ -113,15 +115,15 @@ bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(2
         <International />
       </section> */}
       {/*Our Legal Team SECTION  */}
-      <section className="">
+      <section className={`${Montserrat.className} `}>
         <Team />
       </section>
       {/*Confidential Legal Support SECTION  */}
-      <section className="">
+      <section className={`${Montserrat.className} `}>
         <Confidential />
       </section>
       {/*Our Presence SECTION  */}
-      <section className="">
+      <section className={`${Montserrat.className} `}>
         <Presence />
       </section>
     </>

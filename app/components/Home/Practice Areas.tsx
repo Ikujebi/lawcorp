@@ -29,11 +29,11 @@ const Practice = () => {
       <h2 className="text-sm sm:text-lg font-semibold tracking-wide mb-4 text-[#5F021F] border rounded-3xl border-gray-900 px-6 sm:px-10 py-1">
         Practice Areas
       </h2>
-      <h2 className="text-[1.9rem] sm:text-[2.2rem] 2xl:text-[3.4rem] font-semibold mb-3 text-center">
+      <h2 className="text-[#5F021F] text-[1.9rem]  sm:text-[2.2rem] 2xl:text-[3.4rem] font-semibold mb-3 text-center">
         Areas of Legal Practice
       </h2>
       <p className="max-w-2xl text-base sm:text-[1.1rem] text-center text-gray-700 mb-3">
-        At <b>Lummina Law Firm</b>, we offer a comprehensive range of legal services to meet the diverse needs of our clients:
+        At <b className="text-[#5F021F]">Lummina Law Firm</b>, we offer a comprehensive range of legal services to meet the diverse needs of our clients:
       </p>
       <div className="mx-auto mt-3 h-[2px] w-16 bg-[#F4C430]" />
 

@@ -27,3 +27,8 @@ export const Gyahegi  = localFont({
   variable: "--font-Nunito-VariableFont",
   display: "swap",
 });
+export const Montserrat  = localFont({
+  src: "../public/fonts/Montserrat-VariableFont_wght.ttf",
+  variable: "--font-Montserrat-VariableFont",
+  display: "swap",
+});

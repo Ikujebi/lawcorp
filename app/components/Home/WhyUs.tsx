@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
           </h2>
 
           <h2
-            className="text-[2rem] sm:text-[2.3rem] md:text-[2.9rem] font-semibold text-gray-900 md:text-gray-800 mb-6 sm:mb-8 leading-tight"
+            className="text-[2rem] sm:text-[2.3rem] md:text-[2.9rem] font-semibold text-[#5F021F] md:text-[#5F021F] mb-6 sm:mb-8 leading-tight"
           >
             {subheading}
           </h2>
@@ -77,7 +77,7 @@ export default function WhyChooseUs() {
                 <span className="text-[0.85rem] sm:text-[0.95rem] text-[#F4C430] font-medium">
                   {index + 1 < 10 ? `0${index + 1}` : index + 1}
                 </span>
-                <h3>{item.title}</h3>
+                <h3 className="text-[#5F021F]">{item.title}</h3>
               </div>
 
               <p className="text-[0.85rem] sm:text-[0.95rem] text-gray-600 leading-snug">

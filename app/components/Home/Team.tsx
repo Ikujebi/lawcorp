@@ -66,7 +66,7 @@ const Team = () => {
               </div>
 
               {/* Header */}
-              <h3 className="text-lg sm:text-xl font-medium text-gray-900 group-hover:text-[#F4C430] transition-colors duration-300">
+              <h3 className="text-[#FFA500] text-lg sm:text-xl font-medium  group-hover:text-[#F4C430] transition-colors duration-300">
                 {title}
               </h3>
 
@@ -74,7 +74,7 @@ const Team = () => {
               <div className="mt-2 sm:mt-3 mb-3 sm:mb-4 h-[1.5px] sm:h-[1.8px] w-12 sm:w-16 bg-[#F4C430]"></div>
 
               {/* Description */}
-              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+              <p className=" text-[#5F021F] leading-relaxed text-sm sm:text-base">
                 {description}
               </p>
             </div>

@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import ChatButton from "./components/ChatButton";
 import LegalDisclaimerModal from "./components/LegalDisclaimerModal";
 import "./globals.css";
-import { Gyahegi  } from "./fonts";
+import { Montserrat   } from "./fonts";
 
 
 
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Gyahegi.variable} antialiased flex flex-col min-h-screen`}
+        className={`${Montserrat .variable} antialiased flex flex-col min-h-screen`}
       >
         <LegalDisclaimerModal />
          <Header />
