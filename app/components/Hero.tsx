@@ -67,18 +67,25 @@ export default function Hero() {
         <div className="max-w-4xl">
           {/* Rotating Heading */}
           <AnimatePresence mode="wait">
-            <motion.h1
-              key={slides[index].heading}
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -40 }}
-              transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[1.4rem] sm:text-3xl md:text-[3rem] lg:text-[3.3rem] 
+           <motion.h1
+  key={slides[index].heading}
+  initial={{ opacity: 0, y: 60 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: -40 }}
+  transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+  className="text-[1.4rem] sm:text-3xl md:text-[3rem] lg:text-[3.3rem] 
              font-semibold leading-tight tracking-wide"
-            >
-              <span className="text-white">Legal Experts</span>{" "}
-              <span className="text-[#F7E7CE]">for Business & Individuals</span>
-            </motion.h1>
+>
+  {slides[index].heading.split(" ").map((word, i) => {
+    // Just an example to color certain words differently
+    const coloredWord = i < 2 ? (
+      <span key={i} className="text-white">{word} </span>
+    ) : (
+      <span key={i} className="text-[#F7E7CE]">{word} </span>
+    );
+    return coloredWord;
+  })}
+</motion.h1>
           </AnimatePresence>
 
           {/* CTA */}
@@ -86,7 +93,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.6 }}
-            className="mt-10"
+            className="mt-[10rem] md:mt-[12rem] lg:mt-[14rem]"
           >
             <Link
               href="/contact"
