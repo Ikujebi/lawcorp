@@ -157,35 +157,7 @@ export default function Hero() {
             </div>{" "}
           </div>{" "}
           {/* Other Stats */}{" "}
-          <div className="flex flex-row flex-wrap w-full">
-            {" "}
-            {[
-              { value: "15k+", label: "Matters Resolved" },
-              { value: "13+", label: "Years Exp" },
-              { value: "10k+", label: "Happy Clients" },
-            ].map((stat, i) => (
-              <div
-                key={i}
-                className="flex flex-col flex-1 relative md:mx-3 lg:mx-4 mt-4 md:mt-0"
-              >
-                {" "}
-                {i !== 2 && (
-                  <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-8 border-r border-[#F7E7CE]" />
-                )}{" "}
-                <div className="text-center">
-                  {" "}
-                  <span className="text-lg md:text-xl font-semibold md:font-bold block">
-                    {" "}
-                    {stat.value}{" "}
-                  </span>{" "}
-                  <span className="text-[0.55rem] md:text-xs block mt-1 whitespace-nowrap">
-                    {" "}
-                    {stat.label}{" "}
-                  </span>{" "}
-                </div>{" "}
-              </div>
-            ))}{" "}
-          </div>{" "}
+         
         </div>{" "}
       </motion.article>
     </section>
