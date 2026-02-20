@@ -131,9 +131,9 @@ const ContactPage = () => {
 
             {/* Contact Details */}
             <div className="text-gray-700 space-y-4">
-              <p><strong>Address:</strong> 123 Legal Avenue, Lagos, Nigeria</p>
-              <p><strong>Phone:</strong> +234 800 123 4567</p>
-              <p><strong>Email:</strong> contact@lummina.com</p>
+              <p><strong>Address:</strong> 12 Oluseyi Aweda Street, Magodo Phase 1, Lagos, Nigeria</p>
+              <p><strong>Phone:</strong> +234 706 046 9068</p>
+              <p><strong>Email:</strong>fzekeri@lumminalaw.com</p>
             </div>
 
             {/* Cartoon Illustration */}
