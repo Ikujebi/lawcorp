@@ -59,7 +59,7 @@ export default function FeaturesSection() {
       <div className="mx-auto mt-3 h-[2.5px] w-1/8 bg-[#F4C430]"></div>
 
       {/* Swiper for all screen sizes */}
-      <div className="w-full mt-6 relative">
+      <div className="w-full mt-6 relative h-[16rem]">
         <Swiper
           modules={[Pagination, Navigation, A11y, Autoplay]}
           slidesPerView={1}
