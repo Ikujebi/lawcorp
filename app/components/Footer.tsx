@@ -18,7 +18,7 @@ export default function Footer() {
             className={`${SourceCodePro.className}  text-xl font-extrabold  text-white`}
           >
             {" "}
-            LexTrust Law
+            Lummina
           </h2>
           <p>
             A full-service law firm providing strategic, compliant, and
@@ -59,7 +59,7 @@ export default function Footer() {
         <article>
           <h2 className="text-[#F4C430] text-sm">Legal Disclaimer</h2>
           <p className="">
-            As per the Bar Council of Nigeria rules, LexTrust Law does not solicit
+            As per the Bar Council of Nigeria rules,Lummina does not solicit
             work or advertise. This website is for informational purposes only
             and does not constitute legal advice or create a lawyer-client
             relationship.

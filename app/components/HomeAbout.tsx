@@ -59,7 +59,7 @@ export default function FeaturesSection() {
       <div className="mx-auto mt-3 h-[2.5px] w-1/8 bg-[#F4C430]"></div>
 
       {/* Swiper for all screen sizes */}
-      <div className="w-full mt-6">
+      <div className="w-full mt-6 relative">
         <Swiper
           modules={[Pagination, Navigation, A11y, Autoplay]}
           slidesPerView={1}
@@ -67,7 +67,8 @@ export default function FeaturesSection() {
           grabCursor
           navigation
           pagination={{ clickable: true }}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 6000, disableOnInteraction: false }} // slower
+          speed={1000} // smooth transition
           breakpoints={{
             640: { slidesPerView: 1.5, spaceBetween: 20 },
             768: { slidesPerView: 2, spaceBetween: 25 },
@@ -83,7 +84,7 @@ export default function FeaturesSection() {
                   px-5 py-6 md:py-8 border border-gray-300 bg-white
                   rounded-md
                   hover:bg-white/80 hover:shadow-md hover:-translate-y-1
-                  transition-all duration-300 h-[25rem]"
+                  transition-all duration-300"
               >
                 <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full border border-[#F4C430]/20">
                   <Icon className="h-[18px] w-[18px] text-[#5F021F] group-hover:text-[#F4C430] transition-colors duration-300" />
@@ -99,9 +100,9 @@ export default function FeaturesSection() {
             </SwiperSlide>
           ))}
 
-          {/* Custom arrows */}
-          <div className="swiper-button-next !text-[#5F021F] !text-lg md:!text-xl bottom-2 md:bottom-6" />
-          <div className="swiper-button-prev !text-[#5F021F] !text-lg md:!text-xl bottom-2 md:bottom-6" />
+          {/* Correctly style arrows */}
+          <div className="swiper-button-next !text-[#5F021F] !text-xl md:!text-2xl bottom-6" />
+          <div className="swiper-button-prev !text-[#5F021F] !text-xl md:!text-2xl bottom-6" />
         </Swiper>
       </div>
     </section>
