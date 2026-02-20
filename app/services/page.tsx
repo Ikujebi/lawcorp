@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 import servicesHero2 from "@/public/img/service2.jpg";
 
 const ServicesPage = () => {
@@ -22,12 +23,16 @@ const ServicesPage = () => {
     { title: "Family Law & Private Client Services", description: "Assistance with family matters, estate planning, and personal legal advisory." },
   ];
 
+  const [showAll, setShowAll] = useState(false);
+
+  // Determine which services to show
+  const displayedServices = showAll ? services : services.slice(0, 6);
+
   return (
     <div className="w-full">
 
       {/* HERO */}
       <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
-        {/* Animated Background */}
         <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -43,7 +48,6 @@ const ServicesPage = () => {
           />
         </motion.div>
 
-        {/* Overlay */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
@@ -51,7 +55,6 @@ const ServicesPage = () => {
           className="absolute inset-0 bg-[#5F021F]"
         />
 
-        {/* Hero Text */}
         <div className="relative z-10 flex items-center h-full px-6 sm:px-10 md:px-20 2xl:px-30">
           <motion.div
             initial="hidden"
@@ -62,7 +65,6 @@ const ServicesPage = () => {
             }}
             className="max-w-4xl text-white mx-auto text-center md:text-left"
           >
-            {/* Box-like text */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -73,7 +75,6 @@ const ServicesPage = () => {
               <span className="text-[#FFA500]"> Legal Services</span>
             </motion.div>
 
-            {/* Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
@@ -83,7 +84,6 @@ const ServicesPage = () => {
               Legal Services with Trusted Expertise
             </motion.p>
 
-            {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
@@ -93,7 +93,6 @@ const ServicesPage = () => {
               Comprehensive legal solutions designed to meet the unique needs of individuals, businesses, and institutions.
             </motion.p>
 
-            {/* Decorative Line */}
             <motion.div
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
@@ -115,7 +114,7 @@ const ServicesPage = () => {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {services.map((service) => (
+              {displayedServices.map((service) => (
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -130,6 +129,17 @@ const ServicesPage = () => {
                 </motion.div>
               ))}
             </div>
+
+            {/* Show More / Show Less Button */}
+            <div className="flex justify-center mt-6">
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="px-6 py-3 bg-[#FFA500] text-white rounded-full font-semibold hover:bg-[#F4C430] transition"
+              >
+                {showAll ? "Show Less" : "Show More"}
+              </button>
+            </div>
+
           </div>
 
           {/* Why Choose Us */}

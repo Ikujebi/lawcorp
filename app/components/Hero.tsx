@@ -13,7 +13,7 @@ import { Montserrat } from "../fonts";
 
 const slides = [
   {
-    heading: "Legal Experts for Business & Individuals in Nigeria.",
+    heading: "Legal Experts for Business & Individuals.",
     image: herobg1,
   },
   {
@@ -113,51 +113,7 @@ export default function Hero() {
       </div>
       {/* Stats Bar  */}
       {/* Stats Bar */}{" "}
-      <motion.article
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.8, delay: 1.2 }}
-        className="absolute bottom-0 left-0 w-full h-[20svh] md:h-[10svh] bg-[#5F021F] text-[#F7E7CE] flex items-center justify-center z-20"
-      >
-        {" "}
-        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl px-4 md:px-0 py-6 md:py-0">
-          {" "}
-          {/* Customer Trust */}{" "}
-          <div className="flex flex-col text-white w-full mb-4 md:mb-0 md:mr-6 lg:mr-8 z-10 md:pl-[3rem]">
-            {" "}
-            <h3 className="text-[0.6rem] md:text-[.8rem] mb-1 md:mb-2 md:text-left">
-              {" "}
-              Trusted by our customers{" "}
-            </h3>{" "}
-            <div className="flex md:justify-start">
-              {" "}
-              <div className="flex items-center -space-x-2 md:-space-x-3">
-                {" "}
-                {[...Array(4)].map((_, i) => (
-                  <Image
-                    key={i}
-                    src={bgPic1}
-                    alt="Customer"
-                    width={28}
-                    height={28}
-                    className="rounded-full border md:w-12 md:h-12"
-                  />
-                ))}{" "}
-              </div>{" "}
-              <div className="flex flex-col items-center justify-center ml-2 md:ml-4">
-                {" "}
-                
-                <span className="text-[0.5rem] md:text-[0.625rem] mt-1 whitespace-nowrap">
-                  {" "}
-                  Clients Satisfied{" "}
-                </span>{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
-          {/* Other Stats */}{" "}
-         
-        </div>{" "}
-      </motion.article>
+      
     </section>
   );
 }
