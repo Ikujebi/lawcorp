@@ -134,9 +134,9 @@ const ServicesPage = () => {
             <div className="flex justify-center mt-6">
               <button
                 onClick={() => setShowAll(!showAll)}
-                className="px-6 py-3 bg-[#5F021F]/90 text-white rounded-full font-semibold hover:bg-[#5F021F]/70 transition"
+                className="px-6 py-3 text-[#5F021F] rounded-full font-semibold hover:bg-[#5F021F]/10 transition"
               >
-                {showAll ? "Show Less" : "Show More"}
+                {showAll ? "Show Less.." : "Show More.."}
               </button>
             </div>
 
