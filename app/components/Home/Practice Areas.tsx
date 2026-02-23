@@ -60,9 +60,9 @@ const Practice = () => {
       {/* Show More / Show Less */}
       <button
         onClick={() => setShowAll(!showAll)}
-        className="mt-8 px-6 py-3 bg-[#FFA500] hover:bg-[#F4C430] rounded-full text-white font-semibold transition-colors duration-300"
+        className="mt-8 px-6 py-3  hover:bg-[#F4C430] rounded-full text-[#5F021F] font-semibold transition-colors duration-300"
       >
-        {showAll ? "Show Less" : "Show More"}
+        {showAll ? "Show Less.." : "Show More.."}
       </button>
     </section>
   );
