@@ -26,7 +26,7 @@ export default function FeaturesSection() {
 
   return (
     <section
-      className={`${Montserrat.className} px-5 sm:px-6 py-10 sm:py-16 flex flex-col items-center justify-center h-full md:h-[90svh] xl:h-full bg-[#FFF7E7] text-gray-900`}
+      className={`${Montserrat.className} px-5 sm:px-6 py-10 sm:py-16 flex flex-col items-center justify-center h-full md:h-[90svh] xl:h-full bg-[#FFF7E7]/90 text-black`}
     >
       <h2 className="text-[2rem] sm:text-[2.1rem] 2xl:text-[4rem] font-semibold leading-tight mb-4 mx-auto text-center text-[#5F021F]">
         Modern Legal Solutions Rooted in Trust and Excellence

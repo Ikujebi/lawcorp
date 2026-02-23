@@ -30,12 +30,12 @@ const CoreV = () => {
     >
       
        <h2
-          className={` text-lg font-semibold tracking-wide mb-4 text-[#5F021F] border-1 rounded-3xl border-black  px-10 py-1`}
+          className={` text-lg font-semibold tracking-wide mb-4 text-[#5F021F]/90 border-1 rounded-3xl border-black  px-10 py-1`}
         >
           Our Core Values
         </h2>
 
-      <h2 className="2xl:text-[4rem] text-[2.5rem] font-semibold mb-4 text-center text-[#5F021F]">
+      <h2 className="2xl:text-[4rem] text-[2.5rem] font-semibold mb-4 text-center text-[#5F021F]/90">
         Principles That Define Our Legal Practice
       </h2>
 
@@ -60,11 +60,11 @@ const CoreV = () => {
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#F9DE8A]/70 text-[0.9rem] font-bold text-[#F4C430]">
                 {String(index + 1).padStart(2, "0")}
               </div>
-              <div className="mt-2 h-full w-px bg-gray-300"></div>
+              <div className="mt-2 h-full w-px bg-[#5F021F]/90"></div>
             </div>
 
             <div>
-              <h3 className="text-lg font-medium mb-2 transition-colors duration-300">
+              <h3 className="text-lg font-medium mb-2 transition-colors duration-300 text-[#5F021F]/90">
                 {title}
               </h3>
 

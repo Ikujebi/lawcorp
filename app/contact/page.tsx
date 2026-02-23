@@ -80,75 +80,100 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* CONTACT FORM SECTION */}
-      <section className="px-6 md:px-12 lg:px-20 py-16 bg-[#FFF7E7] text-gray-900">
-        <div className="max-w-4xl mx-auto space-y-12">
+   {/* CONTACT FORM SECTION */}
+<section className="px-6 md:px-12 lg:px-20 py-20 bg-[#FFF7E7] text-gray-900">
+  <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
 
-          {/* Info Section */}
-          <div className="text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#5F021F]">
-              Contact Lummina Law Firm
-            </h2>
-            <p className="text-[1.1rem] text-gray-700">
-              Whether you have a question about our services, need legal guidance, or want to schedule a consultation, we’re ready to help.
-            </p>
-          </div>
+    {/* LEFT SIDE – TEXT + CARTOON */}
+    <div className="space-y-6">
 
-          {/* Form */}
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500]"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500]"
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500]"
-            />
-            <textarea
-              placeholder="Your Message"
-              rows={6}
-              className="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500]"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-[#5F021F]/80 text-[#F7E7CE] px-6 py-3 rounded-lg font-semibold hover:bg-[#FFA500] hover:text-[#5F021F] transition-all duration-300"
-            >
-              Send Message
-            </button>
-          </form>
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#5F021F] leading-tight">
+        Let’s Discuss Your Matter
+      </h2>
 
-          {/* Contact Info */}
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mt-12">
+      <div className="h-[3px] w-20 bg-[#FFA500]"></div>
 
-            {/* Contact Details */}
-            <div className="text-gray-700 space-y-4">
-              <p><strong>Address:</strong> 12 Oluseyi Aweda Street, Magodo Phase 1, Lagos, Nigeria</p>
-              <p><strong>Phone:</strong> +234 706 046 9068</p>
-              <p><strong>Email:</strong>fzekeri@lumminalaw.com</p>
-            </div>
+      <p className="text-[1.05rem] text-gray-700 leading-relaxed">
+        Whether you require strategic legal guidance, representation, or a consultation,
+        our team is prepared to assist with clarity and discretion.
+      </p>
 
-            {/* Cartoon Illustration */}
-            <div className="relative w-48 h-48 flex-shrink-0">
-              <Image
-                src={cartoonImage}
-                alt="Contact Illustration"
-                className="object-contain"
-                fill
-              />
-            </div>
+      <div className="space-y-4 text-gray-700 pt-6">
+        <p><strong>Address:</strong> 12 Oluseyi Aweda Street, Magodo Phase 1, Lagos</p>
+        <p><strong>Phone:</strong> +234 706 046 9068</p>
+        <p><strong>Email:</strong> fzekeri@lumminalaw.com</p>
+      </div>
 
-          </div>
+      {/* CARTOON IMAGE */}
+      <div className="pt-6 flex justify-start">
+        <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44">
+          <Image
+            src={cartoonImage}
+            alt="Contact Illustration"
+            fill
+            className="object-contain"
+          />
         </div>
-      </section>
+      </div>
+
+    </div>
+
+    {/* RIGHT SIDE – FORM CARD */}
+    <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
+      <form className="space-y-5">
+
+        <div>
+          <label className="block mb-2 text-sm font-medium text-[#5F021F]">
+            Full Name
+          </label>
+          <input
+            type="text"
+            className="w-full p-3 md:p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-2 text-sm font-medium text-[#5F021F]">
+            Email Address
+          </label>
+          <input
+            type="email"
+            className="w-full p-3 md:p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-2 text-sm font-medium text-[#5F021F]">
+            Subject
+          </label>
+          <input
+            type="text"
+            className="w-full p-3 md:p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-2 text-sm font-medium text-[#5F021F]">
+            Message
+          </label>
+          <textarea
+            rows={5}
+            className="w-full p-3 md:p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          className="w-full bg-[#5F021F] text-[#F7E7CE] py-3 md:py-4 rounded-lg font-semibold tracking-wide hover:bg-[#FFA500] hover:text-[#5F021F] transition-all duration-300"
+        >
+          Send Message
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
 
     </div>
   );

@@ -124,7 +124,7 @@ const ServicesPage = () => {
                   className="group flex flex-col gap-4 p-6 rounded-2xl border border-gray-300 bg-white
                     hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
                 >
-                  <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                  <h3 className="text-xl font-semibold text-[#5F021F]/90">{service.title}</h3>
                   <p className="text-gray-700 text-[1rem] sm:text-[1.05rem] leading-relaxed">{service.description}</p>
                 </motion.div>
               ))}
@@ -134,7 +134,7 @@ const ServicesPage = () => {
             <div className="flex justify-center mt-6">
               <button
                 onClick={() => setShowAll(!showAll)}
-                className="px-6 py-3 bg-[#FFA500] text-white rounded-full font-semibold hover:bg-[#F4C430] transition"
+                className="px-6 py-3 bg-[#5F021F]/90 text-white rounded-full font-semibold hover:bg-[#5F021F]/70 transition"
               >
                 {showAll ? "Show Less" : "Show More"}
               </button>
