@@ -3,7 +3,7 @@
 import { useState } from "react";
 import NewsletterModal from "@/app/components/NewsletterModal";
 import financial from "@/public/img/financial-advisor-website-hero-background_31O.jpg";
-
+import cartoon2 from "@/public/img/cartoon2.png";
 interface NewsletterProps {
   title: string;
   date: string;
@@ -146,28 +146,50 @@ const NewsletterPage = () => {
 
       
     {/* PAST NEWSLETTERS */}
+{/* PAST NEWSLETTERS */}
 <section className="bg-[#FFF7E7] max-w-6xl mx-auto px-6 py-16 md:py-20">
   <h2 className="text-2xl md:text-4xl font-semibold text-[#5F021F] mb-12 text-center">
     Past Newsletters
   </h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
     {sampleNewsletters.map((item) => (
       <div
         key={item.title}
-        className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 animate-pulseSlide"
+        className="relative bg-[#5F021F]/90 backdrop-blur-md text-white p-8 rounded-2xl shadow-xl border border-white/10 hover:shadow-2xl transition-all duration-300 animate-pulseSlide overflow-hidden"
       >
-        <h3 className="text-xl font-semibold text-[#5F021F] mb-2">
-          {item.title}
-        </h3>
-        <span className="text-sm text-gray-500">{item.date}</span>
-        <p className="text-gray-700 mt-4">{item.summary}</p>
-        <button
-          onClick={() => setSelectedNewsletter(item)}
-          className="mt-4 text-[#F4C430] font-semibold hover:underline"
-        >
-          Read More
-        </button>
+        {/* Decorative Cartoon Image */}
+        <img
+          src={cartoon2.src}
+          alt="Newsletter Illustration"
+          className="absolute -top-6 -right-6 w-24 opacity-20 pointer-events-none"
+        />
+
+        {/* Newsletter Content */}
+        <div className="relative z-10">
+          <span className="text-xs uppercase tracking-widest text-[#F4C430] font-semibold">
+            Newsletter
+          </span>
+
+          <h3 className="text-xl font-semibold mt-2 leading-snug">
+            {item.title}
+          </h3>
+
+          <p className="text-sm text-gray-300 mt-1">{item.date}</p>
+
+          <div className="h-[2px] w-12 bg-[#F4C430] my-4"></div>
+
+          <p className="text-gray-200 text-sm leading-relaxed">
+            {item.summary}
+          </p>
+
+          <button
+            onClick={() => setSelectedNewsletter(item)}
+            className="mt-6 inline-block bg-[#F4C430] text-[#5F021F] px-5 py-2 rounded-lg font-semibold hover:bg-white transition-colors duration-300"
+          >
+            Read Full Edition →
+          </button>
+        </div>
       </div>
     ))}
   </div>

@@ -1,7 +1,7 @@
 "use client";
 
-import { FC } from "react";
-import { X } from "lucide-react"; // or any close icon you prefer
+import { FC, useEffect } from "react";
+import { X } from "lucide-react";
 
 interface NewsletterModalProps {
   title: string;
@@ -10,23 +10,83 @@ interface NewsletterModalProps {
   onClose: () => void;
 }
 
-const NewsletterModal: FC<NewsletterModalProps> = ({ title, date, summary, onClose }) => {
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-      <div className="relative bg-white rounded-2xl max-w-3xl w-full p-8 sm:p-12 shadow-2xl overflow-y-auto max-h-[90vh] animate-fadeIn">
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-gray-700 hover:text-[#5F021F] transition-colors"
-        >
-          <X size={24} />
-        </button>
+const NewsletterModal: FC<NewsletterModalProps> = ({
+  title,
+  date,
+  summary,
+  onClose,
+}) => {
+  // Close on ESC key
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [onClose]);
 
-        {/* Content */}
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#5F021F] mb-2">{title}</h2>
-        <p className="text-sm text-gray-500 mb-6">{date}</p>
-        <p className="text-gray-800 leading-relaxed">{summary}</p>
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md px-4">
+
+      {/* Modal Card */}
+      <div className="relative bg-white rounded-3xl max-w-4xl w-full shadow-2xl overflow-hidden animate-modalFade max-h-[90vh] flex flex-col">
+
+        {/* Header Section */}
+        <div className="bg-[#5F021F] text-white px-10 py-8 relative">
+          <button
+            onClick={onClose}
+            className="absolute top-6 right-6 text-white/80 hover:text-white transition"
+          >
+            <X size={26} />
+          </button>
+
+          <span className="text-xs uppercase tracking-widest text-[#F4C430] font-semibold">
+            Lummina Law Newsletter
+          </span>
+
+          <h2 className="text-3xl md:text-4xl font-bold mt-3 leading-snug">
+            {title}
+          </h2>
+
+          <p className="text-sm text-white/70 mt-2">{date}</p>
+        </div>
+
+        {/* Divider Accent */}
+        <div className="h-[4px] bg-[#F4C430] w-full" />
+
+        {/* Body Content */}
+        <div className="px-10 py-10 overflow-y-auto text-gray-800 leading-relaxed space-y-6">
+
+          <p className="text-lg">
+            {summary}
+          </p>
+
+          <div className="border-t border-gray-200 pt-6 text-sm text-gray-500">
+            This publication is provided for general informational purposes
+            and does not constitute legal advice. For tailored legal guidance,
+            please contact our office directly.
+          </div>
+
+        </div>
       </div>
+
+      {/* Animation */}
+      <style jsx>{`
+        @keyframes modalFade {
+          0% {
+            opacity: 0;
+            transform: translateY(30px) scale(0.98);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        .animate-modalFade {
+          animation: modalFade 0.35s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };
