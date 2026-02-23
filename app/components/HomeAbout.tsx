@@ -60,7 +60,7 @@ export default function FeaturesSection() {
         >
           {values.map(({ title, description, icon: Icon }, index) => (
             <SwiperSlide key={index}>
-              <div className="group flex flex-col items-center text-center px-5 py-8 border border-gray-300 bg-white rounded-md hover:bg-white/80 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+              <div className="group flex flex-col items-center text-center px-5 py-8  bg-[#FFA500]/65 rounded-md hover:bg-white/80 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-[11.5rem]">
                 <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full border border-[#F4C430]/20">
                   <Icon className="h-[18px] w-[18px] text-[#5F021F] group-hover:text-[#F4C430] transition-colors duration-300" />
                 </div>
