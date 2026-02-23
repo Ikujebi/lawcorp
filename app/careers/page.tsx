@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import careersBg from "@/public/img/herobg2.jpg"; // replace with your image
+import careersBg from "@/public/img/careers.jpg"; // replace with your image
 import { Montserrat } from "@/app/fonts";
 
 export default function CareersPage() {
