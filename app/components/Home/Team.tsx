@@ -30,7 +30,7 @@ const Team = () => {
         bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))] text-black`}
       >
         <h2
-          className={`text-sm sm:text-lg font-semibold tracking-wide mb-4 text-[#5F021F] border rounded-3xl border-gray-900 px-6 sm:px-10 py-1`}
+          className={`text-sm sm:text-lg font-semibold tracking-wide mb-4 text-[#5F021F]  rounded-3xl  px-6 sm:px-10 py-1`}
         >
           Our Team
         </h2>
@@ -51,7 +51,7 @@ const Team = () => {
             <div
               key={title}
               className="group flex flex-col items-center text-center
-                px-4 sm:px-6 border border-gray-300 bg-white z-30
+                px-4 sm:px-6  bg-[#FFFDF6]/80 backdrop-blur-md  shadow-xl z-30
                 rounded-lg py-6 sm:py-8
                 hover:bg-white/70 hover:shadow-lg hover:-translate-y-2
                 transition-transform transition-shadow duration-300"
