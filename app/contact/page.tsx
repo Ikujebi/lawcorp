@@ -88,17 +88,17 @@ const ContactPage = () => {
     <div className="space-y-6">
 
       <h2 className="text-3xl md:text-4xl font-semibold text-[#5F021F] leading-tight">
-        Let’s Discuss Your Matter
+        Let&rsquo;s Discuss Your Matter
       </h2>
 
       <div className="h-[3px] w-20 bg-[#FFA500]"></div>
 
-      <p className="text-[1.05rem] text-gray-700 leading-relaxed">
+      <p className="text-[1.05rem] text-black leading-relaxed">
         Whether you require strategic legal guidance, representation, or a consultation,
         our team is prepared to assist with clarity and discretion.
       </p>
 
-      <div className="space-y-4 text-gray-700 pt-6">
+      <div className="space-y-4 text-black pt-6">
         <p><strong>Address:</strong> 12 Oluseyi Aweda Street, Magodo Phase 1, Lagos</p>
         <p><strong>Phone:</strong> +234 706 046 9068</p>
         <p><strong>Email:</strong> fzekeri@lumminalaw.com</p>
@@ -119,7 +119,7 @@ const ContactPage = () => {
     </div>
 
     {/* RIGHT SIDE – FORM CARD */}
-    <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
+    <div className="bg-[#F7e7ce]/70 shadow-sm p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
       <form className="space-y-5">
 
         <div>
@@ -128,7 +128,7 @@ const ContactPage = () => {
           </label>
           <input
             type="text"
-            className="w-full p-3 md:p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
+            className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
           />
         </div>
 
@@ -138,7 +138,7 @@ const ContactPage = () => {
           </label>
           <input
             type="email"
-            className="w-full p-3 md:p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
+            className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
           />
         </div>
 
@@ -148,7 +148,7 @@ const ContactPage = () => {
           </label>
           <input
             type="text"
-            className="w-full p-3 md:p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
+            className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
           />
         </div>
 
@@ -158,7 +158,7 @@ const ContactPage = () => {
           </label>
           <textarea
             rows={5}
-            className="w-full p-3 md:p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
+            className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
           ></textarea>
         </div>
 

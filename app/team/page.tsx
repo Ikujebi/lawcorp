@@ -72,15 +72,15 @@ const TeamPage = () => {
             Leadership & Core Staff
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 ">
             {teamMembers.map((member) => (
               <button
                 key={member.name}
                 onClick={() => setSelectedMember(member)}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm 
+                className="bg-white rounded-2xl overflow-hidden  border border-gray-200 shadow-sm 
                            hover:shadow-lg hover:-translate-y-1 
                            transition-all duration-300 text-left 
-                           focus:outline-none flex flex-col"
+                           focus:outline-none flex flex-col "
               >
                 {/* IMAGE */}
                 <div className="relative w-full aspect-[8.5/4.5]">
@@ -93,7 +93,7 @@ const TeamPage = () => {
                 </div>
 
                 {/* CONTENT */}
-                <div className="p-4 sm:p-5 flex flex-col flex-grow">
+                <div className="p-4 sm:p-5 flex flex-col flex-grow bg-[#F7e7ce]/70 shadow-sm">
                   <h3 className="text-base sm:text-lg font-semibold text-[#5F021F] leading-snug">
                     {member.name}
                   </h3>
@@ -102,7 +102,7 @@ const TeamPage = () => {
                     {member.role}
                   </p>
 
-                  <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mt-3 flex-grow">
+                  <p className="text-black text-xs sm:text-sm leading-relaxed mt-3 flex-grow">
                     {member.bio.length > 120
                       ? member.bio.slice(0, 120) + "..."
                       : member.bio}
