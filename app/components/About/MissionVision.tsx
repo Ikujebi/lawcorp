@@ -1,12 +1,12 @@
 import { Nunito, Roboto } from "@/app/fonts";
 
-const visionText = `To be the premier legal partner for individuals, businesses, and institutions in Nigeria and beyond, renowned for delivering tailored solutions for sustainable success.`;
+const visionText = `To be a trusted partner for individuals, businesses, and institutions in Nigeria and beyond, renowned for delivering bespoke legal solutions that drive sustainable success.`;
 
 const missionArray = [
-  "To provide innovative, practical, and bespoke legal solutions tailored to each client's unique circumstances.",
-  "To build lasting relationships based on trust, integrity, and excellent service delivery.",
-  "To contribute meaningfully to the growth and development of the Nigerian legal system through thought leadership and advocacy.",
-  "To create a positive impact in our community through social responsibility initiatives.",
+  "To provide innovative, practical, and bespoke legal solutions tailored to each client's unique circumstances",
+  "To build lasting relationships grounded in trust, integrity, and exceptional service delivery",
+  "To contribute meaningfully to the evolution of the Nigerian legal system through thought leadership and advocacy",
+  "To create positive impact within our communities through ethical, responsible practice",
 ];
 
 const MissionVision = () => {
@@ -44,12 +44,12 @@ const MissionVision = () => {
           <ul className="space-y-4">
             {missionArray.map((item, index) => (
               <li
-                key={index}
-                className={`${Nunito.className} text-gray-700 text-[1.05rem] leading-relaxed flex gap-3`}
-              >
-                <span className="mt-2 w-2 h-2 bg-[#F4C430] rounded-full flex-shrink-0"></span>
-                <span>{item}</span>
-              </li>
+  key={index}
+  className={`${Nunito.className} text-gray-700 text-[1.05rem] leading-relaxed flex gap-3 items-center`}
+>
+  <span className="w-2 h-2 bg-[#F4C430] rounded-full flex-shrink-0"></span>
+  <span>{item}</span>
+</li>
             ))}
           </ul>
         </div>

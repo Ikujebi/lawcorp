@@ -1,82 +1,64 @@
-import { Roboto } from "../../fonts";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-const coreValues = [
-  {
-    title: "Excellence",
-    description:
-      "We deliver superior legal results through precision, professionalism, and meticulous attention to detail.",
-  },
-  {
-    title: "Client-Centered Service",
-    description:
-      "Every strategy and decision is guided by our clients’ objectives, interests, and long-term success.",
-  },
-  {
-    title: "Integrity",
-    description:
-      "We uphold the highest ethical standards, ensuring transparency, honesty, and accountability in every engagement.",
-  },
-  {
-    title: "Innovation",
-    description:
-      "We apply modern legal technologies and forward-thinking strategies to solve complex legal challenges efficiently.",
-  },
-];
-
-const CoreV = () => {
+const ConfidentialCard = () => {
   return (
-    <section
-      className={`${Roboto.className} px-6 flex flex-col items-center`}
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="max-w-xl mx-auto p-6 md:p-8 rounded-2xl shadow-2xl transition-transform duration-500 transform hover:scale-105
+                 bg-[#FFA500] text-white relative overflow-hidden"
     >
-      
-       <h2
-          className={` text-lg font-semibold tracking-wide mb-4 text-[#5F021F]/90 border-1 rounded-3xl border-black  px-10 py-1`}
-        >
-          Our Core Values
-        </h2>
+      {/* Decorative floating circles */}
+      <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#F7E7CE] rounded-full opacity-20 animate-pulse"></div>
+      <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-[#5F021F] rounded-full opacity-10 animate-pulse"></div>
 
-      <h2 className="2xl:text-[4rem] text-[2.5rem] font-semibold mb-4 text-center text-[#5F021F]/90">
-        Principles That Define Our Legal Practice
+      <h2 className="text-[#5F021F] text-2xl md:text-3xl font-semibold mb-3 relative z-10">
+        Confidential Engagement
       </h2>
 
-      <p className="max-w-3xl text-[1.2rem] text-gray-700 mb-6 text-center">
-        Our practice is guided by excellence, integrity, innovation, and a deep
-        commitment to delivering client-focused legal solutions that create
-        lasting value.
+      <div className="h-[3px] w-20 bg-[#F7E7CE] rounded mb-6 relative z-10 animate-pulse" />
+
+      <p className="text-sm sm:text-base leading-relaxed mb-3 relative z-10">
+        We approach every client relationship with <span className="font-medium">strict confidentiality</span>, professional discretion, and structured analysis. Your matter is handled with care from the very first conversation.
       </p>
 
-      <div className="mt-3 h-[2.5px] w-24 bg-[#F4C430]"></div>
+      <p className="text-sm sm:text-base leading-relaxed relative z-10">
+        Initial consultations do not constitute formal legal advice or representation. Formal engagement begins upon agreement of scope and terms.
+      </p>
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full">
-        {coreValues.map(({ title, description }, index) => (
-          <div
-            key={index}
-            className="group flex gap-4 relative border border-gray-300 bg-white rounded-2xl p-6
-            hover:bg-[linear-gradient(135deg,rgba(244,196,48,0.2),rgba(255,255,255,0.95))]
-            hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
-          >
-            {/* Left Line Accent */}
-            <div className="flex flex-col items-center">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#F9DE8A]/70 text-[0.9rem] font-bold text-[#F4C430]">
-                {String(index + 1).padStart(2, "0")}
-              </div>
-              <div className="mt-2 h-full w-px bg-[#5F021F]/90"></div>
-            </div>
+      {/* Optional hover info icon */}
+      <motion.div
+        whileHover={{ scale: 1.2 }}
+        className="mt-6 w-10 h-10 bg-[#F7E7CE] rounded-full flex items-center justify-center text-[#5F021F] font-bold cursor-pointer relative z-10"
+      >
+        i
+      </motion.div>
 
-            <div>
-              <h3 className="text-lg font-medium mb-2 transition-colors duration-300 text-[#5F021F]/90">
-                {title}
-              </h3>
 
-              <p className="text-gray-500 leading-relaxed text-[1rem]">
-                {description}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+<motion.div
+      
+        className=" rounded-full  flex items-center justify-center  text-[#5F021F] font-bold cursor-pointer relative z-10 "
+      >
+        <Link
+        href="/services"
+        className="inline-block  
+                   hover:text-[#5F021F] 
+                   border-b border-transparent 
+                   hover:border-[#F7E7CE] 
+                   transition-all duration-500 
+                   text-xs md:text-lg 
+                   font-medium tracking-wide mt-10
+                   bg-[#F7E7CE] px-4 py-2 rounded-full
+                   "
+      >
+        Schedule a Consultation
+      </Link>
+      </motion.div>
+    </motion.section>
   );
 };
 
-export default CoreV;
+export default ConfidentialCard;

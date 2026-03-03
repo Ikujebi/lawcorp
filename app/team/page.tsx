@@ -22,22 +22,22 @@ const TeamPage = () => {
 
   const teamMembers: Member[] = [
     {
-      name: "Faith Zekeri, LL.B, B.L, ACIS",
+      name: "Faith Zekeri, LL.B, B.L, ACIS, ACA",
       role: "Managing Partner",
       photo: faithPhoto,
       bio: `Faith Zekeri is a brilliant and resourceful lawyer with extensive experience in corporate advisory, dispute resolution, and regulatory compliance.`,
     },
     {
-      name: "John Doe, LL.B",
-      role: "Senior Associate",
+      name: "OJOAJOGWU ZEKERI ",
+      role: "Senior Partner",
       photo: staff1Photo,
-      bio: `John Doe has extensive experience in Corporate and Commercial Law, advising clients on transactions, governance, and compliance matters.`,
+      bio: `Ojoajogwu Zekeri has extensive experience in Corporate and Commercial Law, advising clients on transactions, governance, and compliance matters.`,
     },
     {
-      name: "Jane Smith, LL.B, B.L",
-      role: "Associate",
+      name: "OLUWATOYIN KOWE ",
+      role: "Junior Associate",
       photo: staff2Photo,
-      bio: `Jane Smith specializes in Family Law and Dispute Resolution, providing strategic and compassionate representation for clients.`,
+      bio: `Oluwatoyin Kowe specializes in Family Law and Dispute Resolution, providing strategic and compassionate representation for clients.`,
     },
   ];
 
@@ -54,11 +54,12 @@ const TeamPage = () => {
           transition={{ duration: 1.4 }}
         >
           <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
-            Our Team
+           Meet the Team
           </h1>
 
           <p className="mt-3 text-sm sm:text-base lg:text-xl text-[#F7E7CE]">
-            Meet the brilliant minds delivering strategic legal solutions.
+           Lummina is built on the belief that exceptional legal work comes from exceptional people. Our team combines legal expertise, commercial awareness, and a genuine commitment to client outcomes.
+
           </p>
 
           <div className="h-[2px] w-14 bg-[#FFA500] mx-auto mt-4"></div>

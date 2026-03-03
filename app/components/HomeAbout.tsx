@@ -18,23 +18,30 @@ export default function FeaturesSection() {
   const swiperRef = useRef<SwiperClass | null>(null);
 
   const values: Value[] = [
-    { title: "Integrity", description: "We maintain the highest ethical standards in all our dealings.", icon: Scale },
-    { title: "Client-Centered Service", description: "Our clients' needs and interests guide every decision we make.", icon: Users },
-    { title: "Excellence", description: "We are dedicated to delivering superior results with precision, professionalism, and attention to detail.", icon: ShieldCheck },
-    { title: "Innovation", description: "We leverage modern technologies and creative approaches to solve complex legal challenges.", icon: Zap },
+    { title: "Integrity", description: "We hold ourselves to the highest ethical standards in everything we do.", icon: Scale },
+    { title: "Client-Centered Service", description: "Your objectives guide our strategy. We design solutions around your goals, not a generic playbook.", icon: Users },
+    { title: "Excellence", description: "We approach every mandate with precision, professionalism, and meticulous attention to detail.", icon: ShieldCheck },
+    { title: "Innovation", description: "We apply forward-thinking legal strategies and modern approaches to solve complex challenges efficiently.", icon: Zap },
   ];
 
   return (
     <section
       className={`${Montserrat.className} px-5 sm:px-6 py-10 sm:py-16 flex flex-col items-center justify-center h-full md:h-[90svh] xl:h-full bg-[#FFF7E7]/90 text-black`}
     >
-      <h2 className="text-[2rem] sm:text-[2.1rem] 2xl:text-[4rem] font-semibold leading-tight mb-4 mx-auto text-center text-[#5F021F]">
-        Modern Legal Solutions Rooted in Trust and Excellence
-      </h2>
+      <h2 className="text-[1.6rem] 2xl:text-[3rem] font-semibold leading-tight mb-6 mx-auto text-center text-[#5F021F]">
+  WHO WE ARE
+</h2>
 
-      <p className="max-w-3xl text-base sm:text-[1.2rem] md:text-[1.363rem] text-center text-gray-700 mb-4">
-        <strong className="text-[#5F021F]">Lummina Law Firm</strong> is a modern, innovative and client-centered full-service law firm based in <strong className="text-[#5F021F]">Lagos, Nigeria</strong>. We are committed to redefining legal practice through innovation, excellence, and a deep understanding of our clients&#39 needs.
-      </p>
+<p className="max-w-3xl  text-[.72rem] md:text-[1rem] text-center text-black mb-6 leading-relaxed">
+  Lummina Law Firm is built on a simple belief: intentional legal work produces great outcomes. 
+  We advise on the legal structures that protect assets, support businesses, and enable sustainable growth.
+</p>
+
+<p className="max-w-3xl text-[.72rem] md:text-[1rem] text-center text-black leading-relaxed">
+  We work with founders scaling their first ventures, established corporates navigating complex transactions, 
+  families building multigenerational wealth, and private clients who require precise and intentional support. 
+  Whatever the mandate, we bring the same rigour, clarity, and commitment to excellence.
+</p>
 
       <div className="mx-auto mt-3 h-[2.5px] w-1/8 bg-[#F4C430]"></div>
 

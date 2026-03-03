@@ -12,7 +12,7 @@ const navItems = [
   // { name: "International Services", href: "/international" },
   { name: "Services", href: "/services" },
   { name: "Our Team", href: "/team" },
-  { name: "Newsletter", href: "/news" },
+  { name: "Insights", href: "/Insights" },
   { name: "Contact", href: "/contact" },
 ];
 

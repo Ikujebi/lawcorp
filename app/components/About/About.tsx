@@ -1,99 +1,91 @@
 "use client";
-
-import { SourceCodePro } from "../../fonts";
-import { Roboto } from "../../fonts";
-import CoreV from "./CoreV";
 import MissionVision from "./MissionVision";
-import abt from "@/public/img/abt.png";
-import Image from "next/image";
+import { Roboto } from "../../fonts";
+import CoreV    from "./CoreV"; 
 
 const About = () => {
   const philosophyList = [
-    "Ethical, transparent, and compliant legal practice",
-    "Structured case assessment and legal strategy",
-    "Clear communication and procedural accountability",
-    "Long-term legal protection and client confidence",
+    "Ethical and transparent legal practice",
+    "Structured case assessment before strategy execution",
+    "Clear, consistent communication at every stage",
+    "Long-term legal protection as the default orientation",
+  ];
+
+  const whoWeServe = [
+    {
+      title: "Emerging & Growth-Focused Businesses",
+      description:
+        "Founders, startups, and scaling companies who need legal architecture that grows with them.",
+    },
+    {
+      title: "Established Corporates",
+      description:
+        "Governance, compliance, transaction support, and strategic advisory for businesses navigating complexity and change.",
+    },
+    {
+      title: "Investors & Capital Deployers",
+      description:
+        "Structured support across investment documentation, due diligence, and corporate reorganisation.",
+    },
+    {
+      title: "Private Clients & Families",
+      description:
+        "Succession planning, trust structures, and asset protection for individuals and families who think long term.",
+    },
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-[#FAFAFA]">
+      <main className={`${Roboto.className} max-w-6xl mx-auto px-6 py-16 text-gray-900`}>
 
-      {/* CORE VALUES SECTION */}
-      <section className="w-full bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))]">
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <MissionVision />
-        </div>
-      </section>
+        {/* Vision Section */}
+        <section className="mb-16">
+         <MissionVision />
+        </section>
 
-      <section className="w-full bg-[#FFF7E7] bg-[linear-gradient(335deg,rgba(244,196,48,0.15),white,white,rgba(244,196,48,0.15))]">
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <CoreV />
-        </div>
-      </section>
+        {/* Practice Philosophy */}
+        <section className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+            Our Practice Philosophy
+          </h2>
+          <div className="h-[2px] w-24 bg-[#F4C430] mb-6" />
+          <p className="text-gray-700 text-sm sm:text-base md:text-[1.05rem] leading-relaxed mb-6">
+            Every matter entrusted to Lummina is handled with professional rigor,
+            ethical responsibility, and strategic foresight. We approach legal work
+            not as a transactional service, but as a long-term partnership.
+          </p>
+          <ul className="space-y-3 list-none">
+            {philosophyList.map((item, index) => (
+              <li key={index} className="text-gray-700 text-sm sm:text-base md:text-[1.05rem] flex gap-3">
+                <span className="mt-1 w-2 h-2 bg-[#F4C430] rounded-full flex-shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      {/* ABOUT SECTION */}
-      <section className="w-full bg-[#FAFAFA]">
-        <main
-          className={`${Roboto.className} max-w-6xl mx-auto px-6 py-16 text-gray-900`}
-        >
-          <div className="flex flex-col md:flex-row md:gap-16 items-center">
+        {/* Who We Serve */}
+        <section className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+            Who We Serve
+          </h2>
+          <div className="h-[2px] w-24 bg-[#F4C430] mb-6" />
+          <ul className="space-y-6">
+            {whoWeServe.map((item, index) => (
+              <li key={index}>
+                <h3 className="font-medium text-[#5F021F] text-base sm:text-lg mb-1">{item.title}</h3>
+                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">{item.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-            {/* LEFT SIDE IMAGE (TABLET & ABOVE) */}
-            <div className="hidden md:block md:w-1/2">
-              <div className="relative w-full h-[420px] lg:h-[500px] rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src={abt}
-                  alt="About Lummina"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
+        {/* Confidential Engagement */}
+        <section>
+          < CoreV />
+        </section>
 
-            {/* RIGHT SIDE */}
-            <div className="w-full md:w-1/2 mt-14 md:mt-0 flex flex-col items-center">
-
-              {/* Gold Line */}
-              <div className="h-[2.5px] w-full max-w-lg bg-[#F4C430]" />
-
-              {/* Card */}
-              <div className="w-full max-w-lg">
-                <div className="border border-gray-300 bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition duration-300">
-
-                  <h3
-                    className={`${SourceCodePro.className} text-lg font-semibold text-gray-900 mb-8 mt-4`}
-                  >
-                    Our Practice Philosophy
-                  </h3>
-
-                  <p className="text-gray-600 mb-10 text-sm leading-relaxed">
-                    Every matter entrusted to us is handled with professional
-                    rigor, ethical responsibility, and strategic foresight.
-                  </p>
-
-                  <ul>
-                    {philosophyList.map((item, index) => (
-                      <li
-                        key={index}
-                        className="flex items-start gap-3 mb-6"
-                      >
-                        <span className="mt-2 w-2 h-2 rounded-full bg-[#F4C430]" />
-                        <span className="text-gray-700 text-sm leading-relaxed">
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </main>
-      </section>
-
+      </main>
     </div>
   );
 };

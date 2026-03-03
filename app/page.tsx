@@ -1,7 +1,5 @@
 import Hero from "./components/Hero";
 import { Montserrat } from "./fonts";
-
-import { Scale, ShieldCheck, Users } from "lucide-react";
 // import International from "./components/Home/International Legal Assistance";
 import Team from "./components/Home/Team";
 import Confidential from "./components/Home/Confidential";

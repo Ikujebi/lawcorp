@@ -2,49 +2,34 @@
 
 interface Item {
   title: string;
-  description: string;
 }
 
 export default function WhyChooseUs() {
   const items: Item[] = [
     {
-      title: "Deep Local Expertise",
-      description:
-        "Deep understanding of the Nigerian legal and business landscape.",
+      title: "Deep understanding of the Legal and Business Landscape",
     },
     {
-      title: "Timely & Pragmatic Solutions",
-      description:
-        "Commitment to timely, cost-effective, and pragmatic solutions.",
+      title: "Commitment to timely, cost effective and Pragmatic Solutions",
     },
     {
-      title: "Strong Legal & Business Network",
-      description:
-        "Strong network of relationships within legal, regulatory, and business circles.",
+      title: "Proven Track Record of success across a wide array of matters",
     },
     {
-      title: "Proven Track Record",
-      description:
-        "Proven track record of success across a wide array of legal matters.",
-    },
-    {
-      title: "Commitment to Positive Legacy",
-      description:
-        "Dedication to building a positive legacy within the legal community and beyond.",
+      title: "Dedication to building a positive legacy within our community and beyond.",
     },
   ];
 
-  const heading = "Why Choose Us";
-  const subheading =
-    "Guiding Businesses with Integrity, Excellence & Innovation";
+  const heading = "WHY LUMMINA";
 
   return (
     <section
       className={`w-full min-h-[70vh] md:min-h-[80vh] xl:h-[90vh] px-5 sm:px-6 py-10 sm:py-16
       flex justify-center items-center
-      bg-[#FFF7E7] md:bg-[#FFF7E7]/60  backdrop-blur-[2px] text-gray-900`}
+      bg-[#FFF7E7] md:bg-[#FFF7E7]/60 backdrop-blur-[2px] text-gray-900`}
     >
       <div className="flex flex-col md:flex-row md:space-x-6 w-full max-w-6xl">
+
         {/* Left Part */}
         <div className="md:w-1/2 md:pr-6 flex flex-col justify-center">
           <h2 className="text-sm sm:text-base font-medium tracking-wide mb-3 text-gray-800">
@@ -52,37 +37,32 @@ export default function WhyChooseUs() {
           </h2>
 
           <h2
-            className="text-[2rem] sm:text-[2.3rem] md:text-[2.9rem] font-semibold text-[#5F021F] md:text-[#5F021F] mb-6 sm:mb-8 leading-tight"
+            className="text-[2rem] sm:text-[2.3rem] md:text-[2.9rem] font-semibold text-[#5F021F] mb-6 sm:mb-8 leading-tight"
           >
-            {subheading}
+            Deep Legal & Business Insight
           </h2>
-
-          <p className="text-gray-700 text-sm sm:text-base leading-snug max-w-xl mb-4">
-            Our firm combines ethical responsibility, regional legal insight,
-            and disciplined case strategy to deliver dependable legal
-            representation in sensitive and complex matters.
-          </p>
 
           <div className="mt-3 h-[2px] w-20 bg-[#F4C430]"></div>
         </div>
 
-        {/* Divider for desktop */}
+        {/* Divider */}
         <div className="hidden md:block w-[1px] bg-gray-300"></div>
 
         {/* Right Part */}
         <div className="md:w-1/2 md:pl-6 mt-6 sm:mt-8 md:mt-0 flex flex-col justify-center">
           {items.map((item, index) => (
             <div key={index} className="mb-6 sm:mb-8 last:mb-0">
-              <div className="text-sm sm:text-base font-semibold mb-1 text-gray-900 flex items-center gap-3">
-                <span className="text-[0.85rem] sm:text-[0.95rem] text-[#F4C430] font-medium">
-                  {index + 1 < 10 ? `0${index + 1}` : index + 1}
-                </span>
-                <h3 className="text-[#5F021F]">{item.title}</h3>
-              </div>
+              <div className="flex items-center gap-3 mb-1 text-gray-900">
+  {/* Centered Dot */}
+  <span className="flex-shrink-0 text-[#F4C430] text-xl sm:text-2xl font-bold">
+    .
+  </span>
 
-              <p className="text-[0.85rem] sm:text-[0.95rem] text-gray-600 leading-snug">
-                {item.description}
-              </p>
+  {/* Title */}
+  <h3 className="text-[#5F021F] text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
+    {item.title}
+  </h3>
+</div>
             </div>
           ))}
         </div>

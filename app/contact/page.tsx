@@ -1,18 +1,44 @@
 "use client";
 
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
+
 import contactHero from "@/public/img/contactHero.jpg";
 import cartoonImage from "@/public/img/cartoon2.png";
 
 const ContactPage = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<string>("");
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    const serviceID = "YOUR_SERVICE_ID";
+    const templateID = "YOUR_TEMPLATE_ID";
+    const publicKey = "YOUR_PUBLIC_KEY";
+
+    emailjs.sendForm(serviceID, templateID, formRef.current, publicKey)
+      .then(
+        (result) => {
+          console.log(result.text);
+          setStatus("Message sent successfully!");
+          formRef.current?.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
     <div className="w-full">
 
       {/* HERO SECTION */}
       <section className="relative h-[80vh] md:h-[88vh] lg:h-[80vh] overflow-hidden">
-
-        {/* Animated Background */}
         <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -28,153 +54,125 @@ const ContactPage = () => {
           />
         </motion.div>
 
-        {/* Overlay */}
+        {/* Overlay for contrast */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.5 }}
+          animate={{ opacity: 0.45 }}
           transition={{ duration: 2 }}
           className="absolute inset-0 bg-[#5F021F]"
         />
 
-        {/* Hero Text */}
         <div className="relative z-10 flex items-center justify-center h-full px-6 text-center">
           <motion.div
             initial="hidden"
             animate="visible"
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.3 } }
-            }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.3 } } }}
             className="max-w-4xl text-white"
           >
-
-            {/* Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.6 }}
-              className="text-3xl md:text-4xl lg:text-[3.5rem] font-bold"
+              className="text-3xl md:text-4xl lg:text-[3.5rem] font-bold tracking-tight leading-tight drop-shadow-lg"
             >
-              Get in Touch with Lummina
+              How Can We Help?
             </motion.h1>
 
-            {/* Subtext */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.8 }}
-              className="mt-4 text-[1.2rem] md:text-[1.5rem]"
+              className="mt-4 text-[1.2rem] md:text-[1.5rem] max-w-2xl mx-auto drop-shadow-sm"
             >
-              We’re here to provide professional legal guidance. Reach out with your inquiries, and our team will assist you promptly.
+              If you require legal guidance or wish to explore your options, we would be pleased to hear from you.
             </motion.p>
 
-            {/* Decorative Line */}
             <motion.div
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
               transition={{ duration: 1.5 }}
-              className="h-[2px] w-[10rem] bg-[#FFA500] mx-auto mt-6 origin-left"
+              className="h-[3px] w-[10rem] bg-[#FFA500] mx-auto mt-6 origin-left rounded"
             />
-
           </motion.div>
         </div>
       </section>
 
-   {/* CONTACT FORM SECTION */}
-<section className="px-6 md:px-12 lg:px-20 py-20 bg-[#FFF7E7] text-gray-900">
-  <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+      {/* CONTACT FORM SECTION */}
+      <section className="px-6 md:px-12 lg:px-20 py-24 bg-[#FFF7E7] text-gray-900">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
 
-    {/* LEFT SIDE – TEXT + CARTOON */}
-    <div className="space-y-6">
+          {/* LEFT SIDE – ADDRESS + ILLUSTRATION */}
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#5F021F] leading-tight">
+              Get in Touch
+            </h2>
+            <div className="h-[4px] w-24 bg-[#FFA500] rounded"></div>
 
-      <h2 className="text-3xl md:text-4xl font-semibold text-[#5F021F] leading-tight">
-        Let&rsquo;s Discuss Your Matter
-      </h2>
+            <p className="text-[1.05rem] leading-relaxed text-black">
+              All enquiries are handled with strict confidentiality. We aim to respond within one business day.
+            </p>
 
-      <div className="h-[3px] w-20 bg-[#FFA500]"></div>
+            <div className="space-y-3 text-black pt-6">
+              <p><strong>Address:</strong> 12 Oluseyi Aweda Street, Magodo Phase 1, Lagos, Nigeria</p>
+              <p><strong>Phone:</strong> +234 706 046 9068</p>
+              <p><strong>Email:</strong> info@lumminalaw.com</p>
+              <p><strong>LinkedIn:</strong> <a href="#" className="underline hover:text-[#FFA500] transition">Visit</a></p>
+              <p><strong>Instagram:</strong> <a href="#" className="underline hover:text-[#FFA500] transition">Visit</a></p>
+            </div>
 
-      <p className="text-[1.05rem] text-black leading-relaxed">
-        Whether you require strategic legal guidance, representation, or a consultation,
-        our team is prepared to assist with clarity and discretion.
-      </p>
+            <div className="pt-6 flex justify-start">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44"
+              >
+                <Image
+                  src={cartoonImage}
+                  alt="Contact Illustration"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
+            </div>
+          </div>
 
-      <div className="space-y-4 text-black pt-6">
-        <p><strong>Address:</strong> 12 Oluseyi Aweda Street, Magodo Phase 1, Lagos</p>
-        <p><strong>Phone:</strong> +234 706 046 9068</p>
-        <p><strong>Email:</strong> fzekeri@lumminalaw.com</p>
-      </div>
+          {/* RIGHT SIDE – FORM */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-[#F7E7CE]/70 p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100"
+          >
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-5">
+              <div>
+                <label className="block mb-2 text-sm font-medium text-[#5F021F]">Full Name</label>
+                <input name="fullName" type="text" required className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"/>
+              </div>
 
-      {/* CARTOON IMAGE */}
-      <div className="pt-6 flex justify-start">
-        <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44">
-          <Image
-            src={cartoonImage}
-            alt="Contact Illustration"
-            fill
-            className="object-contain"
-          />
+              <div>
+                <label className="block mb-2 text-sm font-medium text-[#5F021F]">Email Address</label>
+                <input name="email" type="email" required className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"/>
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm font-medium text-[#5F021F]">Subject</label>
+                <input name="subject" type="text" required className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"/>
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm font-medium text-[#5F021F]">Message</label>
+                <textarea name="message" rows={5} required className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"></textarea>
+              </div>
+
+              <button type="submit" className="w-full bg-[#5F021F] text-[#F7E7CE] py-3 md:py-4 rounded-lg font-semibold tracking-wide hover:bg-[#FFA500] hover:text-[#5F021F] transition-all duration-300">
+                Send Message
+              </button>
+
+              {status && <p className="mt-3 text-center text-green-700 font-medium">{status}</p>}
+            </form>
+          </motion.div>
+
         </div>
-      </div>
-
-    </div>
-
-    {/* RIGHT SIDE – FORM CARD */}
-    <div className="bg-[#F7e7ce]/70 shadow-sm p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
-      <form className="space-y-5">
-
-        <div>
-          <label className="block mb-2 text-sm font-medium text-[#5F021F]">
-            Full Name
-          </label>
-          <input
-            type="text"
-            className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
-          />
-        </div>
-
-        <div>
-          <label className="block mb-2 text-sm font-medium text-[#5F021F]">
-            Email Address
-          </label>
-          <input
-            type="email"
-            className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
-          />
-        </div>
-
-        <div>
-          <label className="block mb-2 text-sm font-medium text-[#5F021F]">
-            Subject
-          </label>
-          <input
-            type="text"
-            className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
-          />
-        </div>
-
-        <div>
-          <label className="block mb-2 text-sm font-medium text-[#5F021F]">
-            Message
-          </label>
-          <textarea
-            rows={5}
-            className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:border-transparent transition"
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-[#5F021F] text-[#F7E7CE] py-3 md:py-4 rounded-lg font-semibold tracking-wide hover:bg-[#FFA500] hover:text-[#5F021F] transition-all duration-300"
-        >
-          Send Message
-        </button>
-
-      </form>
-    </div>
-
-  </div>
-</section>
-
+      </section>
     </div>
   );
 };
