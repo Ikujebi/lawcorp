@@ -88,6 +88,11 @@ export default function Footer() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link href="/client" className="hover:text-[#F4C430] transition">
+                Client Portal
+              </Link>
+            </li>
           </ul>
         </article>
 
