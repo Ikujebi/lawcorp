@@ -39,13 +39,13 @@ export default function Home() {
         <International />
       </section> */}
       {/*Our Legal Team SECTION  */}
-      <section className={`${Montserrat.className} `}>
+      {/* <section className={`${Montserrat.className} `}>
         <Team />
-      </section>
+      </section> */}
       {/*Confidential Legal Support SECTION  */}
-      <section className={`${Montserrat.className} `}>
+      {/* <section className={`${Montserrat.className} `}>
         <Confidential />
-      </section>
+      </section> */}
       {/*Our Presence SECTION  */}
       <section className={`${Montserrat.className} `}>
         <Presence />
