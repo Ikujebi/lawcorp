@@ -1,30 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { Montserrat } from "@/app/fonts";
 
 export default function FeedbackPage() {
-  const [rating, setRating] = useState<number | null>(null);
-  const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendFeedback = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-  };
 
-  if (submitted) {
-    return (
-      <section className={`${Montserrat.className} min-h-screen flex items-center justify-center bg-white`}>
-        <div className="text-center max-w-xl px-6">
-          <h1 className="text-3xl font-semibold mb-4">Thank You</h1>
-          <p className="text-gray-600">
-            Your feedback helps us improve the experience for our clients.
-          </p>
-        </div>
-      </section>
-    );
-  }
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        "service_qob6gin",   // EmailJS service ID
+        "template_un996mj",  // EmailJS template ID
+        formRef.current,
+        "RJqgR6UT9A9FXvm-G"     // EmailJS public key
+      )
+      .then(() => {
+        setStatus("Feedback sent successfully.");
+        formRef.current?.reset();
+      })
+      .catch(() => {
+        setStatus("Something went wrong. Please try again.");
+      });
+  };
 
   return (
     <section className={`${Montserrat.className} bg-white min-h-screen flex items-center`}>
@@ -33,71 +37,56 @@ export default function FeedbackPage() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
         >
 
-          {/* Title */}
           <h1 className="text-3xl md:text-4xl font-semibold text-center mb-6">
             Website Feedback
           </h1>
 
-          {/* Description */}
           <p className="text-gray-600 text-center mb-12">
-            We value your thoughts. Please share your feedback about the website
-            experience so we can continue improving it.
+            We welcome your feedback about your experience on our website.
           </p>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form ref={formRef} onSubmit={sendFeedback} className="space-y-8">
 
-            {/* Rating */}
-            <div className="text-center">
-              <p className="mb-4 font-medium">How would you rate your experience?</p>
-
-              <div className="flex justify-center gap-3">
-                {[1,2,3,4,5].map((star) => (
-                  <button
-                    type="button"
-                    key={star}
-                    onClick={() => setRating(star)}
-                    className={`text-3xl ${
-                      rating && rating >= star ? "text-yellow-500" : "text-gray-300"
-                    }`}
-                  >
-                    ★
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Feedback Message */}
             <div>
               <label className="block mb-2 font-medium">
-                Your Feedback
+                Your Name
               </label>
 
-              <textarea
+              <input
+                name="name"
                 required
-                rows={5}
-                className="w-full border border-gray-300 p-4 rounded-sm focus:outline-none focus:border-[#5F021F]"
-                placeholder="Tell us what you liked or what could be improved..."
+                className="w-full border border-gray-300 p-4 rounded-sm focus:border-[#5F021F]"
               />
             </div>
 
-            {/* Email (optional) */}
             <div>
               <label className="block mb-2 font-medium">
-                Email (optional)
+                Email
               </label>
 
               <input
                 type="email"
-                className="w-full border border-gray-300 p-4 rounded-sm focus:outline-none focus:border-[#5F021F]"
-                placeholder="your@email.com"
+                name="email"
+                required
+                className="w-full border border-gray-300 p-4 rounded-sm focus:border-[#5F021F]"
               />
             </div>
 
-            {/* Submit */}
+            <div>
+              <label className="block mb-2 font-medium">
+                Feedback
+              </label>
+
+              <textarea
+                name="message"
+                required
+                rows={5}
+                className="w-full border border-gray-300 p-4 rounded-sm focus:border-[#5F021F]"
+              />
+            </div>
+
             <div className="text-center">
               <button
                 type="submit"
@@ -107,10 +96,15 @@ export default function FeedbackPage() {
               </button>
             </div>
 
+            {status && (
+              <p className="text-center text-sm text-gray-600">
+                {status}
+              </p>
+            )}
+
           </form>
 
         </motion.div>
-
       </div>
     </section>
   );

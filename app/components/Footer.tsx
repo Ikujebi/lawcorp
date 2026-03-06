@@ -95,7 +95,7 @@ export default function Footer() {
             </li>
             <li>
   <Link href="/feedback" className="hover:text-[#F4C430] transition">
-    Website Feedback
+     💬 Website Feedback
   </Link>
 </li>
           </ul>
