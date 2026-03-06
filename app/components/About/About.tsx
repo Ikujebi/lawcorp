@@ -1,6 +1,6 @@
 "use client";
 import MissionVision from "./MissionVision";
-import { Roboto } from "../../fonts";
+import { Montserrat } from "../../fonts";
 import CoreV    from "./CoreV"; 
 
 const About = () => {
@@ -36,7 +36,7 @@ const About = () => {
 
   return (
     <div className="w-full bg-[#FAFAFA]">
-      <main className={`${Roboto.className} max-w-6xl mx-auto px-6 py-16 text-gray-900`}>
+      <main className={`${Montserrat.className} max-w-6xl mx-auto px-6 py-16 text-gray-900`}>
 
         {/* Vision Section */}
         <section className="mb-16">
