@@ -110,7 +110,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.6 }}
-            className="mt-[5rem] md:mt-[10rem] md:mt-[12rem] lg:mt-[14rem]"
+            className="mt-[10rem]  md:mt-[5rem] lg:mt-[5rem]"
           >
             <Link
               href="/contact"
