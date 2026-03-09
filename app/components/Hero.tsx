@@ -122,7 +122,7 @@ export default function Hero() {
                          text-xl md:text-2xl 
                          font-medium tracking-wide"
             >
-              Schedule Consultation 
+              Schedule a Consultation 
             </Link>
           </motion.div>
 

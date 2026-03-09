@@ -77,7 +77,7 @@ export default function Page() {
   transition={{ duration: 1.6 }}
   className="text-2xl  md:text-3xl  font-semibold tracking-wide text-gray-100 leading-snug"
 >
-  Legal practice should be thoughtful, responsive, and grounded in commercial reality.
+  Legal practice should be intentional.
 </motion.h1>
 
 {/* Description Paragraph */}
