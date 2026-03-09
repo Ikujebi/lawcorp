@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
 
         <div className="tracking-wide">
-          Trust • Confidentiality • Compliance
+          Integrity • Excellence • Innovation
         </div>
 
       </section>
