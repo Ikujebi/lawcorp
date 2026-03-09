@@ -16,13 +16,13 @@ export default function FeedbackPage() {
 
     emailjs
       .sendForm(
-        "service_qob6gin",   // EmailJS service ID
-        "template_un996mj",  // EmailJS template ID
+        "service_qob6gin",
+        "template_un996mj",
         formRef.current,
-        "RJqgR6UT9A9FXvm-G"     // EmailJS public key
+        "RJqgR6UT9A9FXvm-G"
       )
       .then(() => {
-        setStatus("Feedback sent successfully.");
+        setStatus("Thank you. Your feedback has been sent.");
         formRef.current?.reset();
       })
       .catch(() => {
@@ -31,20 +31,22 @@ export default function FeedbackPage() {
   };
 
   return (
-    <section className={`${Montserrat.className} bg-white min-h-screen flex items-center`}>
+    <section className={`${Montserrat.className} bg-[#F7E7CE] min-h-screen flex items-center`}>
       <div className="max-w-3xl mx-auto px-6 py-24 w-full">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
+          className="bg-white/70 backdrop-blur-md p-10 rounded-md shadow-md"
         >
 
-          <h1 className="text-3xl md:text-4xl font-semibold text-center mb-6">
-            Website Feedback
+          <h1 className="text-3xl md:text-4xl font-semibold text-center mb-6 text-[#5F021F]">
+            Service Feedback
           </h1>
 
-          <p className="text-gray-600 text-center mb-12">
-            We welcome your feedback about your experience on our website.
+          <p className="text-gray-700 text-center mb-12">
+            We value feedback from our clients. If you have worked with Lummina,
+            please share your experience with our legal services.
           </p>
 
           <form ref={formRef} onSubmit={sendFeedback} className="space-y-8">
@@ -76,13 +78,14 @@ export default function FeedbackPage() {
 
             <div>
               <label className="block mb-2 font-medium">
-                Feedback
+                Your Feedback About Our Services
               </label>
 
               <textarea
                 name="message"
                 required
                 rows={5}
+                placeholder="Please tell us about your experience working with Lummina."
                 className="w-full border border-gray-300 p-4 rounded-sm focus:border-[#5F021F]"
               />
             </div>
@@ -90,14 +93,14 @@ export default function FeedbackPage() {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-[#5F021F] text-[#F7E7CE] px-10 py-4 font-semibold rounded-sm"
+                className="bg-[#5F021F] text-[#F7E7CE] px-10 py-4 font-semibold rounded-sm hover:opacity-90"
               >
                 Submit Feedback
               </button>
             </div>
 
             {status && (
-              <p className="text-center text-sm text-gray-600">
+              <p className="text-center text-sm text-gray-700">
                 {status}
               </p>
             )}
@@ -105,6 +108,7 @@ export default function FeedbackPage() {
           </form>
 
         </motion.div>
+
       </div>
     </section>
   );
