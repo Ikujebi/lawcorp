@@ -46,7 +46,7 @@ export default function Footer() {
             <p className="flex items-start gap-3">
               <Image src={messages} alt="Email icon" width={18} height={18} />
               <span>
-                fzekeri@lumminalaw.com
+                info@lumminalaw.com
               </span>
             </p>
 
