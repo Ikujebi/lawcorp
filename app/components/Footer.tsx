@@ -24,9 +24,7 @@ export default function Footer() {
           </h2>
 
           <p className="text-sm leading-relaxed text-[#F7E7CE]/90">
-            A full-service law firm providing strategic, compliant, and 
-            confidential legal representation across Nigeria and 
-            international jurisdictions — built on our clients&apos; trust.
+           Strategic Legal Counsel. Structured for Growth.
           </p>
         </article>
 
