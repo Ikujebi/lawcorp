@@ -58,7 +58,7 @@ const TeamPage = () => {
           </h1>
 
           <p className="mt-3 text-sm sm:text-base lg:text-xl text-[#F7E7CE]">
-           Lummina is built on the belief that exceptional legal work comes from exceptional people. Our team combines legal expertise, commercial awareness, and a genuine commitment to client outcomes.
+           Lummina is built on the belief that exceptional work comes from exceptional people. Our team combines legal expertise, commercial awareness, and a genuine commitment to client outcomes.
 
           </p>
 
