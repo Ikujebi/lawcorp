@@ -110,18 +110,33 @@ export default function Footer() {
   purposes only and does not constitute legal advice.
 </p>
       {/* Bottom Bar */}
-      <section className="flex flex-col md:flex-row justify-between items-center 
-        px-6 xl:px-[12%] max-w-7xl mx-auto text-xs text-[#F7E7CE]/80 space-y-2 md:space-y-0">
+      <section
+  className="flex flex-col md:flex-row justify-between items-center
+  px-6 xl:px-[12%] max-w-7xl mx-auto text-xs text-[#F7E7CE]/80 space-y-2 md:space-y-0"
+>
 
-        <div>
-          © {new Date().getFullYear()} Lummina. All rights reserved.
-        </div>
+  <div>
+    © {new Date().getFullYear()} Lummina. All rights reserved.
+  </div>
 
-        <div className="tracking-wide">
-          Integrity • Excellence • Innovation
-        </div>
+  {/* Legal Links */}
+  <div className="flex items-center gap-3">
+    <Link href="/privacy-policy" className="hover:text-[#F4C430] transition">
+      Privacy Policy
+    </Link>
 
-      </section>
+    <span className="opacity-50">|</span>
+
+    <Link href="/terms-of-use" className="hover:text-[#F4C430] transition">
+      Terms of Use
+    </Link>
+  </div>
+
+  <div className="tracking-wide">
+    Integrity • Excellence • Innovation
+  </div>
+
+</section>
     </footer>
   );
 }
