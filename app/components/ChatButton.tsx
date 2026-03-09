@@ -10,14 +10,14 @@ export default function ChatButton() {
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
       className="
-        fixed bottom-6 right-6
-        z-50
-        w-14 h-14
-       
-        flex items-center justify-center
-        transition
-        hover:scale-105
-      "
+fixed bottom-6 right-6
+z-50
+w-14 h-14
+flex items-center justify-center
+transition
+hover:scale-110
+drop-shadow-lg
+"
     >
       <div className="relative w-full h-full">
         <Image

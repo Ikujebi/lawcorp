@@ -104,8 +104,11 @@ export default function Footer() {
       </section>
 
       {/* Divider */}
-      <div className="w-full h-[1px] bg-[#F4C430]/50 my-8"></div>
-
+      <div className="w-full h-[1px] bg-[#F4C430]/50 my-4"></div>
+<p className="text-xs  text-center mb-2">
+  The information on this website is provided for general informational
+  purposes only and does not constitute legal advice.
+</p>
       {/* Bottom Bar */}
       <section className="flex flex-col md:flex-row justify-between items-center 
         px-6 xl:px-[12%] max-w-7xl mx-auto text-xs text-[#F7E7CE]/80 space-y-2 md:space-y-0">
