@@ -122,8 +122,7 @@ export default function Hero() {
                          text-xl md:text-2xl 
                          font-medium tracking-wide"
             >
-              Schedule Consultation with{" "}
-              <span className="text-[#F7E7CE] font-semibold">Lumina</span>
+              Schedule Consultation 
             </Link>
           </motion.div>
 
