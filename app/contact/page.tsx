@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 
-import contactHero from "@/public/img/contactHero.jpg";
+import contactHero from "@/public/img/contact.jpg";
 import cartoonImage from "@/public/img/cartoon2.png";
 
 const ContactPage = () => {
