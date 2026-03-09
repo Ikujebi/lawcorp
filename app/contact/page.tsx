@@ -4,7 +4,8 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
-
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import Link from "next/link";
 import contactHero from "@/public/img/contact.jpg";
 import cartoonImage from "@/public/img/cartoon2.png";
 
@@ -193,24 +194,28 @@ const ContactPage = () => {
               <p>
                 <strong>Email:</strong> info@lumminalaw.com
               </p>
-              <p>
-                <strong>LinkedIn:</strong>{" "}
-                <a
-                  href="#"
-                  className="underline hover:text-[#FFA500] transition"
-                >
-                  Visit
-                </a>
-              </p>
-              <p>
-                <strong>Instagram:</strong>{" "}
-                <a
-                  href="#"
-                  className="underline hover:text-[#FFA500] transition"
-                >
-                  Visit
-                </a>
-              </p>
+             <p className="flex items-center gap-2">
+    <strong>LinkedIn:</strong>
+    <Link
+      href="https://www.linkedin.com/company/lummina"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#0A66C2] hover:opacity-80 transition"
+    >
+      <FaLinkedin size={24} />
+    </Link>
+  </p>
+               <p className="flex items-center gap-2">
+    <strong>Instagram:</strong>
+    <Link
+      href="https://www.instagram.com/lummina"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#E4405F] hover:opacity-80 transition"
+    >
+      <FaInstagram size={24} />
+    </Link>
+  </p>
             </div>
 
             <div className="pt-6 flex justify-start">
