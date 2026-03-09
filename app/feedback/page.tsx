@@ -44,7 +44,7 @@ export default function FeedbackPage() {
             Service Feedback
           </h1>
 
-          <p className="text-gray-700 text-center mb-12">
+          <p className="text-black text-center mb-12">
             We value feedback from our clients. If you have worked with Lummina,
             please share your experience with our legal services.
           </p>

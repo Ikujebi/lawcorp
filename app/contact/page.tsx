@@ -179,8 +179,7 @@ const ContactPage = () => {
             <div className="h-[4px] w-24 bg-[#FFA500] rounded"></div>
 
             <p className="text-[1.05rem] leading-relaxed text-black">
-              All enquiries are handled with strict confidentiality. We aim to
-              respond within one business day.
+              All enquiries are handled with strict confidentiality.
             </p>
 
             <div className="space-y-3 text-black pt-6">
