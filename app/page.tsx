@@ -1,8 +1,5 @@
 import Hero from "./components/Hero";
 import { Montserrat } from "./fonts";
-// import International from "./components/Home/International Legal Assistance";
-import Team from "./components/Home/Team";
-import Confidential from "./components/Home/Confidential";
 import Practice from "./components/Home/Practice Areas";
 import Presence from "./components/Home/Presence";
 import WhyUs from "./components/Home/WhyUs";
