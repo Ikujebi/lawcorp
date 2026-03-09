@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import Link from "next/link";
 import contactHero from "@/public/img/contact.jpg";
 import cartoonImage from "@/public/img/cartoon2.png";
@@ -197,7 +197,7 @@ const ContactPage = () => {
              <p className="flex items-center gap-2">
     <strong>LinkedIn:</strong>
     <Link
-      href="https://www.linkedin.com/company/lummina"
+      href="https://www.linkedin.com/company/lumminalawfirm/"
       target="_blank"
       rel="noopener noreferrer"
       className="text-[#0A66C2] hover:opacity-80 transition"
@@ -208,7 +208,7 @@ const ContactPage = () => {
                <p className="flex items-center gap-2">
     <strong>Instagram:</strong>
     <Link
-      href="https://www.instagram.com/lummina"
+      href="https://www.instagram.com/lumminalaw?igsh=MXNoZzA0Mmxod3V3eQ%3D%3D&utm_source=qr"
       target="_blank"
       rel="noopener noreferrer"
       className="text-[#E4405F] hover:opacity-80 transition"
@@ -216,6 +216,17 @@ const ContactPage = () => {
       <FaInstagram size={24} />
     </Link>
   </p>
+  <p className="flex items-center gap-2">
+  <strong>Facebook:</strong>
+  <Link
+    href="https://www.facebook.com/share/18wazK8sx4/?mibextid=wwXIfr"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-[#1877F2] hover:opacity-80 transition"
+  >
+    <FaFacebook size={24} />
+  </Link>
+</p>
             </div>
 
             <div className="pt-6 flex justify-start">
