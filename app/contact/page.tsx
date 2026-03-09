@@ -20,23 +20,21 @@ const ContactPage = () => {
     const templateID = "YOUR_TEMPLATE_ID";
     const publicKey = "YOUR_PUBLIC_KEY";
 
-    emailjs.sendForm(serviceID, templateID, formRef.current, publicKey)
-      .then(
-        (result) => {
-          console.log(result.text);
-          setStatus("Message sent successfully!");
-          formRef.current?.reset();
-        },
-        (error) => {
-          console.log(error.text);
-          setStatus("Failed to send message. Please try again.");
-        }
-      );
+    emailjs.sendForm(serviceID, templateID, formRef.current, publicKey).then(
+      (result) => {
+        console.log(result.text);
+        setStatus("Message sent successfully!");
+        formRef.current?.reset();
+      },
+      (error) => {
+        console.log(error.text);
+        setStatus("Failed to send message. Please try again.");
+      },
+    );
   };
 
   return (
     <div className="w-full">
-
       {/* HERO SECTION */}
       <section className="relative h-[80vh] md:h-[88vh] lg:h-[80vh] overflow-hidden">
         <motion.div
@@ -66,7 +64,10 @@ const ContactPage = () => {
           <motion.div
             initial="hidden"
             animate="visible"
-            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.3 } } }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.3 } },
+            }}
             className="max-w-4xl text-white"
           >
             <motion.h1
@@ -84,7 +85,8 @@ const ContactPage = () => {
               transition={{ duration: 1.8 }}
               className="mt-4 text-[1.2rem] md:text-[1.5rem] max-w-2xl mx-auto drop-shadow-sm"
             >
-              If you require legal guidance or wish to explore your options, we would be pleased to hear from you.
+              If you require legal guidance or wish to explore your options, we
+              would be pleased to hear from you.
             </motion.p>
 
             <motion.div
@@ -100,7 +102,75 @@ const ContactPage = () => {
       {/* CONTACT FORM SECTION */}
       <section className="px-6 md:px-12 lg:px-20 py-24 bg-[#FFF7E7] text-gray-900">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-[#F7E7CE]/70 p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100"
+          >
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-5">
+              <div>
+                <label className="block mb-2 text-sm font-medium text-[#5F021F]">
+                  Full Name
+                </label>
+                <input
+                  name="fullName"
+                  type="text"
+                  required
+                  className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"
+                />
+              </div>
 
+              <div>
+                <label className="block mb-2 text-sm font-medium text-[#5F021F]">
+                  Email Address
+                </label>
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm font-medium text-[#5F021F]">
+                  Subject
+                </label>
+                <input
+                  name="subject"
+                  type="text"
+                  required
+                  className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm font-medium text-[#5F021F]">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  rows={5}
+                  required
+                  className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-[#5F021F] text-[#F7E7CE] py-3 md:py-4 rounded-lg font-semibold tracking-wide hover:bg-[#FFA500] hover:text-[#5F021F] transition-all duration-300"
+              >
+                Send Message
+              </button>
+
+              {status && (
+                <p className="mt-3 text-center text-green-700 font-medium">
+                  {status}
+                </p>
+              )}
+            </form>
+          </motion.div>
           {/* LEFT SIDE – ADDRESS + ILLUSTRATION */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-semibold text-[#5F021F] leading-tight">
@@ -109,15 +179,39 @@ const ContactPage = () => {
             <div className="h-[4px] w-24 bg-[#FFA500] rounded"></div>
 
             <p className="text-[1.05rem] leading-relaxed text-black">
-              All enquiries are handled with strict confidentiality. We aim to respond within one business day.
+              All enquiries are handled with strict confidentiality. We aim to
+              respond within one business day.
             </p>
 
             <div className="space-y-3 text-black pt-6">
-              <p><strong>Address:</strong> 12 Oluseyi Aweda Street, Magodo Phase 1, Lagos, Nigeria</p>
-              <p><strong>Phone:</strong> +234 706 046 9068</p>
-              <p><strong>Email:</strong> info@lumminalaw.com</p>
-              <p><strong>LinkedIn:</strong> <a href="#" className="underline hover:text-[#FFA500] transition">Visit</a></p>
-              <p><strong>Instagram:</strong> <a href="#" className="underline hover:text-[#FFA500] transition">Visit</a></p>
+              <p>
+                <strong>Address:</strong> 12 Oluseyi Aweda Street, Magodo Phase
+                1, Lagos, Nigeria
+              </p>
+              <p>
+                <strong>Phone:</strong> +234 706 046 9068
+              </p>
+              <p>
+                <strong>Email:</strong> info@lumminalaw.com
+              </p>
+              <p>
+                <strong>LinkedIn:</strong>{" "}
+                <a
+                  href="#"
+                  className="underline hover:text-[#FFA500] transition"
+                >
+                  Visit
+                </a>
+              </p>
+              <p>
+                <strong>Instagram:</strong>{" "}
+                <a
+                  href="#"
+                  className="underline hover:text-[#FFA500] transition"
+                >
+                  Visit
+                </a>
+              </p>
             </div>
 
             <div className="pt-6 flex justify-start">
@@ -136,41 +230,6 @@ const ContactPage = () => {
           </div>
 
           {/* RIGHT SIDE – FORM */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-[#F7E7CE]/70 p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100"
-          >
-            <form ref={formRef} onSubmit={sendEmail} className="space-y-5">
-              <div>
-                <label className="block mb-2 text-sm font-medium text-[#5F021F]">Full Name</label>
-                <input name="fullName" type="text" required className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"/>
-              </div>
-
-              <div>
-                <label className="block mb-2 text-sm font-medium text-[#5F021F]">Email Address</label>
-                <input name="email" type="email" required className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"/>
-              </div>
-
-              <div>
-                <label className="block mb-2 text-sm font-medium text-[#5F021F]">Subject</label>
-                <input name="subject" type="text" required className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"/>
-              </div>
-
-              <div>
-                <label className="block mb-2 text-sm font-medium text-[#5F021F]">Message</label>
-                <textarea name="message" rows={5} required className="w-full p-3 md:p-4 rounded-lg border border-[#5F021F]/40 focus:outline-none focus:ring-2 focus:ring-[#FFA500] transition"></textarea>
-              </div>
-
-              <button type="submit" className="w-full bg-[#5F021F] text-[#F7E7CE] py-3 md:py-4 rounded-lg font-semibold tracking-wide hover:bg-[#FFA500] hover:text-[#5F021F] transition-all duration-300">
-                Send Message
-              </button>
-
-              {status && <p className="mt-3 text-center text-green-700 font-medium">{status}</p>}
-            </form>
-          </motion.div>
-
         </div>
       </section>
     </div>
