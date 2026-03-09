@@ -18,6 +18,9 @@ export default function WhyChooseUs() {
     {
       title: "Dedication to building a positive legacy within our community and beyond.",
     },
+    {
+      title: "Multidisciplinary experience across corporate, commercial, and private client matters.",
+    },
   ];
 
   const heading = "WHY LUMMINA";

@@ -15,6 +15,7 @@ const services = [
       "Regulatory compliance built into operations",
     ],
     subServices: [
+      'Business Formation ',
       "Corporate & Commercial Advisory",
       "Corporate Structuring & Governance",
       "Contract Drafting & Review",
@@ -23,7 +24,7 @@ const services = [
       "Company Secretarial Services",
       "Due Diligence",
     ],
-    cta: "Discuss Your Corporate Advisory Needs",
+    // cta: "Discuss Your Corporate Advisory Needs",
   },
   {
     title: "Real Estate & Property",
@@ -65,7 +66,7 @@ const services = [
       "Succession Planning",
       "Long-Term Asset Protection",
     ],
-    cta: "Structure Your Legacy",
+    // cta: "Structure Your Legacy",
   },
 ];
 
@@ -107,7 +108,7 @@ const ServicesPage = () => {
               Legal Services
             </p>
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              Legal Services, Built for What Matters
+              Built for What Matters
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl leading-relaxed">
               Comprehensive, structured legal solutions designed to address immediate needs while protecting long-term interests.
@@ -155,11 +156,11 @@ const ServicesPage = () => {
                 </>
               )}
 
-              {service.cta && (
+            {/*   {service.cta && (
                 <button className="mt-6 px-6 py-3 rounded-full bg-[#F4C430] text-[#5F021F] font-medium hover:bg-[#FFA500] transition-all">
                   {service.cta}
                 </button>
-              )}
+              )} */}
             </motion.div>
           ))}
 

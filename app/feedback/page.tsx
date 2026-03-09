@@ -45,8 +45,7 @@ export default function FeedbackPage() {
           </h1>
 
           <p className="text-black text-center mb-12">
-            We value feedback from our clients. If you have worked with Lummina,
-            please share your experience with our legal services.
+            We value your feedback. Please share your thoughts about our services to help us improve and serve you better.
           </p>
 
           <form ref={formRef} onSubmit={sendFeedback} className="space-y-8">
