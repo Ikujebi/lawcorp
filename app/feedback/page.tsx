@@ -52,7 +52,7 @@ export default function FeedbackPage() {
           <form ref={formRef} onSubmit={sendFeedback} className="space-y-8">
 
             <div>
-              <label className="block mb-2 font-medium">
+              <label className="block mb-2 font-medium text-[#5F021F]">
                 Your Name
               </label>
 
@@ -64,7 +64,7 @@ export default function FeedbackPage() {
             </div>
 
             <div>
-              <label className="block mb-2 font-medium">
+              <label className="block mb-2 font-medium text-[#5F021F]">
                 Email
               </label>
 
@@ -77,7 +77,7 @@ export default function FeedbackPage() {
             </div>
 
             <div>
-              <label className="block mb-2 font-medium">
+              <label className="block mb-2 font-medium text-[#5F021F]">
                 Your Feedback About Our Services
               </label>
 
