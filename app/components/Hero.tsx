@@ -84,7 +84,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -40 }}
               transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[1.6rem] sm:text-3xl md:text-[3rem] lg:text-[3.3rem] 
+              className="text-[1.6rem]  md:text-[2rem] xl:text-[3.3rem] 
                          font-semibold leading-tight tracking-wide text-[#F7E7CE]"
             >
               {slides[index].heading}
