@@ -2,14 +2,11 @@
 
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import { motion } from "framer-motion";
 import StaffModal from "../components/StaffModal";
-import HeroAnimation from "../components/HeroAnimation";
-import teamHero from "@/public/img/team.jpg";
 import faithPhoto from "@/public/img/faithPhoto.jpg";
 import staff1Photo from "@/public/img/staff1Photo.jpg";
 import staff2Photo from "@/public/img/staff2Photo.jpg";
-
+import TeamComp from "../components/TeamComp";
 type Member = {
   name: string;
   role: string;
@@ -44,27 +41,9 @@ const TeamPage = () => {
   return (
     <div className="w-full">
       {/* HERO SECTION */}
-      <HeroAnimation bgImage={teamHero}>
-        <div className="absolute inset-0 bg-[#5F021F]/60 pointer-events-none" />
-
-        <motion.div
-          className="relative z-10 text-center max-w-2xl mx-auto text-white px-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.4 }}
-        >
-          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
-           Meet the Team
-          </h1>
-
-          <p className="mt-3 text-sm sm:text-base lg:text-xl text-[#F7E7CE]">
-           Lummina is built on the belief that exceptional work comes from exceptional people. Our team combines legal expertise, commercial awareness, and a genuine commitment to client outcomes.
-
-          </p>
-
-          <div className="h-[2px] w-14 bg-[#FFA500] mx-auto mt-4"></div>
-        </motion.div>
-      </HeroAnimation>
+      <TeamComp />
+      
+      
 
       {/* TEAM SECTION */}
       <section className="px-4 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 bg-[#FFF7E7] text-gray-900">

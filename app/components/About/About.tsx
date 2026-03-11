@@ -1,4 +1,3 @@
-"use client";
 import MissionVision from "./MissionVision";
 import { Montserrat } from "../../fonts";
 import CoreV    from "./CoreV"; 

@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { Roboto, Nunito } from "@/app/fonts";
+import {  Nunito } from "@/app/fonts";
 import internation2 from "@/public/img/international2.jpg";
 
 const InternationalPage = () => {

@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import NewsletterModal from "@/app/components/NewsletterModal";
 import financial from "@/public/img/financial-advisor-website-hero-background_31O.jpg";
