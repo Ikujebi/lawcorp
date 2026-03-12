@@ -6,7 +6,7 @@ const TeamComp = () => {
   return (
     <div>
           <HeroAnimation bgImage={teamHero}>
-        <div className="absolute inset-0 bg-[#5F021F]/60 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/60 pointer-events-none" />
 
         <motion.div
           className="relative z-10 text-center max-w-2xl mx-auto text-white px-4"
