@@ -5,7 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import StaffModal from "../components/StaffModal";
 import faithPhoto from "@/public/img/faithPhoto.jpg";
 import staff1Photo from "@/public/img/staff1Photo.jpg";
-import staff2Photo from "@/public/img/staff2Photo.jpg";
+import staff2Photo from "@/public/img/kowe.jpeg";
 import TeamComp from "../components/TeamComp";
 type Member = {
   name: string;
@@ -34,7 +34,7 @@ const TeamPage = () => {
       name: "OLUWATOYIN KOWE ",
       role: "Junior Associate",
       photo: staff2Photo,
-      bio: `Oluwatoyin Kowe specializes in Family Law and Dispute Resolution, providing strategic and compassionate representation for clients.`,
+      bio: `Oluwatoyin Kowe is a Junior Associate at Lummina Law Firm where she contributes to the firm's corporate and commercial practice. Her work includes legal research, drafting of commercial agreements, and assisting clients with regulatory and compliance matters.She has a keen interest in corporate governance, contract negotiation, and business advisory services. Oluwatoyin is committed to continuous professional development and providing clients with practical, timely, and effective legal solutions.`,
     },
   ];
 
@@ -68,7 +68,7 @@ const TeamPage = () => {
                     src={member.photo}
                     alt={member.name}
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-t-[7rem]"
                   />
                 </div>
 

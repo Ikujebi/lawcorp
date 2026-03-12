@@ -34,32 +34,39 @@ const StaffModal = ({ member, onClose }: StaffModalProps) => {
           ✕
         </button>
 
-        {/* LEFT — Image */}
-        <div className="relative w-full lg:w-[40%] h-[300px] lg:h-auto">
-          <Image
-            src={member.photo}
-            alt={member.name}
-            fill
-            className="object-cover"
-          />
-        </div>
+      <div className="flex flex-col md:flex-row w-full">
 
-        {/* RIGHT — Content */}
-        <div className="flex-1 p-8 lg:p-12 overflow-y-auto">
-          <h2 className="text-2xl lg:text-3xl font-bold text-[#5F021F]">
-            {member.name}
-          </h2>
+  {/* LEFT — Image */}
+  <div className="relative w-full md:w-[40%] h-[320px] md:h-auto min-h-[320px]">
+    <Image
+      src={member.photo}
+      alt={member.name}
+      fill
+      sizes="(max-width: 768px) 100vw, 40vw"
+      className="object-cover object-top"
+    />
+  </div>
 
-          <p className="text-[#F4C430] font-semibold mt-2 text-lg">
-            {member.role}
-          </p>
+  {/* RIGHT — Content */}
+  <div className="flex-1 p-6 md:p-10 lg:p-12 flex flex-col justify-center bg-[#F7e7ce]/70">
 
-          <div className="h-[2px] w-20 bg-[#F4C430] my-6"></div>
+    <h2 className="text-2xl md:text-3xl font-bold text-[#5F021F]">
+      {member.name}
+    </h2>
 
-          <p className={`${Nunito.className} text-gray-700 leading-relaxed whitespace-pre-line`}>
-            {member.bio}
-          </p>
-        </div>
+    <p className="text-[#F4C430] font-semibold mt-2 text-lg">
+      {member.role}
+    </p>
+
+    <div className="h-[2px] w-20 bg-[#F4C430] my-6"></div>
+
+    <p className={`${Nunito.className} text-black leading-relaxed whitespace-pre-line`}>
+      {member.bio}
+    </p>
+
+  </div>
+
+</div>
       </div>
     </div>
   );
