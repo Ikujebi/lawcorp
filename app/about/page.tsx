@@ -55,7 +55,7 @@ export default function Page() {
   transition={{ duration: 1.2 }}
   className="inline-flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3 bg-white/10 text-gray-200 text-[1rem] sm:text-[1.2rem] md:text-[1.3rem] px-4 sm:px-6 py-2 rounded-full mb-1 mt-[6rem] sm:mt-[8rem]"
 >
-  <span className="h-[2px] w-[4rem] sm:w-[5rem] bg-[#F4C430]"></span>
+  <span className="h-[2px] w-[4rem]  sm:w-[5rem] bg-[#F4C430]"></span>
   <span>About the Firm</span>
 </motion.div>
 

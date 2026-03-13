@@ -100,13 +100,13 @@ export default function Footer() {
         </article>
 
       </section>
-
-      {/* Divider */}
-      <div className="w-full h-[1px] bg-[#F4C430]/50 my-4"></div>
-<p className="text-xs  text-center mb-2">
+{/* <p className="text-xs  text-center mb-2">
   The information on this website is provided for general informational
   purposes only and does not constitute legal advice.
-</p>
+</p> */}
+      {/* Divider */}
+      <div className="w-full h-[1px] bg-[#F4C430]/50 my-4"></div>
+
       {/* Bottom Bar */}
       <section
   className="flex flex-col md:flex-row justify-between items-center

@@ -22,7 +22,12 @@ const TeamPage = () => {
       name: "Faith Zekeri, LL.B, B.L, ACIS, ACA",
       role: "Managing Partner",
       photo: faithPhoto,
-      bio: `Faith Zekeri is a brilliant and resourceful lawyer with extensive experience in corporate advisory, dispute resolution, and regulatory compliance.`,
+      bio: `Faith Zekeri is the founding Managing Partner of Lummina Law Firm. She advises businesses, founders, and private clients on corporate structuring, commercial transactions, governance, and legal risk management.
+Her work focuses on designing the legal frameworks that support sustainable business growth. She regularly advises on corporate structuring, shareholder arrangements, commercial documentation, regulatory compliance, and transaction support across a range of sectors. She also provides advisory support on property transactions, due diligence processes, and governance systems for organisations seeking clarity and institutional discipline.
+Faith brings an interdisciplinary perspective to legal advisory. In addition to her legal training, she holds professional qualifications in corporate governance and accountancy. This background enables her to approach legal problems with a broader understanding of commercial realities, financial risk, and organisational structure. Clients value this ability to translate legal complexity into clear, practical decisions.
+Before founding Lummina, Faith worked on matters involving corporate advisory, commercial documentation, regulatory compliance, employment transitions, and dispute support. Her approach to legal practice is grounded in structure, careful analysis, and disciplined execution.
+She believes that thoughtful legal architecture protects businesses, preserves assets, and allows organisations to grow with confidence.
+Faith is committed to building Lummina Law Firm into a trusted advisory practice for businesses and private clients who value clarity, professionalism, and long-term partnership.`,
     },
     {
       name: "OJOAJOGWU ZEKERI ",
