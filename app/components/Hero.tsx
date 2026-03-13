@@ -23,6 +23,7 @@ const slides = [
     image: herobg3,
   },
 ];
+const Booking = 'https://outlook.office.com/bookwithme/user/d96c6449a3d34b089eaf119785dead4e@lumminalaw.com/meetingtype/wlmKvCovDkG3PO7ocDzNLQ2?anonymous&ismsaljsauthenabled&ep=email'
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
@@ -71,7 +72,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="uppercase tracking-widest text-[#FFA500] text-[.45rem] md:text-[.56rem] mb-[2rem] md:mb-[5rem] "
+            className="uppercase tracking-widest text-[#FFA500] text-[.45rem] md:text-[.56rem] mb-[2rem] md:mb-[10rem] 2xl:mb-[5rem]"
           >
             Strategic Legal Counsel. Structured for Growth.
           </motion.p>
@@ -113,7 +114,7 @@ export default function Hero() {
             className="mt-[10rem]  md:mt-[5rem] lg:mt-[5rem]"
           >
             <Link
-              href="/contact"
+              href={Booking}
               className="inline-block text-[#FFA500] 
                          hover:text-[#F7E7CE] 
                          border-b border-transparent 
