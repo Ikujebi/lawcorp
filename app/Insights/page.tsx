@@ -1,5 +1,5 @@
 import NewsletterClient from "@/app/components/NewsletterClient";
-import financial from "@/public/img/financial-advisor-website-hero-background_31O.jpg";
+import financial from "@/public/img/sky.jpg";
 
 const NewsletterPage = () => {
   return (

@@ -19,7 +19,7 @@ const TeamPage = () => {
 
   const teamMembers: Member[] = [
     {
-      name: "Faith Zekeri, LL.B, B.L, ACIS, ACA",
+      name: "FAITH ZEKERI, LL.B, B.L, ACIS, ACA",
       role: "Managing Partner",
       photo: faithPhoto,
       bio: `Faith Zekeri is the founding Managing Partner of Lummina Law Firm. She advises businesses, founders, and private clients on corporate structuring, commercial transactions, governance, and legal risk management.
@@ -28,13 +28,13 @@ Faith brings an interdisciplinary perspective to legal advisory. In addition to 
 Before founding Lummina, Faith worked on matters involving corporate advisory, commercial documentation, regulatory compliance, employment transitions, and dispute support. Her approach to legal practice is grounded in structure, careful analysis, and disciplined execution.
 She believes that thoughtful legal architecture protects businesses, preserves assets, and allows organisations to grow with confidence.
 Faith is committed to building Lummina Law Firm into a trusted advisory practice for businesses and private clients who value clarity, professionalism, and long-term partnership.`,
-    },
+    }/* ,
     {
       name: "OJOAJOGWU ZEKERI ",
       role: "Senior Partner",
       photo: staff1Photo,
       bio: `Ojoajogwu Zekeri has extensive experience in Corporate and Commercial Law, advising clients on transactions, governance, and compliance matters.`,
-    },
+    } */,
     {
       name: "OLUWATOYIN KOWE ",
       role: "Junior Associate",
