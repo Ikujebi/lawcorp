@@ -3,9 +3,9 @@
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import StaffModal from "../components/StaffModal";
-import faithPhoto from "@/public/img/faithPhoto.jpg";
+import faithPhoto from "@/public/img/kowe2.jpg";
 import staff1Photo from "@/public/img/staff1Photo.jpg";
-import staff2Photo from "@/public/img/kowe2.jpeg";
+import staff2Photo from "@/public/img/kowe.jpeg";
 import TeamComp from "../components/TeamComp";
 type Member = {
   name: string;
