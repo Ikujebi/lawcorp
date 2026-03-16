@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import StaffModal from "../components/StaffModal";
-import faithPhoto from "@/public/img/kowe2.jpg";
+import faithPhoto from "@/public/img/kowe2.png";
 import staff1Photo from "@/public/img/staff1Photo.jpg";
 import staff2Photo from "@/public/img/kowe.jpeg";
 import TeamComp from "../components/TeamComp";
@@ -53,9 +53,7 @@ Faith is committed to building Lummina Law Firm into a trusted advisory practice
       {/* TEAM SECTION */}
       <section className="px-4 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 bg-[#FFF7E7] text-gray-900">
         <div className="max-w-6xl mx-auto space-y-10 sm:space-y-14">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#5F021F] text-center">
-            Leadership & Core Staff
-          </h2>
+          
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 ">
             {teamMembers.map((member) => (

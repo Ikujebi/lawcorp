@@ -17,7 +17,7 @@ export default function CareersPage() {
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/30" />
 
         <div className="relative z-10 text-center px-6 max-w-3xl">
 
@@ -81,7 +81,7 @@ export default function CareersPage() {
 
 
       {/* RECRUITMENT PROCESS */}
-      <div className="max-w-5xl mx-auto px-6 py-20">
+      <div className="max-w-5xl mx-auto px-6 py-20 bg-[bg-[#F7E7CE]">
 
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-[#5F021F]">
           OUR RECRUITMENT PROCESS
