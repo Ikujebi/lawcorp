@@ -72,7 +72,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="uppercase tracking-widest text-[#FFA500] text-[.45rem] md:text-[.56rem] mb-[2rem] md:mb-[10rem] 2xl:mb-[5rem]"
+            className="uppercase tracking-widest text-[#FFA500] text-[.45rem] md:text-[.56rem] mb-[2rem] md:mb-[4rem] 2xl:mb-[5rem]"
           >
             Strategic Legal Counsel. Structured for Growth.
           </motion.p>
