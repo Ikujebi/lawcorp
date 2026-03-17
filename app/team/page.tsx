@@ -70,7 +70,7 @@ Faith is committed to building Lummina Law Firm into a trusted advisory practice
                     src={member.photo}
                     alt={member.name}
                     fill
-                    className="object-cover object-top-[10rem]"
+                    className="object-cover object-[center_20%]"
                   />
                 </div>
 
