@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import StaffModal from "../components/StaffModal";
-import faithPhoto from "@/public/img/kowe2.png";
+import faithPhoto from "@/public/img/noka.png";
 import staff2Photo from "@/public/img/kowe.jpeg";
 import TeamComp from "../components/TeamComp";
 type Member = {
@@ -70,7 +70,7 @@ Faith is committed to building Lummina Law Firm into a trusted advisory practice
                     src={member.photo}
                     alt={member.name}
                     fill
-                    className="object-cover object-t-[7rem]"
+                    className="object-cover object-top-[10rem]"
                   />
                 </div>
 
