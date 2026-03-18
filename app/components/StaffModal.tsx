@@ -34,10 +34,10 @@ const StaffModal = ({ member, onClose }: StaffModalProps) => {
           ✕
         </button>
 
-      <div className="flex flex-col md:flex-row w-full">
+      <div className="flex flex-col md:flex-row w-full h-full">
 
   {/* LEFT — Image */}
-  <div className="relative w-full md:w-[40%] h-[320px] md:h-auto min-h-[320px]">
+  <div className="relative w-full md:w-[40%] h-[320px] md:h-auto min-h-[320px] flex-shrink-0">
     <Image
       src={member.photo}
       alt={member.name}
@@ -48,23 +48,23 @@ const StaffModal = ({ member, onClose }: StaffModalProps) => {
   </div>
 
   {/* RIGHT — Content */}
-  <div className="flex-1 p-6 md:p-10 lg:p-12 flex flex-col justify-center bg-[#F7e7ce]/70">
+<div className="flex-1 p-6 md:p-10 lg:p-12 bg-[#F7e7ce]/70 overflow-y-auto scroll-smooth md:overflow-visible">
 
-    <h2 className="text-2xl md:text-3xl font-bold text-[#5F021F]">
-      {member.name}
-    </h2>
+  <h2 className="text-2xl md:text-3xl font-bold text-[#5F021F]">
+    {member.name}
+  </h2>
 
-    <p className="text-[#F4C430] font-semibold mt-2 text-lg">
-      {member.role}
-    </p>
+  <p className="text-[#F4C430] font-semibold mt-2 text-lg">
+    {member.role}
+  </p>
 
-    <div className="h-[2px] w-20 bg-[#F4C430] my-6"></div>
+  <div className="h-[2px] w-20 bg-[#F4C430] my-6"></div>
 
-    <p className={`${Nunito.className} text-black leading-relaxed whitespace-pre-line`}>
-      {member.bio}
-    </p>
+  <p className={`${Nunito.className} text-black leading-relaxed whitespace-pre-line`}>
+    {member.bio}
+  </p>
 
-  </div>
+</div>
 
 </div>
       </div>
