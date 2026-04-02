@@ -17,9 +17,9 @@ const ContactPage = () => {
     e.preventDefault();
     if (!formRef.current) return;
 
-    const serviceID = "YOUR_SERVICE_ID";
-    const templateID = "YOUR_TEMPLATE_ID";
-    const publicKey = "YOUR_PUBLIC_KEY";
+    const serviceID = "service_qob6gin";
+const templateID = "template_un996mj";
+const publicKey = "RJqgR6UT9A9FXvm-G";
 
     emailjs.sendForm(serviceID, templateID, formRef.current, publicKey).then(
       (result) => {
