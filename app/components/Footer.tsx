@@ -10,7 +10,7 @@ import { SourceCodePro } from "../fonts";
 export default function Footer() {
   return (
     <footer className="bg-[#5F021F]/80 text-[#F7E7CE] pt-12 pb-6">
-      
+
       {/* MAIN FOOTER CONTENT */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 
         xl:px-[12%] max-w-7xl mx-auto">
@@ -24,7 +24,7 @@ export default function Footer() {
           </h2>
 
           <p className="text-sm leading-relaxed text-[#F7E7CE]/90">
-           Strategic Legal Counsel. Structured for Growth.
+            Strategic Legal Counsel. Structured for Growth.
           </p>
         </article>
 
@@ -36,25 +36,46 @@ export default function Footer() {
 
           <div className="space-y-3 text-sm">
 
-            <p className="flex items-start gap-3">
+            <a
+              href="tel:+2342013307508"
+              className="flex items-start gap-3"
+            >
               <Image src={call} alt="Call icon" width={18} height={18} />
-              <span>+234 706 046 9068</span>
-            </p>
+              <span>+234 201 330 7508</span>
+            </a>
 
-            <p className="flex items-start gap-3">
-              <Image src={messages} alt="Email icon" width={18} height={18} />
-              <span>
-                info@lumminalaw.com
-              </span>
-            </p>
+            <a
+              href="mailto:info@lumminalaw.com"
+              className="flex items-start gap-3 hover:text-[#FFA500] transition"
+            >
+              <Image
+                src={messages}
+                alt="Email icon"
+                width={18}
+                height={18}
+              />
 
-            <p className="flex items-start gap-3">
-              <Image src={location} alt="Location icon" width={18} height={18} />
+              <span>info@lumminalaw.com</span>
+            </a>
+
+            <a
+              href="https://maps.google.com/?q=12+Oluseyi+Aweda+Street,+Magodo+Phase+1,+Lagos,+Nigeria"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3"
+            >
+              <Image
+                src={location}
+                alt="Location icon"
+                width={18}
+                height={18}
+              />
+
               <span>
                 12 Oluseyi Aweda Street, <br />
                 Magodo Phase 1, Lagos, Nigeria
               </span>
-            </p>
+            </a>
 
           </div>
         </article>
@@ -92,15 +113,15 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-  <Link href="/feedback" className="hover:text-[#F4C430] transition">
-     💬Feedback
-  </Link>
-</li>
+              <Link href="/feedback" className="hover:text-[#F4C430] transition">
+                💬Feedback
+              </Link>
+            </li>
           </ul>
         </article>
 
       </section>
-{/* <p className="text-xs  text-center mb-2">
+      {/* <p className="text-xs  text-center mb-2">
   The information on this website is provided for general informational
   purposes only and does not constitute legal advice.
 </p> */}
@@ -109,32 +130,32 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <section
-  className="flex flex-col md:flex-row justify-between items-center
+        className="flex flex-col md:flex-row justify-between items-center
   px-6 xl:px-[12%] max-w-7xl mx-auto text-xs text-[#F7E7CE]/80 space-y-2 md:space-y-0"
->
+      >
 
-  <div>
-    © {new Date().getFullYear()} Lummina. All rights reserved.
-  </div>
+        <div>
+          © {new Date().getFullYear()} Lummina. All rights reserved.
+        </div>
 
-  {/* Legal Links */}
-  <div className="flex items-center gap-3">
-    <Link href="/privacy-policy" className="hover:text-[#F4C430] transition">
-      Privacy Policy
-    </Link>
+        {/* Legal Links */}
+        <div className="flex items-center gap-3">
+          <Link href="/privacy-policy" className="hover:text-[#F4C430] transition">
+            Privacy Policy
+          </Link>
 
-    <span className="opacity-50">|</span>
+          <span className="opacity-50">|</span>
 
-    <Link href="/terms-of-use" className="hover:text-[#F4C430] transition">
-      Terms of Use
-    </Link>
-  </div>
+          <Link href="/terms-of-use" className="hover:text-[#F4C430] transition">
+            Terms of Use
+          </Link>
+        </div>
 
-  <div className="tracking-wide">
-    Integrity • Excellence • Innovation
-  </div>
+        <div className="tracking-wide">
+          Integrity • Excellence • Innovation
+        </div>
 
-</section>
+      </section>
     </footer>
   );
 }

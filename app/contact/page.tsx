@@ -6,8 +6,13 @@ import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import Link from "next/link";
+import call from "@/public/call.svg";
 import contactHero from "@/public/img/contact.jpg";
 import cartoonImage from "@/public/img/cartoon2.png";
+import location from "@/public/location.svg";
+import messages from "@/public/messages.svg";
+
+
 
 const ContactPage = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -182,16 +187,45 @@ const publicKey = "RJqgR6UT9A9FXvm-G";
             
 
             <div className="space-y-3 text-black pt-6">
-              <p>
-                <strong>Address:</strong> 12 Oluseyi Aweda Street, Magodo Phase
-                1, Lagos, Nigeria
-              </p>
-              <p>
-                <strong>Phone:</strong> +234 706 046 9068
-              </p>
-              <p>
-                <strong>Email:</strong> info@lumminalaw.com
-              </p>
+              <a
+                            href="https://maps.google.com/?q=12+Oluseyi+Aweda+Street,+Magodo+Phase+1,+Lagos,+Nigeria"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-start gap-3"
+                          >
+                            <Image
+                              src={location}
+                              alt="Location icon"
+                              width={18}
+                              height={18}
+                            />
+              
+                            <span>
+                              12 Oluseyi Aweda Street, <br />
+                              Magodo Phase 1, Lagos, Nigeria
+                            </span>
+                          </a>
+              
+              <a
+                            href="tel:+2342013307508"
+                            className="flex items-start gap-3"
+                          >
+                            <Image src={call} alt="Call icon" width={18} height={18} />
+                            <span>+234 201 330 7508</span>
+                          </a>
+               <a
+                            href="mailto:info@lumminalaw.com"
+                            className="flex items-start gap-3 hover:text-[#FFA500] transition"
+                          >
+                            <Image
+                              src={messages}
+                              alt="Email icon"
+                              width={18}
+                              height={18}
+                            />
+              
+                            <span>info@lumminalaw.com</span>
+                          </a>
              <p className="flex items-center gap-2">
     <strong>LinkedIn:</strong>
     <Link
