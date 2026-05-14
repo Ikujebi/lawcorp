@@ -5,7 +5,7 @@ import chat from "../../public/icons8-whatsapp-color/icons8-whatsapp-144.svg";
 export default function ChatButton() {
   return (
     <Link
-      href="https://wa.me/2347036351010"
+      href="https://wa.me/2347060469068"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
