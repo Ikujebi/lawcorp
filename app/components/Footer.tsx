@@ -58,24 +58,24 @@ export default function Footer() {
               <span>info@lumminalaw.com</span>
             </a>
 
-            <a
-              href="https://maps.google.com/?q=12+Oluseyi+Aweda+Street,+Magodo+Phase+1,+Lagos,+Nigeria"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-start gap-3"
-            >
-              <Image
-                src={location}
-                alt="Location icon"
-                width={18}
-                height={18}
-              />
+          <a
+  href="https://maps.google.com/?q=Plot+5,+Block+94,+The+Providence+Street,+Lekki+Phase+1,+Lagos+State"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-start gap-3 hover:text-[#FFA500] transition"
+>
+  <Image
+    src={location}
+    alt="Location icon"
+    width={18}
+    height={18}
+  />
 
-              <span>
-                12 Oluseyi Aweda Street, <br />
-                Magodo Phase 1, Lagos, Nigeria
-              </span>
-            </a>
+  <span>
+    Plot 5, Block 94, The Providence Street, <br />
+    Lekki Phase 1, Lagos State.
+  </span>
+</a>
 
           </div>
         </article>

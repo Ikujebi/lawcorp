@@ -23,8 +23,8 @@ const ContactPage = () => {
     if (!formRef.current) return;
 
     const serviceID = "service_qob6gin";
-const templateID = "template_un996mj";
-const publicKey = "RJqgR6UT9A9FXvm-G";
+    const templateID = "template_un996mj";
+    const publicKey = "RJqgR6UT9A9FXvm-G";
 
     emailjs.sendForm(serviceID, templateID, formRef.current, publicKey).then(
       (result) => {
@@ -184,81 +184,81 @@ const publicKey = "RJqgR6UT9A9FXvm-G";
             </h2>
             <div className="h-[4px] w-24 bg-[#FFA500] rounded"></div>
 
-            
+
 
             <div className="space-y-3 text-black pt-6">
               <a
-                            href="https://maps.google.com/?q=12+Oluseyi+Aweda+Street,+Magodo+Phase+1,+Lagos,+Nigeria"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-start gap-3"
-                          >
-                            <Image
-                              src={location}
-                              alt="Location icon"
-                              width={18}
-                              height={18}
-                            />
-              
-                            <span>
-                              12 Oluseyi Aweda Street, <br />
-                              Magodo Phase 1, Lagos, Nigeria
-                            </span>
-                          </a>
-              
+                href="https://maps.google.com/?q=Plot+5,+Block+94,+The+Providence+Street,+Lekki+Phase+1,+Lagos+State"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 hover:text-[#FFA500] transition"
+              >
+                <Image
+                  src={location}
+                  alt="Location icon"
+                  width={18}
+                  height={18}
+                />
+
+                <span>
+                  Plot 5, Block 94, The Providence Street, <br />
+                  Lekki Phase 1, Lagos State.
+                </span>
+              </a>
+
               <a
-                            href="tel:+2342013307508"
-                            className="flex items-start gap-3"
-                          >
-                            <Image src={call} alt="Call icon" width={18} height={18} />
-                            <span>+234 201 330 7508</span>
-                          </a>
-               <a
-                            href="mailto:info@lumminalaw.com"
-                            className="flex items-start gap-3 hover:text-[#FFA500] transition"
-                          >
-                            <Image
-                              src={messages}
-                              alt="Email icon"
-                              width={18}
-                              height={18}
-                            />
-              
-                            <span>info@lumminalaw.com</span>
-                          </a>
-             <p className="flex items-center gap-2">
-    <strong>LinkedIn:</strong>
-    <Link
-      href="https://www.linkedin.com/company/lumminalawfirm/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[#0A66C2] hover:opacity-80 transition"
-    >
-      <FaLinkedin size={24} />
-    </Link>
-  </p>
-               <p className="flex items-center gap-2">
-    <strong>Instagram:</strong>
-    <Link
-      href="https://www.instagram.com/lumminalaw?igsh=MXNoZzA0Mmxod3V3eQ%3D%3D&utm_source=qr"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[#E4405F] hover:opacity-80 transition"
-    >
-      <FaInstagram size={24} />
-    </Link>
-  </p>
-  <p className="flex items-center gap-2">
-  <strong>Facebook:</strong>
-  <Link
-    href="https://www.facebook.com/share/18wazK8sx4/?mibextid=wwXIfr"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-[#1877F2] hover:opacity-80 transition"
-  >
-    <FaFacebook size={24} />
-  </Link>
-</p>
+                href="tel:+2342013307508"
+                className="flex items-start gap-3"
+              >
+                <Image src={call} alt="Call icon" width={18} height={18} />
+                <span>+234 201 330 7508</span>
+              </a>
+              <a
+                href="mailto:info@lumminalaw.com"
+                className="flex items-start gap-3 hover:text-[#FFA500] transition"
+              >
+                <Image
+                  src={messages}
+                  alt="Email icon"
+                  width={18}
+                  height={18}
+                />
+
+                <span>info@lumminalaw.com</span>
+              </a>
+              <p className="flex items-center gap-2">
+                <strong>LinkedIn:</strong>
+                <Link
+                  href="https://www.linkedin.com/company/lumminalawfirm/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0A66C2] hover:opacity-80 transition"
+                >
+                  <FaLinkedin size={24} />
+                </Link>
+              </p>
+              <p className="flex items-center gap-2">
+                <strong>Instagram:</strong>
+                <Link
+                  href="https://www.instagram.com/lumminalaw?igsh=MXNoZzA0Mmxod3V3eQ%3D%3D&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#E4405F] hover:opacity-80 transition"
+                >
+                  <FaInstagram size={24} />
+                </Link>
+              </p>
+              <p className="flex items-center gap-2">
+                <strong>Facebook:</strong>
+                <Link
+                  href="https://www.facebook.com/share/18wazK8sx4/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1877F2] hover:opacity-80 transition"
+                >
+                  <FaFacebook size={24} />
+                </Link>
+              </p>
             </div>
 
             <div className="pt-6 flex justify-start">
