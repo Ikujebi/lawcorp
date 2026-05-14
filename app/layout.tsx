@@ -8,7 +8,7 @@ import { Montserrat   } from "./fonts";
 
 
 export const metadata: Metadata = {
-  title: "Lummina",
+  title: "LUMMINA LAW FIRM",
   description: "ATTORNEYS AT LAW",
 };
 
