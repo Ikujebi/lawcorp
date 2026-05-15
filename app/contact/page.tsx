@@ -206,13 +206,31 @@ const ContactPage = () => {
                 </span>
               </a>
 
-              <a
-                href="tel:+2342013307508"
-                className="flex items-start gap-3"
-              >
-                <Image src={call} alt="Call icon" width={18} height={18} />
-                <span>+234 201 330 7508</span>
-              </a>
+              <div className="flex items-start gap-3">
+                <Image
+                  src={call}
+                  alt="Call icon"
+                  width={18}
+                  height={18}
+                  className="mt-1"
+                />
+
+                <div className="flex flex-col">
+                  <a
+                    href="tel:+2342013307508"
+                    className="hover:text-[#FFA500] transition-colors duration-300"
+                  >
+                    +234 201 330 7508
+                  </a>
+
+                  <a
+                    href="tel:+2347060479068"
+                    className="hover:text-[#FFA500] transition-colors duration-300"
+                  >
+                    +234 706 047 9068
+                  </a>
+                </div>
+              </div>
               <a
                 href="mailto:info@lumminalaw.com"
                 className="flex items-start gap-3 hover:text-[#FFA500] transition"
