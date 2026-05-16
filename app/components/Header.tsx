@@ -9,12 +9,15 @@ import Lummina2 from "@/public/img/Lummina2.png";
 
 const navItems = [
   { name: "About", href: "/about" },
-  // { name: "International Services", href: "/international" },
   { name: "Services", href: "/services" },
   { name: "Our Team", href: "/team" },
   { name: "Insights", href: "/Insights" },
   { name: "Contact", href: "/contact" },
+  { name: "Portal", href: "https://legal.lumminalaw.com/" },
 ];
+//  <Link href="https://legal.lumminalaw.com/" className="hover:text-[#F4C430] transition">
+//                 Client Portal
+//               </Link>
 
 export default function Header() {
   const [open, setOpen] = useState(false);

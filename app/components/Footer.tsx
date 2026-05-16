@@ -126,7 +126,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/client" className="hover:text-[#F4C430] transition">
+              <Link href="https://legal.lumminalaw.com/" className="hover:text-[#F4C430] transition">
                 Client Portal
               </Link>
             </li>
