@@ -16,20 +16,29 @@ const NewsletterModal: FC<NewsletterModalProps> = ({
   summary,
   onClose,
 }) => {
-  // Close on ESC key
+  // ESC key support (proper dependency handling)
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") {
+        onClose();
+      }
     };
+
     window.addEventListener("keydown", handleEsc);
     return () => window.removeEventListener("keydown", handleEsc);
   }, [onClose]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md px-4">
+      
+      {/* Click outside to close */}
+      <div
+        className="absolute inset-0"
+        onClick={onClose}
+      />
 
       {/* Modal Card */}
-      <div className="relative bg-white rounded-3xl max-w-4xl w-full shadow-2xl overflow-hidden animate-modalFade max-h-[90vh] flex flex-col">
+      <div className="relative bg-white rounded-3xl max-w-4xl w-full shadow-2xl overflow-hidden animate-modalFade max-h-[90vh] flex flex-col z-10">
 
         {/* Header Section */}
         <div className="bg-[#5F021F] text-white px-10 py-8 relative">
@@ -51,22 +60,19 @@ const NewsletterModal: FC<NewsletterModalProps> = ({
           <p className="text-sm text-white/70 mt-2">{date}</p>
         </div>
 
-        {/* Divider Accent */}
+        {/* Divider */}
         <div className="h-[4px] bg-[#F4C430] w-full" />
 
-        {/* Body Content */}
+        {/* Body */}
         <div className="px-10 py-10 overflow-y-auto text-gray-800 leading-relaxed space-y-6">
 
-          <p className="text-lg">
-            {summary}
-          </p>
+          <p className="text-lg">{summary}</p>
 
           <div className="border-t border-gray-200 pt-6 text-sm text-gray-500">
             This publication is provided for general informational purposes
             and does not constitute legal advice. For tailored legal guidance,
             please contact our office directly.
           </div>
-
         </div>
       </div>
 
