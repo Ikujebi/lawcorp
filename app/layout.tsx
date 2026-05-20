@@ -2,14 +2,18 @@ import type { Metadata } from "next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ChatButton from "./components/ChatButton";
+import ActivityTracker from "./components/ActivityTracker";
 import "./globals.css";
 import { Montserrat } from "./fonts";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.lumminalaw.com"),
+  metadataBase: new URL(
+    "https://www.lumminalaw.com"
+  ),
 
   title: {
-    default: "Lummina Law | Legal Management & Compliance",
+    default:
+      "Lummina Law | Legal Management & Compliance",
     template: "%s | Lummina Law",
   },
 
@@ -57,6 +61,8 @@ export default function RootLayout({
       <body
         className={`${Montserrat.variable} antialiased flex flex-col min-h-screen`}
       >
+        <ActivityTracker />
+
         {/* <LegalDisclaimerModal /> */}
 
         <Header />
