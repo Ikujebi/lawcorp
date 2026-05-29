@@ -6,7 +6,7 @@ type ActivityMetadata = Record<
 >;
 
 const API_URL =
-  "https://legal.lumminalaw.com/api/activity";
+  "https://legal.lumminalaw.com/api/public/activity";
 
 function getOrCreateStorageValue(
   key: string
