@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Montserrat.variable} antialiased flex flex-col min-h-screen`}
+        className={`${Montserrat.className} antialiased flex flex-col min-h-screen`}
       >
         <ActivityTracker />
 

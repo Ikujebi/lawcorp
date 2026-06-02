@@ -52,7 +52,8 @@ export default function Header() {
               alt="Lummina Logo"
               width={100}
               height={50}
-              className="h-13 object-contain"
+              sizes="(max-width: 768px) 120px, 150px"
+              className="h-13 w-auto object-contain"
             />
           </Link>
         </div>
