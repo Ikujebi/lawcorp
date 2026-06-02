@@ -9,6 +9,20 @@ interface InsightProps {
   date: string;
   summary: string;
   link?: string;
+  content?: string;
+  images?: string[];
+  pdfUrl?: string;
+}
+
+/* ✅ ADD THIS (API TYPE) */
+interface InsightApi {
+  title: string;
+  date: string;
+  summary: string;
+  content?: string;
+  image?: string;
+  images?: string[];
+  pdfUrl?: string;
 }
 
 const mockInsights: InsightProps[] = [
@@ -28,29 +42,41 @@ const mockInsights: InsightProps[] = [
 
 export default function NewsletterClient() {
   const [email, setEmail] = useState("");
-  const [selectedInsight, setSelectedInsight] =
-    useState<InsightProps | null>(null);
+  const [selectedInsight, setSelectedInsight] = useState<InsightProps | null>(
+    null,
+  );
 
   const [insights, setInsights] = useState<InsightProps[]>(mockInsights);
 
-  // OPTIONAL BACKEND SYNC (DOES NOT BREAK SITE)
   useEffect(() => {
     const sync = async () => {
       try {
         const res = await fetch(
-          "https://legal.lumminalaw.com/api/public/insights"
+          "https://legal.lumminalaw.com/api/public/insights",
         );
-
-        if (!res.ok) return;
 
         const data = await res.json();
 
-        if (Array.isArray(data) && data.length > 0) {
-          setInsights(data);
+        if (Array.isArray(data)) {
+          const formatted = data.map((item: InsightApi) => ({
+            title: item.title,
+            date: item.date,
+            summary: item.summary,
+            content: item.content,
+
+            images: item.images
+              ? item.images
+              : item.image
+              ? [item.image]
+              : [],
+
+            pdfUrl: item.pdfUrl,
+          }));
+
+          setInsights(formatted);
         }
-      } catch  {
-        // silent fail → keep mock data
-        console.log("Using fallback insights");
+      } catch (err) {
+        console.error("Insights fetch failed:", err);
       }
     };
 
@@ -58,31 +84,29 @@ export default function NewsletterClient() {
   }, []);
 
   const handleSubscribe = async (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  try {
-    await fetch(
-      "https://legal.lumminalaw.com/api/public/newsletter-subscribe",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+    try {
+      await fetch(
+        "https://legal.lumminalaw.com/api/public/newsletter-subscribe",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
         },
-        body: JSON.stringify({ email }),
-      }
-    );
+      );
 
-    message.success(`Subscribed with ${email}`);
-    setEmail("");
-  } catch {
-    console.log("Subscribe failed, still keep UX smooth");
-    message.error("Subscription failed. Please try again.");
-  }
-};
+      message.success(`Subscribed with ${email}`);
+      setEmail("");
+    } catch {
+      message.error("Subscription failed. Please try again.");
+    }
+  };
 
   return (
     <>
-      {/* SUBSCRIBE */}
       <form
         onSubmit={handleSubscribe}
         className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
@@ -93,7 +117,7 @@ export default function NewsletterClient() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
           required
-          className="flex-1 px-6 py-4 rounded-lg border border-gray-300 text-[#5F021F] focus:border-none focus:ring-none transition"
+          className="flex-1 px-6 py-4 rounded-lg border border-gray-300 text-[#5F021F]"
         />
 
         <button
@@ -104,16 +128,13 @@ export default function NewsletterClient() {
         </button>
       </form>
 
-      {/* INSIGHTS */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-10">
         {insights.map((insight, index) => (
           <div
             key={index}
             className="bg-[#5F021F]/90 text-white p-8 rounded-2xl shadow-xl"
           >
-            <h3 className="text-2xl font-semibold mb-2">
-              {insight.title}
-            </h3>
+            <h3 className="text-2xl font-semibold mb-2">{insight.title}</h3>
 
             <p className="text-sm text-gray-300 mb-4">
               Published: {insight.date}
@@ -121,9 +142,7 @@ export default function NewsletterClient() {
 
             <div className="h-[2px] w-12 bg-[#F4C430] my-4" />
 
-            <p className="text-gray-200 leading-relaxed">
-              {insight.summary}
-            </p>
+            <p className="text-gray-200 leading-relaxed">{insight.summary}</p>
 
             <button
               onClick={() => setSelectedInsight(insight)}
@@ -135,12 +154,13 @@ export default function NewsletterClient() {
         ))}
       </section>
 
-      {/* MODAL */}
       {selectedInsight && (
         <NewsletterModal
           title={selectedInsight.title}
           date={selectedInsight.date}
-          summary={selectedInsight.summary}
+          content={selectedInsight.content || selectedInsight.summary}
+          images={selectedInsight.images}
+          pdfUrl={selectedInsight.pdfUrl}
           onClose={() => setSelectedInsight(null)}
         />
       )}

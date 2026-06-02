@@ -3,32 +3,37 @@
 import { FC, useEffect } from "react";
 import { X } from "lucide-react";
 import { trackActivity } from "@/utils/analytics";
+import Image from "next/image";
 
 interface NewsletterModalProps {
   title: string;
   date: string;
-  summary: string;
+  content: string;
+  images?: string[];
+  pdfUrl?: string;
   onClose: () => void;
 }
 
 const NewsletterModal: FC<NewsletterModalProps> = ({
   title,
   date,
-  summary,
+  content,
+  images,
+  pdfUrl,
   onClose,
 }) => {
-
+  /* =========================
+     TRACK OPEN
+  ========================= */
   useEffect(() => {
-  trackActivity(
-    "newsletter_open",
-    `/newsletter/${title}`,
-    {
+    trackActivity("newsletter_open", `/newsletter/${title}`, {
       title,
-    }
-  );
-}, [title]);
+    });
+  }, [title]);
 
-  // ESC key support (proper dependency handling)
+  /* =========================
+     ESC KEY CLOSE
+  ========================= */
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -40,26 +45,46 @@ const NewsletterModal: FC<NewsletterModalProps> = ({
     return () => window.removeEventListener("keydown", handleEsc);
   }, [onClose]);
 
+  /* =========================
+     DOWNLOAD TRACKING
+  ========================= */
+  const handleDownload = () => {
+    trackActivity("download", `/newsletter/${title}`, {
+      title,
+      type: "newsletter_pdf",
+    });
+
+    if (pdfUrl) {
+      window.open(pdfUrl, "_blank");
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md px-4">
-      
       {/* Click outside to close */}
-      <div
-        className="absolute inset-0"
-        onClick={onClose}
-      />
+      <div className="absolute inset-0" onClick={onClose} />
 
       {/* Modal Card */}
       <div className="relative bg-white rounded-3xl max-w-4xl w-full shadow-2xl overflow-hidden animate-modalFade max-h-[90vh] flex flex-col z-10">
-
-        {/* Header Section */}
+        {/* Header */}
         <div className="bg-[#5F021F] text-white px-10 py-8 relative">
+          {/* Close */}
           <button
             onClick={onClose}
             className="absolute top-6 right-6 text-white/80 hover:text-white transition"
           >
             <X size={26} />
           </button>
+
+          {/* Download Button */}
+          {pdfUrl && (
+            <button
+              onClick={handleDownload}
+              className="absolute top-6 right-16 text-[#5F021F] bg-[#F4C430] px-3 py-1 rounded-lg text-sm font-semibold hover:opacity-90"
+            >
+              Download PDF
+            </button>
+          )}
 
           <span className="text-xs uppercase tracking-widest text-[#F4C430] font-semibold">
             Lummina Law Newsletter
@@ -77,12 +102,29 @@ const NewsletterModal: FC<NewsletterModalProps> = ({
 
         {/* Body */}
         <div className="px-10 py-10 overflow-y-auto text-gray-800 leading-relaxed space-y-6">
+          {/* Content */}
+          <p className="text-lg whitespace-pre-line">{content}</p>
 
-          <p className="text-lg">{summary}</p>
+          {/* Images (optional) */}
+          {images?.length ? (
+            <div className="space-y-4">
+              {images.map((img, i) => (
+                <div key={i} className="relative w-full h-[400px]">
+                  <Image
+                    src={img}
+                    alt={`newsletter-${i}`}
+                    fill
+                    className="object-cover rounded-xl"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : null}
 
+          {/* Disclaimer */}
           <div className="border-t border-gray-200 pt-6 text-sm text-gray-500">
-            This publication is provided for general informational purposes
-            and does not constitute legal advice. For tailored legal guidance,
+            This publication is provided for general informational purposes and
+            does not constitute legal advice. For tailored legal guidance,
             please contact our office directly.
           </div>
         </div>
