@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import NewsletterModal from "@/app/components/NewsletterModal";
+import { message } from "antd";
 
 interface InsightProps {
   title: string;
@@ -57,26 +58,27 @@ export default function NewsletterClient() {
   }, []);
 
   const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      await fetch(
-        "https://legal.lumminalaw.com/api/public/newsletter-subscribe",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email }),
-        }
-      );
-    } catch  {
-      console.log("Subscribe failed, still keep UX smooth");
-    }
+  try {
+    await fetch(
+      "https://legal.lumminalaw.com/api/public/newsletter-subscribe",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      }
+    );
 
-    alert(`Subscribed with ${email}`);
+    message.success(`Subscribed with ${email}`);
     setEmail("");
-  };
+  } catch {
+    console.log("Subscribe failed, still keep UX smooth");
+    message.error("Subscription failed. Please try again.");
+  }
+};
 
   return (
     <>

@@ -28,3 +28,4 @@ export const Montserrat  = localFont({
   variable: "--font-Montserrat-VariableFont",
   display: "swap",
 });
+

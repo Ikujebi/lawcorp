@@ -2,6 +2,7 @@
 
 import { FC, useEffect } from "react";
 import { X } from "lucide-react";
+import { trackActivity } from "@/utils/analytics";
 
 interface NewsletterModalProps {
   title: string;
@@ -16,6 +17,17 @@ const NewsletterModal: FC<NewsletterModalProps> = ({
   summary,
   onClose,
 }) => {
+
+  useEffect(() => {
+  trackActivity(
+    "newsletter_open",
+    `/newsletter/${title}`,
+    {
+      title,
+    }
+  );
+}, [title]);
+
   // ESC key support (proper dependency handling)
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
