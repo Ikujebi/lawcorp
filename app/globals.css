@@ -53,4 +53,19 @@ h6 {
 --swiper-pagination-color: #5F021F;
 }
 
+html,
+body {
+  min-height: 100%;
+}
 
+body::-webkit-scrollbar {
+display: none;}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

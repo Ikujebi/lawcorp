@@ -17,7 +17,11 @@ export const Nunito = localFont({
   variable: "--font-Nunito-VariableFont",
   display: "swap",
 });
-
+export const Roboto = localFont({
+  src: "../public/fonts/Roboto-VariableFont_wdth,wght.ttf",
+  variable: "--font-Nunito-VariableFont",
+  display: "swap",
+});
 export const Gyahegi  = localFont({
   src: "../public/fonts/Gyahegi Regular.ttf",
   variable: "--font-Nunito-VariableFont",
@@ -28,4 +32,3 @@ export const Montserrat  = localFont({
   variable: "--font-Montserrat-VariableFont",
   display: "swap",
 });
-

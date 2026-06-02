@@ -3,14 +3,17 @@
 import { useEffect, useState } from "react";
 import NewsletterModal from "@/app/components/NewsletterModal";
 import { message } from "antd";
+import Image from "next/image";
 
 interface InsightProps {
   title: string;
   date: string;
   summary: string;
+  publishedAt?: string;
+  coverImage?: string;
   link?: string;
   content?: string;
-  images?: string[];
+  images: string[];
   pdfUrl?: string;
 }
 
@@ -18,27 +21,14 @@ interface InsightProps {
 interface InsightApi {
   title: string;
   date: string;
+  publishedAt?: string;
+  coverImage?: string;
   summary: string;
   content?: string;
   image?: string;
-  images?: string[];
+  images: string[];
   pdfUrl?: string;
 }
-
-const mockInsights: InsightProps[] = [
-  {
-    title: "October Insights",
-    date: "1st October 2025",
-    summary:
-      "This edition covers recent developments in corporate governance, key compliance changes affecting Nigerian businesses, and case studies drawn from our recent client work. Practical, relevant, and direct.",
-  },
-  {
-    title: "November Insights",
-    date: "1st November 2025",
-    summary:
-      "We examine regulatory shifts affecting Nigerian businesses, explore emerging risks in commercial transactions, and share perspectives on effective risk mitigation strategies for founders and corporates alike.",
-  },
-];
 
 export default function NewsletterClient() {
   const [email, setEmail] = useState("");
@@ -46,7 +36,8 @@ export default function NewsletterClient() {
     null,
   );
 
-  const [insights, setInsights] = useState<InsightProps[]>(mockInsights);
+  // ✅ ONLY CHANGE: removed mockInsights here
+  const [insights, setInsights] = useState<InsightProps[]>([]);
 
   useEffect(() => {
     const sync = async () => {
@@ -60,15 +51,16 @@ export default function NewsletterClient() {
         if (Array.isArray(data)) {
           const formatted = data.map((item: InsightApi) => ({
             title: item.title,
-            date: item.date,
+            date: item.publishedAt || item.date,
             summary: item.summary,
             content: item.content,
 
-            images: item.images
+            // ✅ GUARANTEED ARRAY (THIS IS KEY)
+            images: item.images?.length
               ? item.images
-              : item.image
-              ? [item.image]
-              : [],
+              : item.coverImage
+                ? [item.coverImage]
+                : [],
 
             pdfUrl: item.pdfUrl,
           }));
@@ -105,6 +97,27 @@ export default function NewsletterClient() {
     }
   };
 
+  const formatDate = (date?: string) => {
+    if (!date) return "";
+
+    return new Date(date).toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  };
+  useEffect(() => {
+  if (selectedInsight) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [selectedInsight]);
+
   return (
     <>
       <form
@@ -117,7 +130,7 @@ export default function NewsletterClient() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
           required
-          className="flex-1 px-6 py-4 rounded-lg border border-gray-300 text-[#5F021F]"
+          className="flex-1 px-6 py-4 rounded-lg border border-[#5F021F] text-[#5F021F] focus:outline-none focus:ring-0"
         />
 
         <button
@@ -134,10 +147,21 @@ export default function NewsletterClient() {
             key={index}
             className="bg-[#5F021F]/90 text-white p-8 rounded-2xl shadow-xl"
           >
+            {insight.images?.length > 0 && (
+              <div className="mb-4 relative w-full h-48">
+                <Image
+                  src={insight.images[0]}
+                  alt={insight.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover rounded-xl"
+                />
+              </div>
+            )}
             <h3 className="text-2xl font-semibold mb-2">{insight.title}</h3>
 
             <p className="text-sm text-gray-300 mb-4">
-              Published: {insight.date}
+              Published: {formatDate(insight.date)}
             </p>
 
             <div className="h-[2px] w-12 bg-[#F4C430] my-4" />
@@ -159,7 +183,13 @@ export default function NewsletterClient() {
           title={selectedInsight.title}
           date={selectedInsight.date}
           content={selectedInsight.content || selectedInsight.summary}
-          images={selectedInsight.images}
+          images={
+            selectedInsight.images.length
+              ? selectedInsight.images
+              : selectedInsight.coverImage
+                ? [selectedInsight.coverImage]
+                : []
+          }
           pdfUrl={selectedInsight.pdfUrl}
           onClose={() => setSelectedInsight(null)}
         />
