@@ -24,7 +24,7 @@ export default function Page() {
             fill
             priority
             sizes="100vw"
-            quality={85}
+            quality={75}
             className="object-cover object-[center_25%]"
           />
         </motion.div>

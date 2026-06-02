@@ -12,23 +12,27 @@ export const SourceCodePro = localFont({
   variable: "--font-source-code-pro",
   display: "swap",
 });
+
 export const Nunito = localFont({
   src: "../public/fonts/Nunito-VariableFont_wght.ttf",
-  variable: "--font-Nunito-VariableFont",
+  variable: "--font-nunito",
   display: "swap",
 });
+
 export const Roboto = localFont({
   src: "../public/fonts/Roboto-VariableFont_wdth,wght.ttf",
-  variable: "--font-Nunito-VariableFont",
+  variable: "--font-roboto",
   display: "swap",
 });
-export const Gyahegi  = localFont({
+
+export const Gyahegi = localFont({
   src: "../public/fonts/Gyahegi Regular.ttf",
-  variable: "--font-Nunito-VariableFont",
+  variable: "--font-gyahegi",
   display: "swap",
 });
-export const Montserrat  = localFont({
+
+export const Montserrat = localFont({
   src: "../public/fonts/Montserrat-VariableFont_wght.ttf",
-  variable: "--font-Montserrat-VariableFont",
+  variable: "--font-montserrat",
   display: "swap",
 });

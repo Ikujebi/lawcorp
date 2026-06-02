@@ -25,7 +25,7 @@ drop-shadow-lg
           alt="WhatsApp chat"
           fill
           className="object-contain"
-          priority
+          sizes="(max-width: 640px) 40px, 56px"
         />
       </div>
     </Link>
