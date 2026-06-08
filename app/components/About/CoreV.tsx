@@ -15,7 +15,7 @@ const ConfidentialCard = () => {
       <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#F7E7CE] rounded-full opacity-20 animate-pulse"></div>
       <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-[#5F021F] rounded-full opacity-10 animate-pulse"></div>
 
-      <h2 className="text-[#5F021F] text-2xl md:text-3xl font-semibold mb-3 relative z-10">
+      <h2 className=" text-2xl md:text-3xl font-semibold mb-3 relative z-10">
         Confidential Engagement
       </h2>
 
