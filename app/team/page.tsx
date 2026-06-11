@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import StaffModal from "../components/StaffModal";
 import faithPhoto from "@/public/img/noka.png";
 import staff2Photo from "@/public/img/kowe.jpeg";
 import TeamComp from "../components/TeamComp";
+
 type Member = {
   name: string;
   role: string;
@@ -15,6 +16,19 @@ type Member = {
 
 const TeamPage = () => {
   const [selectedMember, setSelectedMember] = useState<Member | null>(null);
+
+  // Prevents parent page background from scrolling when modal is open
+  useEffect(() => {
+    if (selectedMember) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedMember]);
 
   const teamMembers: Member[] = [
     {
@@ -27,18 +41,16 @@ Faith brings an interdisciplinary perspective to legal advisory. In addition to 
 Before founding Lummina, Faith worked on matters involving corporate advisory, commercial documentation, regulatory compliance, employment transitions, and dispute support. Her approach to legal practice is grounded in structure, careful analysis, and disciplined execution.
 She believes that thoughtful legal architecture protects businesses, preserves assets, and allows organisations to grow with confidence.
 Faith is committed to building Lummina Law Firm into a trusted advisory practice for businesses and private clients who value clarity, professionalism, and long-term partnership.`,
-    }/* ,
-    {
-      name: "OJOAJOGWU ZEKERI ",
-      role: "Senior Partner",
-      photo: staff1Photo,
-      bio: `Ojoajogwu Zekeri has extensive experience in Corporate and Commercial Law, advising clients on transactions, governance, and compliance matters.`,
-    } */,
+    },
     {
       name: "OLUWATOYIN KOWE ",
       role: "Junior Associate",
       photo: staff2Photo,
-      bio: `Oluwatoyin Kowe is a Junior Associate at Lummina Law Firm where she contributes to the firm's corporate and commercial practice. Her work includes legal research, drafting of commercial agreements, and assisting clients with regulatory and compliance matters.She has a keen interest in corporate governance, contract negotiation, and business advisory services. Oluwatoyin is committed to continuous professional development and providing clients with practical, timely, and effective legal solutions.`,
+      bio: `Oluwatoyin Kowe is a Junior Associate at Lummina Law Firm where she contributes to the firm's corporate
+       and commercial practice. Her work includes legal research, drafting of commercial agreements, and assisting clients
+        with regulatory and compliance matters.She has a keen interest in corporate governance, contract negotiation, and
+         business advisory services. Oluwatoyin is committed to continuous
+       professional development and providing clients with practical, timely, and effective legal solutions.`,
     },
   ];
 
@@ -46,20 +58,16 @@ Faith is committed to building Lummina Law Firm into a trusted advisory practice
     <div className="w-full">
       {/* HERO SECTION */}
       <TeamComp />
-      
-      
 
       {/* TEAM SECTION */}
       <section className="px-4 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 bg-[#FFF7E7] text-gray-900">
         <div className="max-w-6xl mx-auto space-y-10 sm:space-y-14">
-          
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 ">
             {teamMembers.map((member) => (
               <button
                 key={member.name}
                 onClick={() => setSelectedMember(member)}
-                className="bg-white rounded-2xl overflow-hidden  border border-gray-200 shadow-sm 
+                className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm 
                            hover:shadow-lg hover:-translate-y-1 
                            transition-all duration-300 text-left 
                            focus:outline-none flex flex-col "
