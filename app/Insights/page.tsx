@@ -3,61 +3,47 @@ import financial from "@/public/img/sky.jpg";
 
 const NewsletterPage = () => {
   return (
-    <div className="w-full bg-[#FFF7E7] text-gray-900">
+    <div className="w-full bg-[#faf9f8] text-gray-900 min-h-screen">
 
-      {/* HERO */}
-      <section className="relative h-[65vh] md:h-[75vh] flex items-center justify-center text-center px-6 overflow-hidden">
-
+      {/* REFINED EDITORIAL OVERVIEW HERO */}
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center text-center px-6 overflow-hidden bg-gray-900">
         <div
-          className="absolute inset-0 bg-cover bg-center animate-heroImage"
+          className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity scale-102"
           style={{ backgroundImage: `url(${financial.src})` }}
         />
+        
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/20 to-gray-950/80 pointer-events-none" />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/20 to-black/30 pointer-events-none animate-overlay" />
-
-        <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
-
-        <div className="relative z-10 max-w-3xl text-white animate-fadeZoom">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
-            Insights
+        <div className="relative z-10 max-w-3xl text-white px-4">
+          <span className="text-xs uppercase font-bold tracking-widest text-[#F4C430] bg-[#F4C430]/10 px-3 py-1 rounded-md border border-[#F4C430]/20">
+            Lummina Intelligence
+          </span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black mt-4 mb-4 tracking-tight">
+            Firm Insights
           </h1>
-
-          <p className="text-md md:text-lg drop-shadow-md">
-            Our Insights series delivers practical commentary on regulatory developments,
-            governance trends, and matters that affect our clients.
+          <p className="text-sm md:text-base text-gray-200 leading-relaxed max-w-2xl mx-auto font-light">
+            Practical commentary on emerging regulatory frameworks, corporate governance trends, and foundational statutory adjustments impacting our clients.
           </p>
-
-          
         </div>
       </section>
 
-      {/* DISCLAIMER */}
-      <section className="max-w-4xl mx-auto px-6 md:px-12 py-16 text-gray-700 text-sm leading-relaxed">
-       
-       {/* Client Component */}
-          <NewsletterClient />
-        <h4 className="font-semibold mb-4 text-[#5F021F]">Disclaimer</h4>
+      {/* CORE INTERACTIVE CLIENT INTERFACE */}
+      <NewsletterClient />
+
+      {/* PREMIUM BASE REGULATORY REGISTRATION FOOTER */}
+      <section className="max-w-4xl mx-auto px-6 pb-24 text-gray-500 text-xs leading-relaxed border-t border-gray-200/80 pt-12">
+        <h4 className="font-bold mb-3 text-gray-700 uppercase tracking-wider text-[10px]">
+          Regulatory Advisory Context & Boundary Notice
+        </h4>
 
         <p className="mb-2">
-          The information published in the Insights section is provided for
-          general informational purposes only. It does not constitute legal
-          advice and should not be relied upon as a substitute for obtaining
-          specific advice tailored to your circumstances.
+          The resources surfaced across this dynamic structural index are organized exclusively for broad education and professional orientation reference values. They do not formulate specialized advisory positions, legal instructions, or establish a functional attorney-client engagement context.
         </p>
 
         <p className="mb-2">
-          While Lummina Law Firm takes reasonable steps to ensure accuracy as
-          at the date of publication, laws and regulatory interpretations are
-          subject to change. No lawyer-client relationship is created by
-          accessing or engaging with any content in this section.
-        </p>
-
-        <p>
-          For legal advice, please contact Lummina Law Firm directly to
-          schedule a consultation.
+          While Lummina Law details institutional precision at the phase of asset issuance, contemporary frameworks remain fluid and highly reactive to shifting court actions. Do not execute strategic operations using reference entries without first validating directions via dedicated counsel.
         </p>
       </section>
-
     </div>
   );
 };
