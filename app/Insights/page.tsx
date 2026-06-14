@@ -6,7 +6,7 @@ const NewsletterPage = () => {
     <div className="w-full bg-[#faf9f8] text-gray-900 min-h-screen">
 
       {/* REFINED EDITORIAL OVERVIEW HERO */}
-      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center text-center px-6 overflow-hidden bg-gray-900">
+      <section className="relative h-[55vh] md:h-[70vh] flex items-center justify-center text-center px-6 overflow-hidden bg-gray-900">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity scale-102"
           style={{ backgroundImage: `url(${financial.src})` }}

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageProps, LegalInsight } from "@/types/types";
+import insightGb from "@/public/img/insight.png"
 
 export default async function InsightPage({ params }: PageProps) {
   const resolvedParams = await params;
@@ -11,6 +12,9 @@ export default async function InsightPage({ params }: PageProps) {
     `https://legal.lumminalaw.com/api/public/insights/${id}`,
     { cache: "no-store" }
   );
+
+  console.log("Insight ID:", id);
+console.log("Status:", res.status);
 
   if (!res.ok) {
     notFound();
@@ -33,14 +37,19 @@ export default async function InsightPage({ params }: PageProps) {
     <main className="bg-[#faf9f8] min-h-screen text-gray-900 antialiased selection:bg-[#F4C430]/30 selection:text-[#5F021F]">
       
       {/* 1. EDITORIAL HEADER (Text-first approach eliminates contrast and clipping bugs) */}
-      <header className="bg-white border-b border-gray-100 pt-16 pb-12 md:pt-24 md:pb-16">
+       <header
+  className="relative border-b border-gray-100 pt-16 pb-12 md:pt-24 md:pb-16 bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${insightGb.src})`,
+  }}
+>
         <div className="max-w-4xl mx-auto px-6">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#5F021F]/5 px-3 py-1 text-xs font-semibold tracking-wider text-[#5F021F] uppercase">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#F7E7CE]/50 shadow-xl px-3 py-1 text-xs font-semibold tracking-wider text-[#5F021F] uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-[#F4C430]" />
             Lummina Law Insight
           </div>
 
-          <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-black text-[#5F021F] tracking-tight leading-[1.15]">
+          <h1 className="mt-6 text-2xl sm:text-2xl md:text-2xl lg:text-6xl font-serif font-black text-[#5F021F] tracking-tight leading-[1.15]">
             {insight.title}
           </h1>
 
@@ -87,13 +96,7 @@ export default async function InsightPage({ params }: PageProps) {
           
           {/* CORE CONTENT BLOCK */}
           <div className="min-w-0">
-            {/* DEEP INTRO CARD */}
-            <div className="mb-12 rounded-2xl border border-gray-200/60 bg-white p-6 md:p-8 shadow-xs relative overflow-hidden">
-              <div className="absolute top-0 left-0 bottom-0 w-1.5 bg-[#F4C430]" />
-              <p className="text-base md:text-lg font-medium text-gray-700 leading-relaxed">
-                Official perspectives, breaking compliance notices, and structured modern litigation commentary from our firm's practicing partners.
-              </p>
-            </div>
+            
 
             {/* MAIN ARTICLE BODY */}
             <article 
@@ -118,6 +121,7 @@ export default async function InsightPage({ params }: PageProps) {
                 {insight.content}
               </div>
             </article>
+            
 
             {/* CLEAN RELATED GALLERY */}
             {hasImages && insight.images && insight.images.length > 1 && (
@@ -177,7 +181,9 @@ export default async function InsightPage({ params }: PageProps) {
 
           {/* DESKTOP FIXED UTILITY SIDEBAR */}
           <aside className="hidden lg:block sticky top-8 space-y-6">
+            
             <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+              
               <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
                 Document Metadata
               </h3>
@@ -211,6 +217,14 @@ export default async function InsightPage({ params }: PageProps) {
             >
               <span>←</span> Index Directory
             </Link>
+
+            {/* DEEP INTRO CARD */}
+            <div className="mb-12 rounded-2xl border border-gray-200/60 bg-white p-6 md:p-8 shadow-xs relative overflow-hidden">
+              <div className="absolute top-0 left-0 bottom-0 w-1.5 bg-[#F4C430]" />
+              <p className="text-base md:text-lg font-medium text-gray-700 leading-relaxed">
+                Official perspectives, breaking compliance notices, and structured modern litigation commentary from our firm's practicing partners.
+              </p>
+            </div>
           </aside>
 
         </div>

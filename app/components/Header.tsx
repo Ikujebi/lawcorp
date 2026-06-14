@@ -11,7 +11,7 @@ const navItems = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Our Team", href: "/team" },
-  { name: "Insights", href: "/Insights" },
+  { name: "Insights", href: "/insights" },
   { name: "Contact", href: "/contact" },
   { name: "Portal", href: "https://legal.lumminalaw.com/" },
 ];

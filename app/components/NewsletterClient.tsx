@@ -162,7 +162,7 @@ export default function NewsletterClient() {
               </p>
 
               <Link
-                href={`/insight/${insight.id}`}
+                href={`/insights/${insight.id}`}
                 className="inline-flex items-center gap-1 text-sm font-bold text-[#5F021F] hover:text-[#4A0118] transition group/link"
               >
                 Read Analysis 
