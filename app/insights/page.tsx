@@ -16,11 +16,9 @@ const NewsletterPage = () => {
 
         <div className="relative z-10 max-w-3xl text-white px-4">
           <span className="text-xs uppercase font-bold tracking-widest text-[#F4C430] bg-[#F4C430]/10 px-3 py-1 rounded-md border border-[#F4C430]/20">
-            Lummina Intelligence
+            Insights
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black mt-4 mb-4 tracking-tight">
-             Insights
-          </h1>
+          
           <p className="text-sm md:text-base text-gray-200 leading-relaxed max-w-2xl mx-auto font-light">
             Practical commentary on emerging regulatory frameworks, corporate governance trends, and foundational statutory adjustments impacting our clients.
           </p>
