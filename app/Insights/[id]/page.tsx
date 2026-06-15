@@ -44,7 +44,7 @@ export default async function InsightPage({ params }: PageProps) {
         <div className="max-w-4xl mx-auto px-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#F7E7CE]/50 shadow-xl px-3 py-1 text-xs font-semibold tracking-wider text-[#5F021F] uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-[#F4C430]" />
-            Lummina Law Insight
+            Lummina Insight
           </div>
 
           <h1 className="mt-6 text-2xl sm:text-2xl md:text-2xl lg:text-6xl font-serif font-black text-[#5F021F] tracking-tight leading-[1.15]">

@@ -23,7 +23,7 @@ export default function CareersPage() {
 
           <h1 className="text-3xl md:text-5xl font-semibold text-white leading-tight">
             Build Something That Lasts with{" "}
-            <span className="text-[#F7E7CE]">Lumina</span>
+            <span className="text-[#F7E7CE]">Lummina</span>
           </h1>
 
           <p className="mt-6 text-lg text-gray-200">

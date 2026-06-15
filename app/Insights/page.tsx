@@ -19,7 +19,7 @@ const NewsletterPage = () => {
             Lummina Intelligence
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black mt-4 mb-4 tracking-tight">
-            Firm Insights
+             Insights
           </h1>
           <p className="text-sm md:text-base text-gray-200 leading-relaxed max-w-2xl mx-auto font-light">
             Practical commentary on emerging regulatory frameworks, corporate governance trends, and foundational statutory adjustments impacting our clients.

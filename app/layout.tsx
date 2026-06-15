@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Lummina Law | Legal Management & Compliance",
+      "LUMMINA LAW FIRM | LEGAL MANAGEMENT & COMPLIANCE",
     template: "%s | Lummina Law",
   },
 
