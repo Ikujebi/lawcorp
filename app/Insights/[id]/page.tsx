@@ -41,7 +41,6 @@ console.log("Status:", res.status);
   
   
 >
-    <div className="absolute inset-0 bg-black/10" />
 
         <div className="max-w-4xl mx-auto px-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#F7E7CE]/50 shadow-xl px-3 py-1 text-xs font-semibold tracking-wider text-[#5F021F] uppercase">
