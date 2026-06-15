@@ -104,7 +104,7 @@ export default function NewsletterClient() {
       {/* NEWSLETTER CAPTURE BAR */}
       <div className="max-w-2xl mx-auto bg-white border border-gray-200/60 p-6 md:p-8 rounded-2xl shadow-xs -mt-24 relative z-20">
         <h3 className="text-center font-serif text-lg font-bold text-[#5F021F] mb-1">
-          Subscribe to Lummina Intelligence
+          Subscribe to Lummina Insight
         </h3>
         <p className="text-center text-xs text-gray-500 mb-6">
           Receive direct analytical updates regarding modern regulatory frameworks.

@@ -14,12 +14,12 @@ const NewsletterPage = () => {
         //fix
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/20 to-gray-950/80 pointer-events-none" />
 
-        <div className="relative z-10 max-w-3xl text-white px-4">
-          <span className="text-xs uppercase font-bold tracking-widest text-[#F4C430] bg-[#F4C430]/10 px-3 py-1 rounded-md border border-[#F4C430]/20">
+        <div className="relative z-10 max-w-3xl text-white px-4 ">
+          <span className="md:text-[2rem] uppercase font-bold tracking-widest text-[#F4C430] bg-[#F4C430]/10 px-3 py-1 rounded-md border border-[#F4C430]/20 ">
             Insights
           </span>
           
-          <p className="text-sm md:text-base text-gray-200 leading-relaxed max-w-2xl mx-auto font-light">
+          <p className="text-sm md:text-base text-gray-200 leading-relaxed max-w-2xl mx-auto font-light mt-[2rem]">
             Practical commentary on emerging regulatory frameworks, corporate governance trends, and foundational statutory adjustments impacting our clients.
           </p>
         </div>
