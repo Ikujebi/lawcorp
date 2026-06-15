@@ -11,7 +11,7 @@ const NewsletterPage = () => {
           className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity scale-102"
           style={{ backgroundImage: `url(${financial.src})` }}
         />
-        
+        //fix
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/20 to-gray-950/80 pointer-events-none" />
 
         <div className="relative z-10 max-w-3xl text-white px-4">
