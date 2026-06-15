@@ -28,6 +28,7 @@ interface InsightApi {
 
 export default function NewsletterClient() {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [insights, setInsights] = useState<InsightProps[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -63,15 +64,19 @@ export default function NewsletterClient() {
     sync();
   }, []);
 
-  const handleSubscribe = async (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       await fetch("https://legal.lumminalaw.com/api/public/newsletter-subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          name,
+          email,
+        }),
       });
       message.success(`Subscribed with ${email}`);
+      setName("");
       setEmail("");
     } catch {
       message.error("Subscription failed. Please try again.");
@@ -109,7 +114,16 @@ export default function NewsletterClient() {
         <p className="text-center text-xs text-gray-500 mb-6">
           Receive direct analytical updates regarding modern regulatory frameworks.
         </p>
-        <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
+        <form onSubmit={handleSubscribe} className="flex flex-col  gap-3">
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Full name"
+            required
+            className="px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#5F021F] bg-gray-50/50 transition"
+          />
+          
           <input
             type="email"
             value={email}
@@ -145,7 +159,7 @@ export default function NewsletterClient() {
                 />
               </div>
             )}
-            
+
             <div className="p-6 flex flex-col flex-1">
               <div className="flex items-center gap-2 text-xs font-semibold text-gray-400 mb-3">
                 <time dateTime={insight.date}>{formatDate(insight.date)}</time>
@@ -165,7 +179,7 @@ export default function NewsletterClient() {
                 href={`/insights/${insight.id}`}
                 className="inline-flex items-center gap-1 text-sm font-bold text-[#5F021F] hover:text-[#4A0118] transition group/link"
               >
-                Read Full Insight 
+                Read Full Insight
                 <span className="transition-transform duration-150 group-hover/link:translate-x-0.5">→</span>
               </Link>
             </div>
