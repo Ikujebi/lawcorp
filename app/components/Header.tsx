@@ -17,7 +17,7 @@ const navItems = [
 ];
 //  <Link href="https://legal.lumminalaw.com/" className="hover:text-[#F4C430] transition">
 //                 Client Portal
-//               </Link>
+//               </Link>w
 
 export default function Header() {
   const [open, setOpen] = useState(false);
