@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageProps, LegalInsight } from "@/types/types";
-import insightGb from "@/public/img/insight.png"
 
 export default async function InsightPage({ params }: PageProps) {
   const resolvedParams = await params;
@@ -39,9 +38,8 @@ console.log("Status:", res.status);
       {/* 1. EDITORIAL HEADER (Text-first approach eliminates contrast and clipping bugs) */}
        <header
   className="relative border-b border-gray-100 pt-16 pb-12 md:pt-24 md:pb-16 bg-cover bg-center"
-  style={{
-    backgroundImage: `url(${insightGb.src})`,
-  }}
+  
+  
 >
     <div className="absolute inset-0 bg-black/10" />
 
