@@ -12,8 +12,7 @@ export default async function InsightPage({ params }: PageProps) {
     { cache: "no-store" }
   );
 
-  console.log("Insight ID:", id);
-console.log("Status:", res.status);
+
 
   if (!res.ok) {
     notFound();
@@ -37,7 +36,7 @@ console.log("Status:", res.status);
       
       {/* 1. EDITORIAL HEADER (Text-first approach eliminates contrast and clipping bugs) */}
        <header
-  className="relative border-b border-gray-100 pt-16 pb-12 md:pt-24 md:pb-16 bg-cover bg-center"
+  className="relative border-b border-gray-100 pt-16 pb-12 md:pt-24 md:pb-16 bg-cover bg-center shadow-sm"
   
   
 >
