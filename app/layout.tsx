@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   title: {
     default:
       "LUMMINA LAW FIRM | LEGAL MANAGEMENT & COMPLIANCE",
-    template: "%s | Lummina Law",
+    template: "%s | LUMMINA LAW FIRM",
   },
 
   description:
     "Modern legal management, compliance, and advisory services for businesses and institutions.",
 
-  applicationName: "Lummina Law",
+  applicationName: "LUMMINA LAW FIRM",
 
   keywords: [
     "Legal Management",
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "Contract Management",
     "Governance",
     "Law Firm",
+    "Lagos Law",
     "Nigeria Law Firm",
   ],
 
