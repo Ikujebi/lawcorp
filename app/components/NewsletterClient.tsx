@@ -128,7 +128,7 @@ export default function NewsletterClient() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Institutional email address"
+            placeholder="Email address"
             required
             className="flex-1 px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#5F021F] bg-gray-50/50 transition"
           />
